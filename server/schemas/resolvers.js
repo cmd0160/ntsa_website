@@ -24,16 +24,6 @@ const resolvers = {
         user: async (parent, { email }) => {
           return User.findOne({ email }).select("-__v -password");
         },
-        //return all services
-        services: async () => {
-          return await Pricing.find();
-        },
-    
-        // ISSUES
-        servicesByTime: async (parent, { timeFrame }) => {
-          return await Pricing.find({ priceTimeFrame: timeFrame });
-        },
-
     },
 
     Mutation: {
