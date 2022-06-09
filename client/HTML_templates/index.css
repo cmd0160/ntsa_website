@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #2E9946;
+    --secondary-color: #f99500;
+    --light-color: #c3bfbf;
+    --dark-color: #333;
+    --max-width: 1200px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styling */
+
+body {
+    background: var(--light-color);
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin: .5rem;
+}
+
+img {
+    width: 100%;
+}
+
+ /* Utilities */
+ .container {
+    max-width: var(--max-width);
+    margin: auto;
+    /* padding: 0 2rem; */
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: #fff;
+    padding: .5rem 1.5rem;
+}
+
+.btn-light { background: var(--light-color);}
+.btn-primary { background: var(--primary-color);}
+.btn-secondary { background: var(--secondary-color);}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.py-1 { padding: 1.5rem 0;}
+.py-2 { padding: 2rem 0;}
+.py-3 { padding: 3rem 0;}
+.p-1 { padding: 1.5rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 2.5rem;}
+
+
+
+/* Navigation */
+
+#main-nav {
+    background: #fff;
+    position: sticky;
+    /* top: 0; */
+    z-index: 2;
+}
+
+#main-nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main-nav .container .logo {
+    align-items: center;
+}
+
+#main-nav .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
