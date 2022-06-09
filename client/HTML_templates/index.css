@@ -102,10 +102,6 @@ img {
     justify-content: space-between;
 }
 
-#main-nav .container .logo {
-    align-items: center;
-}
-
 #main-nav .nav {
     display: flex;
     flex-direction: row;
