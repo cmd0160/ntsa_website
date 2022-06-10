@@ -41,16 +41,20 @@ i {
 
 hr {
     height: 4px;
-    width: 80%;
+    width: 90%;
     background-color: #333;
 }
 
+button {
+    margin: 1rem auto 3rem auto;
+}
+
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
  /* Utilities */
@@ -130,7 +134,7 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: .75rem;
+    font-size: .85rem;
     font-weight: bold;
 }
 
@@ -140,7 +144,7 @@ h2 {
     background: url(/images/music_ed.jpeg) no-repeat center center/cover;
     width: 100%;
     height: 60vh;
-    opacity: 0.9;
+    /* opacity: 0.8; */
 }
 
 #hero .container {
@@ -161,10 +165,6 @@ h2 {
     text-align: justify;
 }
 
-#hero .container button {
-    margin: 1rem auto 0 auto;
-}
-
 /* Main Content Section */
 
 #main-content .container {
@@ -176,7 +176,6 @@ h2 {
 
 #main-content .container p {
     width: 500px;
-    /* text-align: justify; */
     padding-bottom: 3rem;
 }
 
@@ -185,4 +184,73 @@ h2 {
 }
 #main-content .container a:hover {
     color: var(--primary-color);
+}
+
+/* Announcement Section */
+
+#announcement .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#announcement .container h2 {
+    padding: 3rem 0 1rem 0;
+}
+
+
+/* Teacher Development Section */
+
+
+#teacher-development .container {
+    display: flex;
+    flex-direction: row;
+}
+#teacher-development .container .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#teacher-development .container .description p {
+    width: 50%;
+    text-align: center;
+}
+
+/* Scholarship Section */
+
+#scholarships .container {
+    display: flex;
+    flex-direction: row;
+}
+#scholarships .container .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scholarships .container .description p {
+    text-align: center;
+}
+
+/* Teacher Development Section */
+
+
+#trophy-festival .container {
+    display: flex;
+    flex-direction: row;
+}
+#trophy-festival .container .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#trophy-festival .container .description p {
+    width: 50%;
+    text-align: center;
 }
