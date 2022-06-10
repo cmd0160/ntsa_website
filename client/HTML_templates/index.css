@@ -1,9 +1,9 @@
 :root {
     --primary-color: #2E9946;
     --secondary-color: #f99500;
-    --light-color: #faf9f9;
+    --light-color: #fff;
     --dark-color: #333;
-    --max-width: 1100px; 
+    --max-width: 1200px; 
 }
 
 * {
@@ -32,6 +32,7 @@ p {
 }
 
 img {
+    height: 100%;
     width: 100%;
 }
 
@@ -66,6 +67,25 @@ h2 {
     overflow: hidden;
 }
 
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.container-description p {
+    width: 50%;
+    text-align: center;
+}
+
+
 .btn {
     width: fit-content;
     border: none;
@@ -79,6 +99,7 @@ h2 {
 .btn-primary { 
     background: var(--primary-color);
     color: #fff;
+    cursor: pointer;
 }
 .btn-secondary { background: var(--secondary-color);}
 
@@ -174,6 +195,10 @@ h2 {
     text-align: center;
 }
 
+#main-content .container h2 {
+    padding-bottom: 0;
+}
+
 #main-content .container p {
     width: 500px;
     padding-bottom: 3rem;
@@ -199,58 +224,32 @@ h2 {
     padding: 3rem 0 1rem 0;
 }
 
+/* Footer */
 
-/* Teacher Development Section */
-
-
-#teacher-development .container {
-    display: flex;
-    flex-direction: row;
-}
-#teacher-development .container .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#footer {
+    background: var(--dark-color);
 }
 
-#teacher-development .container .description p {
-    width: 50%;
+#footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+#footer .container h4 {
+    margin-bottom: 1rem;
+}
+
+#footer .container a {
+color: #fff;
+}
+
+#footer .copyright p {
     text-align: center;
+    color: #fff;
 }
-
-/* Scholarship Section */
-
-#scholarships .container {
-    display: flex;
-    flex-direction: row;
-}
-#scholarships .container .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#scholarships .container .description p {
-    text-align: center;
-}
-
-/* Teacher Development Section */
-
-
-#trophy-festival .container {
-    display: flex;
-    flex-direction: row;
-}
-#trophy-festival .container .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#trophy-festival .container .description p {
-    width: 50%;
-    text-align: center;
+#footer hr {
+    margin: auto;
+    width: 56%;
+    background-color: #fff;
 }
