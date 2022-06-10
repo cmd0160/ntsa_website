@@ -242,8 +242,9 @@ h2 {
 
 #footer .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-items: center;
+    width: 50vw;
 }
 
 #footer .container h4 {
