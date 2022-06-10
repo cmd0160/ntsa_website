@@ -144,7 +144,7 @@ h2 {
 .p-2 { padding: 2rem;}
 .p-3 { padding: 3rem;}
 
-
+/* Home Page Start */
 
 /* Navigation */
 
@@ -263,3 +263,8 @@ color: var(--light-color);
     width: 56%;
     background-color: var(--light-color);
 }
+
+/* Home Page End */
+
+/* Event Page Start */
+
