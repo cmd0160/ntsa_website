@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--primary-color);
+}
+
 ul {
     list-style: none;
 }
@@ -37,8 +41,14 @@ img {
 }
 
 i {
+    color: var(--dark-color);
     padding: .3rem;
 }
+i:hover {
+    color: var(--primary-color);
+}
+
+
 
 hr {
     height: 4px;
@@ -139,7 +149,7 @@ h2 {
 /* Navigation */
 
 #main-nav {
-    background: rgb(255, 255, 255);
+    background: var(--light-color);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -181,7 +191,7 @@ h2 {
 #hero .container p {
     margin: .4rem auto;
     width: 400px;
-    color: white;
+    color: var(--light-color);
     font-weight: bold;
     text-align: justify;
 }
@@ -241,15 +251,15 @@ h2 {
 }
 
 #footer .container a {
-color: #fff;
+color: var(--light-color);
 }
 
 #footer .copyright p {
     text-align: center;
-    color: #fff;
+    color: var(--light-color);
 }
 #footer hr {
     margin: auto;
     width: 56%;
-    background-color: #fff;
+    background-color: var(--light-color);
 }
