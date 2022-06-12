@@ -48,8 +48,6 @@ i:hover {
     color: var(--primary-color);
 }
 
-
-
 hr {
     height: 4px;
     width: 90%;
@@ -167,6 +165,23 @@ h2 {
     align-items: center;
     font-size: .85rem;
     font-weight: bold;
+}
+
+/* Dropdown Navigation */
+
+#main-nav .nav div ul {
+    position: absolute;
+    margin: .5rem 0;
+    display: none;
+}
+
+#main-nav .nav div ul li {
+    padding: .3rem;
+    background: var(--light-color);
+}
+
+#main-nav .nav div:hover > ul {
+    display: block;
 }
 
 /* Hero Section */
