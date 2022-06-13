@@ -51,7 +51,7 @@ i:hover {
 hr {
     height: 4px;
     width: 90%;
-    background-color: #333;
+    background-color: var(--dark-color);
 }
 
 button {
@@ -85,7 +85,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: var(--light-color);
 }
 
 .container-description p {
@@ -99,14 +99,14 @@ h2 {
     border: none;
     border-radius: 5px;
     background: var(--light-color);
-    color: #333;
+    color: var(--dark-color);
     padding: .5rem 1rem;
 }
 
 .btn-light { background: var(--light-color);}
 .btn-primary { 
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
     cursor: pointer;
 }
 .btn-secondary { background: var(--secondary-color);}
@@ -123,15 +123,15 @@ h2 {
 
 .bg-dark {
     background: var(--dark-color);
-    color: #fff;
+    color: var(--light-color);
 }
 .bg-primary {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
 }
 .bg-secondary {
     background: var(--secondary-color);
-    color: #fff;
+    color: var(--light-color);
 }
 
 .py-1 { padding: 1rem 0;}
@@ -176,8 +176,16 @@ h2 {
 }
 
 #main-nav .nav div ul li {
-    padding: .3rem;
+    height: 100%;
+    width: 100%;
+    padding: .4rem;
     background: var(--light-color);
+}
+
+
+
+#main-nav .nav div ul li:hover {
+    background-color: #ece1e1;
 }
 
 #main-nav .nav div:hover > ul {
@@ -259,7 +267,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
-    width: 50vw;
+    width: 60vw;
 }
 
 #footer .container h4 {
@@ -268,6 +276,7 @@ h2 {
 
 #footer .container a {
 color: var(--light-color);
+margin: auto;
 }
 
 #footer .copyright p {
@@ -276,7 +285,7 @@ color: var(--light-color);
 }
 #footer hr {
     margin: auto;
-    width: 56%;
+    width: 70%;
     background-color: var(--light-color);
 }
 
