@@ -50,7 +50,7 @@ i:hover {
 
 hr {
     height: 4px;
-    width: 90%;
+    width: 70%;
     background-color: var(--dark-color);
 }
 
@@ -150,7 +150,7 @@ h2 {
     background: var(--light-color);
     position: sticky;
     top: 0;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 #main-nav .container {
@@ -167,7 +167,7 @@ h2 {
     font-weight: bold;
 }
 
-/* Dropdown Navigation */
+/* Dropdown Directory in Navigation */
 
 #main-nav .nav div ul {
     position: absolute;
@@ -181,8 +181,6 @@ h2 {
     padding: .4rem;
     background: var(--light-color);
 }
-
-
 
 #main-nav .nav div ul li:hover {
     background-color: #ece1e1;
