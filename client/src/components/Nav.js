@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
@@ -10,7 +11,7 @@ const Nav = () => {
 
         <ul className="nav">
             <div>
-                <li><a href="#about-us" className="p-h">ABOUT</a></li>
+                <li><NavLink to="/about" className="p-h">ABOUT</NavLink></li>
                 <ul>
                     <li><a href="#">Mission Statement</a></li>
                     <li><a href="#">Board Members</a></li>
@@ -20,7 +21,7 @@ const Nav = () => {
             </div>
 
             <div>
-                <li><a href="#events" className="p-h">OFFERINGS</a></li>
+                <li><a href="/offerings" className="p-h">OFFERINGS</a></li>
                 <ul>
                     <li><a href="#">Biannual Meetings</a></li>
                     <li><a href="#">Teacher Development</a></li>
@@ -30,14 +31,14 @@ const Nav = () => {
             </div>
 
             <div>
-                <li><a href="#membership" className="p-h">MEMBERSHIP</a></li>
+                <li><a href="/membership" className="p-h">MEMBERSHIP</a></li>
                 <ul>
                     <li><a href="#">Member Directory</a></li>
                 </ul>
             </div>
 
             <div>
-                <li><a href="#login" className="p-h">LOGIN/JOIN</a></li>
+                <li><a href="/login_signup" className="p-h">LOGIN/JOIN</a></li>
                 <ul>
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Join our association</a></li>
@@ -45,7 +46,7 @@ const Nav = () => {
             </div>
 
             <div>
-                <li><a href="#donate" className="p-h">DONATE</a></li>
+                <li><a href="/donate" className="p-h">DONATE</a></li>
                 <ul>
                     <li><a href="#">Amazon Smile</a></li>
                     <li><a href="#">Donate Here</a></li>
@@ -53,7 +54,7 @@ const Nav = () => {
             </div>
 
             <div>
-                <li><a href="#donate" className="p-h">CONTACT US</a></li>
+                <li><a href="/contact" className="p-h">CONTACT US</a></li>
                 <ul>
                     <li><a href="#">Email</a></li>
                 </ul>
