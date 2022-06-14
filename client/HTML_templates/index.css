@@ -3,7 +3,7 @@
     --secondary-color: #f99500;
     --light-color: #fff;
     --dark-color: #333;
-    --max-width: 1200px; 
+    --max-width: 1100px; 
 }
 
 * {
@@ -52,6 +52,7 @@ hr {
     height: 4px;
     width: 70%;
     background-color: var(--dark-color);
+    margin: auto;
 }
 
 button {
@@ -193,7 +194,7 @@ h2 {
 /* Hero Section */
 
 #hero {
-    background: url(/images/music_ed.jpeg) no-repeat center center/cover;
+    background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
     width: 100%;
     height: 60vh;
     /* opacity: 0.8; */
@@ -289,5 +290,79 @@ margin: auto;
 
 /* Home Page End */
 
-/* Event Page Start */
+/* About Page Start */
 
+#about_hero {
+    background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+    width: 100%;
+    height: 60vh;
+}
+
+#about_hero .container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+}
+
+#board-members h2 {
+    text-align: center;
+}
+
+#board-members p {
+    margin: 2rem 0;
+}
+
+#board-members i:hover {
+    cursor: pointer;
+}
+
+#board-members .code-of-ethics {
+    text-align: left;
+}
+
+
+#board-members .card-container {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+#board-members .card-container .card {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+/* Reverse Cards */
+
+#board-members .card-container .card-reverse {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+
+/* Reverse Cards End */
+
+
+#board-members .card-container .card .image-container {
+    text-align: center;
+}
+
+#board-members .card-container .card .info-container {
+    height: 100%;
+}
+
+#board-members .card-container .card .image-container img {
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+    box-shadow: 5px 8px 20px var(--dark-color);
+}
+
+.code-of-ethics {
+    text-align: justify;
+}
