@@ -1,17 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
 <nav id="main-nav">
     <div className="container">
         <div className="logo">
-            <i className="fa-solid fa-music fa-3x p-1"></i>
+            <a href='/'><i className="fa-solid fa-music fa-3x p-1"></i></a>
         </div>
 
         <ul className="nav">
             <div>
-                <li><NavLink to="/about" className="p-h">ABOUT</NavLink></li>
+                <li><a href="/about" className="p-h">ABOUT</a></li>
                 <ul>
                     <li><a href="#">Mission Statement</a></li>
                     <li><a href="#">Board Members</a></li>
