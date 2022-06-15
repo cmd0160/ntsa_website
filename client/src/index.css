@@ -152,17 +152,9 @@ h4 {
 .p-2 { padding: 2rem;}
 .p-3 { padding: 3rem;}
 
-.center {
-  text-align: center;
-}
-
-.left {
-  text-align: left;
-}
-
-.justify {
-  text-align: left;
-}
+.center { text-align: center;}
+.left { text-align: left;}
+.justify { text-align: left; }
 
 /* Home Page Start */
 
