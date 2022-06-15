@@ -45,6 +45,7 @@ i {
   padding: .3rem;
 }
 i:hover {
+  cursor: pointer;
   color: var(--primary-color);
 }
 
@@ -150,6 +151,18 @@ h4 {
 .p-1 { padding: 1rem;}
 .p-2 { padding: 2rem;}
 .p-3 { padding: 3rem;}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.justify {
+  text-align: left;
+}
 
 /* Home Page Start */
 
@@ -315,23 +328,9 @@ margin: auto;
   color: var(--light-color);
 }
 
-
 #board-members p {
   margin: 2rem 0;
 }
-
-#board-members .b-members {
-  text-align: center;
-}
-
-#board-members i:hover {
-  cursor: pointer;
-}
-
-#board-members .code-of-ethics {
-  text-align: left;
-}
-
 
 #board-members .card-container {
   max-width: var(--max-width);
@@ -340,7 +339,6 @@ margin: auto;
 }
 
 #board-members .card-container .card {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
@@ -349,29 +347,14 @@ margin: auto;
 /* Reverse Cards */
 
 #board-members .card-container .card-reverse {
-  height: 100%;
-  display: grid;
   grid-template-columns: 1fr 1fr;    
 }
 
 /* Reverse Cards End */
 
-
-#board-members .card-container .card .image-container {
-  text-align: center;
-}
-
-#board-members .card-container .card .info-container {
-  height: 100%;
-}
-
 #board-members .card-container .card .image-container img {
-  width: 100%;
   margin: auto;
-  object-fit: contain;
   box-shadow: 5px 8px 20px var(--dark-color);
 }
 
-.code-of-ethics {
-  text-align: justify;
-}
+/* About Page End */

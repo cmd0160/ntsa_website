@@ -33,7 +33,7 @@ const About = () => {
 </section>
 
 <section id="board-members">
-    <h2 class="p-3 b-members">Board Members</h2>
+    <h2 class="p-3 b-members center">Board Members</h2>
     <div class="card-container">
 
         <div class="card">
@@ -78,7 +78,7 @@ const About = () => {
         </div>
 
         <div class="card">
-            <div class="image-container py-1">
+            <div class="image-container py-1 center">
                 <div class="image-holder">
                     <img src={ntsaPresident} alt="" />
                 </div>
@@ -127,7 +127,7 @@ const About = () => {
         <h2 class="p-3">Code Of Ethics</h2>
         <h4 class="p-2">North Texas Suzuki Association Code of Ethics <br></br>
             Created by the NTSA Executive Committee, 2002</h4>
-        <p class="code-of-ethics">
+        <p class="left">
 
             This Code of Ethics was adopted by the North Texas Suzuki Association’s Board to standardize
             rules of conduct for Suzuki teachers in relation to pupils, parents, teachers, and the public. It
