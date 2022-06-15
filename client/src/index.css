@@ -344,14 +344,6 @@ margin: auto;
   grid-gap: 1rem;
 }
 
-/* Reverse Cards */
-
-#board-members .card-container .card-reverse {
-  grid-template-columns: 1fr 1fr;    
-}
-
-/* Reverse Cards End */
-
 #board-members .card-container .card .image-container img {
   margin: auto;
   box-shadow: 5px 8px 20px var(--dark-color);

@@ -37,7 +37,7 @@ const About = () => {
     <div class="card-container">
 
         <div class="card">
-            <div class="image-container py-1">
+            <div class="image-container py-1 center">
                 <div class="image-holder">
                     <img src={ntsaPresident} alt="" />
                 </div>
@@ -67,7 +67,7 @@ const About = () => {
                     Suzuki ideal of creating better citizens through music lessons.
                 </p>
             </div>
-            <div class="image-container py-1">
+            <div class="image-container py-1 center">
                 <div class="image-holder">
                     <img src={ntsaPresident} alt="" />
                 </div>
@@ -109,7 +109,7 @@ const About = () => {
                     Suzuki ideal of creating better citizens through music lessons.
                 </p>
             </div>
-            <div class="image-container py-1">
+            <div class="image-container py-1 center">
                 <div class="image-holder">
                     <img src={ntsaPresident} alt="" />
                 </div>
