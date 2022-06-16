@@ -365,7 +365,7 @@ font-size: .85rem;
 
 #login-form {
   background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
