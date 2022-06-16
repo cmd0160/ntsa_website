@@ -393,3 +393,82 @@ input {
     grid-template-rows: 1fr 1fr  ;
   }
  
+    /* Login Form Section End*/
+
+    /* Offerings Section */
+
+    #offerings_hero {
+      background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--light-color)
+    }
+
+/* Teacher development announcement Section */
+
+    #teacher-development-announcement .container {
+      height: 100%;
+      width: 55%;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--dark-color)
+    }
+
+/* Scholarship Announcement Section */
+
+    #scholarships-announcement .container {
+      height: 100%;
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      color: var(--dark-color)
+    }
+
+    #scholarships-announcement .container p {
+      margin-left: 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    #scholarships-announcement .container ul {
+      margin-left: 2rem;
+    }
+
+    #scholarships-announcement .container li {
+      list-style: circle;
+      padding: .1rem;
+      font-size: .9rem;
+    }
+
+    /* Trophy Festival Announcement Section */
+
+    #trophy-festival-announcement .container {
+      height: 100%;
+      width: 55%;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      color: var(--dark-color)
+    }
+
+    #trophy-festival-announcement .container p {
+      margin-left: 0;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    #trophy-festival-announcement .container h2 {
+      margin: auto;
+    }
+
+    #trophy-festival-announcement .container button {
+      display: block;
+      margin: .2rem 0;
+    }
