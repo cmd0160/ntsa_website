@@ -3,7 +3,7 @@
   --secondary-color: #f99500;
   --light-color: #fff;
   --dark-color: #333;
-  --max-width: 1100px; 
+  --max-width: 1200px; 
 }
 
 * {
@@ -354,6 +354,23 @@ font-size: .85rem;
   box-shadow: 5px 8px 20px var(--dark-color);
 }
 
+#code-of-ethics .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#code-of-ethics .container p {
+  width: 55%;
+  margin-bottom: 3rem;
+}
+#code-of-ethics .container h4 {
+  padding: 0 0 1rem 0;
+}
+
+
+
 /* About Page End */
 
 
@@ -399,7 +416,7 @@ font-size: .85rem;
 
   #offerings_hero {
     background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -141,7 +141,7 @@ const About = () => {
         <hr></hr>
       </section>
 
-      <section id="main-content">
+      <section id="code-of-ethics">
         <div className="container">
           <h2 className="p-3">Code Of Ethics</h2>
           <h4 className="p-2">
