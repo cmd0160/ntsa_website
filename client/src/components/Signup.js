@@ -17,35 +17,35 @@ const Signup = () => {
           <input
             className="form-input"
             type="text"
-            placeholder="FIRST NAME"
+            placeholder="First Name"
             name="firstName"
             id="firstName"
           />
           <input
             className="form-input"
             type="password"
-            placeholder="LAST NAME"
+            placeholder="Last Name"
             name="lastName"
             id="lastName"
           />
           <input
             className="form-input"
             type="email"
-            placeholder="EMAIL"
+            placeholder="Email"
             name="email"
             id="email"
           />
           <input
             className="form-input"
             type="password"
-            placeholder="PASSWORD"
+            placeholder="Password"
             name="password"
             id="login-password"
           />
           <input
             className="form-input"
             type="password"
-            placeholder="CONFIRM PASSWORD"
+            placeholder="Confirm Password"
             name="password"
             id="login-password"
           />

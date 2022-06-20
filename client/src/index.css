@@ -4,6 +4,7 @@
   --light-color: #fff;
   --dark-color: #333;
   --max-width: 1200px; 
+  font-family: 'Times New Roman', Times, serif;
 }
 
 * {
@@ -159,12 +160,12 @@ h4 {
 input {
   height: 1.8rem;
   margin: .5rem 1rem;
-  padding: .8rem;
+  padding: .5rem;
   border: none;
   border-radius: 3px;
   background: #bcb7b7;
-  font-size: .7rem;
-  color: var(--light-color)
+  font-size: .8rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Home Page Start */
@@ -393,6 +394,7 @@ font-size: .85rem;
   grid-template-rows: 1fr 2fr 3fr;
   border-radius: 3px;
   background: #ffffff;
+  opacity: .9;
   box-shadow: 5px 8px 20px var(--dark-color);
 }
 
@@ -494,7 +496,7 @@ font-size: .85rem;
 
 
 .contact-con {
-    height: 60vh;
+    height: 70vh;
     background: url('../src/images/violins.jpeg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -506,29 +508,22 @@ font-size: .85rem;
 
 
 form .text{
-    width: 50%;
+    width: 75%;
     margin: .2rem;
-    padding: .2rem;
-    background-color: var(--dark-color);
-    opacity: 0.7;
-    color: var(--light-color);
-    font-weight: 800;
+    padding: .5rem;
+    background-color: var(--light-color);
+    opacity: 0.8;
+    color: var(--dark-color);
     font-size: .8rem;
-
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .text::-webkit-input-placeholder {
-    color: var(--light-color);
-    opacity: 0.8;
-    font-family: 'Khula';
-    font-weight: 800;
+    color: var(--dark-color);
 }
 
 input:focus {
     outline: 2px solid var(--primary-color);
-    color: var(--light-color);
-    font-weight: 800;
 }
 
 input:focus::placeholder {
@@ -542,5 +537,9 @@ textarea:focus {
 .message {
     height: 100px;
     border: none;
+    border-radius: 3px;
 }
 
+.message:focus::placeholder {
+    color: transparent;
+}

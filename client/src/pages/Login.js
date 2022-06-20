@@ -27,14 +27,14 @@ const Login = () => {
         <input
           className="form-input"
           type="text"
-          placeholder="EMAIL ADDRESS"
+          placeholder="Email Address"
           name="email"
           id="login-email"
         />
         <input
           className="form-input"
           type="password"
-          placeholder="PASSWORD"
+          placeholder="Password"
           name="password"
           id="login-password"
         />

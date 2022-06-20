@@ -4,6 +4,7 @@ const Contact = () => {
   return (
     <div className="contact-con">
         <h1 className="contact-title p-2">Contact Us</h1>
+        <p>Questions?<br></br> Fill out the following form to email us. <br></br></p>
         <form className="">
           <input
             type="text"

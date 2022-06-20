@@ -94,7 +94,7 @@ const Offerings = () => {
                 </ul>
             </div>
             <div>
-                <h4 className="py-1 left">Teacher Scholarship Requirements</h4>
+                <h4 className="py-1 left">Teacher Scholarship Requirements:</h4>
                 <ul>
                     <li>Two scholarships in the amount of $500.00 will be awarded to teachers who wish to attend summer
                         Suzuki training.</li>
