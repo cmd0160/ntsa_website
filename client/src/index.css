@@ -179,6 +179,12 @@ input {
   /* z-index: 2; */
 }
 
+#main-nav .logo {
+  width: 80px;
+  padding: .3rem;
+}
+
+
 #main-nav .container {
   display: flex;
   flex-direction: row;

@@ -1,11 +1,12 @@
 import React from 'react'
+import ntsaLogo from "../images/ntsa.png";
 
 const Nav = () => {
   return (
 <nav id="main-nav">
     <div className="container">
-        <div className="logo">
-            <a href='/'><i className="fa-solid fa-music fa-3x p-1"></i></a>
+        <div className="theLogo">
+            <a href='/'><img src={ntsaLogo} alt="NTSA Logo" className='logo'/></a>
         </div>
 
         <ul className="nav">
@@ -53,7 +54,7 @@ const Nav = () => {
             </div>
 
             <div>
-                <li><a href="/contact" className="p-h">CONTACT US</a></li>
+                <li><a href="/contact" className="p-h">CONTACT</a></li>
                 <ul>
                     <li><a href="#">Email</a></li>
                 </ul>
