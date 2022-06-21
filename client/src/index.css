@@ -543,3 +543,38 @@ textarea:focus {
 .message:focus::placeholder {
     color: transparent;
 }
+
+/* Membership Section */
+
+#membership_hero {
+  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+}
+
+#membership_hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color)
+}
+
+
+/* Donate Section */
+
+#donate_hero {
+  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+}
+
+#donate_hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color)
+}
