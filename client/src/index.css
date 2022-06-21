@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #2E9946;
+  --primary-color: #54C247;
   --secondary-color: #f99500;
   --light-color: #fff;
   --dark-color: #333;
@@ -118,12 +118,13 @@ h4 {
 .btn-primary { 
   background: var(--primary-color);
   color: var(--light-color);
+  font-weight: 700;
   cursor: pointer;
 }
 .btn-secondary { background: var(--secondary-color);}
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .btn-block {
@@ -180,8 +181,8 @@ input {
 }
 
 #main-nav .logo {
-  width: 80px;
-  padding: .3rem;
+  width: 100px;
+  padding: .5rem;
 }
 
 
