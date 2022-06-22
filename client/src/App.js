@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
 import './index.css';
 
@@ -14,8 +14,13 @@ import Login from "./pages/Login"
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact"
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
 function App() {
   return (
+    <ApolloProvider client={client}>
     <Router>
     <div>
       <Nav />
@@ -35,6 +40,7 @@ function App() {
       <Footer />
     </div>
   </Router>
+  </ApolloProvider>
   );
 }
 
