@@ -13,6 +13,7 @@ import About from "./pages/About"
 import Offerings from "./pages/Offerings"
 import Membership from "./pages/Membership"
 import Login from "./pages/Login"
+import Profile from "./pages/Profile";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact"
 
@@ -49,6 +50,7 @@ function App() {
           <Route exact path="/offerings" element={<Offerings />} />
           <Route exact path="/membership" element={<Membership />} />
           <Route exact path="/login_signup" element={<Login />} />
+          <Route exact path="/profile" element={<Profile />} />
           <Route exact path="/donate" element={<Donate />} />
           <Route exact path="/contact" element={<Contact />} />
           {/* <Route exact path="/admin" component={Admin} /> */}
