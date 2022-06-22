@@ -401,7 +401,6 @@ font-size: .85rem;
   grid-template-rows: 1fr 2fr 3fr;
   border-radius: 3px;
   background: #ffffff;
-  opacity: .9;
   box-shadow: 5px 8px 20px var(--dark-color);
 }
 
@@ -519,7 +518,6 @@ form .text{
     margin: .2rem;
     padding: .5rem;
     background-color: var(--light-color);
-    opacity: 0.8;
     color: var(--dark-color);
     font-size: .8rem;
     font-family: 'Times New Roman', Times, serif;

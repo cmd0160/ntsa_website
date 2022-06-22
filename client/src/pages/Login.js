@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
-
+import { LOGIN_USER } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+// import { useHistory } from "react-router-dom";
 import Signup from "../components/Signup";
+
 
 const Login = () => {
 
@@ -10,7 +14,38 @@ const Login = () => {
         setIsActive(false)
     }
 
+    const [inputState, setInputState] = useState({ email: "", password: "" });
 
+
+    const [login, { error }] = useMutation(LOGIN_USER);
+
+
+    const formSubmission = async (event) => {
+      event.preventDefault();
+      try {
+        const loginResponse = await login({
+          variables: {
+            email: inputState.email,
+            password: inputState.password,
+          },
+        });
+  
+        const token = loginResponse.data.login.token;
+        Auth.login(token);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    const stateChange = (event) => {
+      const { name, value } = event.target;
+      setInputState({
+        ...inputState,
+        [name]: value,
+      });
+    };
+
+    // const history = useHistory();
   return (
 <section id="login-form">
     {isActive ? 
@@ -23,13 +58,14 @@ const Login = () => {
         <h3>North Texas Suzuki Association</h3>
       </div>
 
-      <form>
+      <form onSubmit={formSubmission}>
         <input
           className="form-input"
           type="text"
           placeholder="Email Address"
           name="email"
           id="login-email"
+          onChange={stateChange}
         />
         <input
           className="form-input"
@@ -37,6 +73,7 @@ const Login = () => {
           placeholder="Password"
           name="password"
           id="login-password"
+          onChange={stateChange}
         />
         <div className="row justify-content-center">
           <div className="sign-up-button center">
@@ -44,6 +81,11 @@ const Login = () => {
               LOGIN
             </button>
           </div>
+          {error ? (
+              <div>
+                <p>The login information you have entered is incorrect.</p>
+              </div>
+            ) : null}
         </div>
       </form>
 
