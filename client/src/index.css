@@ -79,6 +79,16 @@ h4 {
 
 /* Utilities */
 
+.active {
+  color: #54C247;
+  font-weight: 900;
+}
+
+.inactive {
+  color: #ff0000;
+  font-weight: 900;
+}
+
 .container {
   max-width: var(--max-width);
   margin: auto;
@@ -149,6 +159,7 @@ h4 {
 .py-1 { padding: 1rem 0;}
 .py-2 { padding: 2rem 0;}
 .py-3 { padding: 3rem 0;}
+.p-0 { padding: 0;}
 .p-h {padding: .5rem;}
 .p-1 { padding: 1rem;}
 .p-2 { padding: 2rem;}
@@ -583,3 +594,67 @@ textarea:focus {
   align-items: center;
   color: var(--light-color)
 }
+
+/* Profile page start */
+
+#profile-page {
+  height: 575px;
+  width: 100vw;
+  margin: auto;
+  background: url("../src/images/violins.jpeg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-page .container {
+  height: 60%;
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  background: var(--dark-color);
+  border-radius: 3px;
+}
+
+#profile-page .container .image-container {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile-page .container .info-container {
+  background: var(--light-color);
+  border-radius: 3px;
+
+}
+
+
+
+/* For images that are completly square */
+/* .circular--square { 
+  border-top-left-radius: 50% 50%; 
+  border-top-right-radius: 50% 50%; 
+  border-bottom-right-radius: 50% 50%; 
+  border-bottom-left-radius: 50% 50%; 
+} */
+
+
+.circular--landscape { 
+  display: inline-block; 
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+  background: var(--dark-color);
+} 
+  
+  .circular--landscape img { 
+    width: auto; 
+    height: 100%; 
+    margin-left: -50px; 
+  }
