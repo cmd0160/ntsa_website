@@ -603,23 +603,27 @@ textarea:focus {
   margin: auto;
   background: url("../src/images/violins.jpeg") no-repeat center center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#profile-page h1 {
+  padding-bottom: 0;
 }
 
 #profile-page .container {
   height: 60%;
   display: grid;
-  margin: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  background: var(--dark-color);
   border-radius: 3px;
+  background: transparent;
+  box-shadow:0 3px 30px var(--dark-color);
+
 }
 
 #profile-page .container .image-container {
   height: 100%;
-  border-radius: 3px;
   background: var(--light-color);
   display: flex;
   flex-direction: column;
@@ -628,10 +632,13 @@ textarea:focus {
 
 #profile-page .container .info-container {
   background: var(--light-color);
-  border-radius: 3px;
-
 }
 
+#profile-page .container .info-container .p-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /* For images that are completly square */
@@ -651,6 +658,7 @@ textarea:focus {
   overflow: hidden; 
   border-radius: 50%; 
   background: var(--dark-color);
+
 } 
   
   .circular--landscape img { 
