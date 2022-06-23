@@ -1,6 +1,6 @@
 import React from "react";
 import ntsaPresident from "../../src/images/christine-cd.jpeg";
-import ntsaTreasurer from "../../src/images/ashliePic.jpeg"
+import ntsaTreasurer from "../../src/images/ashliePic.jpeg";
 
 const About = () => {
   return (
@@ -68,14 +68,69 @@ const About = () => {
               <h3>President</h3>
               <h4>Christine Collins-Davis</h4>
               <p>
-                Christine Collins-Davis attended the University of North Texas
-                for her Bachelors Degree in Music Education and Elementary Music
-                Education. She recently graduated from the University of Texas
-                at Arlington with a Masters of Music Education. She has been
-                teaching in Hurst-Euless-Bedford ISD as a Suzuki Strings
-                Specialist since 2016. Christine is passionate about teaching
-                using the Suzuki ideal of creating better citizens through music
-                lessons.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur, blanditiis? Impedit aliquid qui modi. Consequuntur
+                porro repudiandae enim nesciunt facilis soluta? Ut tempore modi
+                eum beatae, doloribus fugit quod eaque explicabo praesentium
+                repellendus eius quo. Fugiat molestias perferendis sapiente at
+                eveniet aut facilis saepe ducimus unde quia delectus natus
+                praesentium libero illum molestiae, consequuntur vitae ipsum
+                explicabo repellat doloremque nesciunt blanditiis cum? Adipisci
+                facere impedit, eaque sunt laudantium ratione eum quaerat
+                inventore. Rem quae quas voluptates nulla voluptas consectetur
+                dicta modi, beatae mollitia reiciendis esse! Natus accusantium
+                nam soluta cumque distinctio, temporibus totam aspernatur in?
+                Error aperiam optio quidem? Quod quos voluptatem sint
+                consequuntur praesentium cumque ipsam quis soluta, omnis ut
+                itaque aliquid sapiente provident hic inventore ratione earum
+                obcaecati deleniti tempora quisquam. Hic error corporis
+                cupiditate, deserunt dolorem sed architecto dolores. Earum
+                quibusdam nesciunt dolorem. Quidem fuga velit, numquam ipsum
+                laboriosam quo impedit repellat nesciunt hic fugiat labore
+                praesentium recusandae! Corrupti quasi sed nam laudantium,
+                architecto ipsa repudiandae natus quisquam cumque, aut facilis
+                vitae deleniti rerum repellat eos aspernatur esse labore odio
+                voluptates. Quisquam sapiente consequatur odit iusto reiciendis,
+                fugiat eius quod temporibus! Magni laborum laboriosam sit
+                consequuntur aperiam ipsa provident perspiciatis, corporis
+                quidem fugit tempore, quibusdam quisquam vitae molestias
+                repudiandae maiores officia alias sapiente! Quaerat laborum quas
+                ut praesentium eius deserunt illo distinctio esse quidem!
+                Maiores saepe porro at officia dolorum eveniet. Saepe veritatis
+                dicta, nostrum magni, reiciendis quaerat nulla sint facere
+                expedita suscipit eius recusandae exercitationem fugiat porro
+                consectetur molestiae libero, reprehenderit modi deserunt
+                voluptates nobis maxime eligendi quae. Sunt minus, obcaecati
+                asperiores, at incidunt rem pariatur aut odio facilis impedit et
+                earum molestiae officia alias fuga assumenda nostrum cum iusto.
+                Ducimus, in fuga laboriosam magnam facere magni sapiente unde
+                facilis nulla nam eum, ullam soluta. Quam corrupti rerum fuga
+                explicabo. Aspernatur, quaerat? Praesentium enim harum a. Illum
+                cupiditate incidunt magni possimus culpa dicta? Maxime a
+                incidunt nulla deserunt! Iste veniam unde tempore cumque
+                exercitationem eligendi optio repudiandae nihil dolorem,
+                expedita deserunt nobis autem obcaecati harum laborum eius
+                placeat ullam nesciunt, quam iure voluptas. Quae fuga a vel
+                impedit nemo animi sequi voluptatibus earum corrupti
+                reprehenderit, corporis quibusdam error cum non cumque rerum
+                consequuntur ut consequatur totam adipisci assumenda laboriosam,
+                molestias delectus itaque! Porro dolores eius modi natus
+                voluptatibus veritatis fuga beatae assumenda totam animi maxime
+                voluptatum aperiam asperiores, vero atque aliquam ab ipsa autem.
+                Doloremque deserunt doloribus tempore facilis vitae ea culpa
+                ratione quasi fugiat quibusdam ipsum officiis impedit recusandae
+                sapiente totam consequuntur dolorum vel nesciunt laborum,
+                accusantium corporis quam animi, dolorem eaque. Alias autem
+                debitis culpa aut deleniti nostrum? Voluptates qui odit maxime
+                esse pariatur ipsa nemo autem at aperiam magni. Nihil, nulla id
+                suscipit accusamus vero molestiae architecto inventore iste quo
+                quia cupiditate assumenda exercitationem quod dolorum fuga ipsum
+                ratione asperiores magnam tempore sed molestias similique!
+                Inventore ducimus ipsa unde consequatur perferendis sequi
+                incidunt eligendi, ex, doloribus voluptatibus esse voluptate,
+                rem ratione neque! Ut, molestiae! Dolorem, accusamus aliquid.
+                Amet a eos modi, reiciendis quis iure mollitia consequatur, enim
+                repudiandae aspernatur doloribus. Reiciendis, eaque harum!
               </p>
             </div>
             <div className="image-container py-1 center">
