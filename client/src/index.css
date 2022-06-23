@@ -370,7 +370,7 @@ font-size: .85rem;
 
 #board-members .card-container .card .image-container img {
   margin: auto;
-  box-shadow: 5px 8px 20px var(--dark-color);
+  box-shadow: 0 8px 20px var(--dark-color);
   height: 350px;
   width: auto;  
 }
