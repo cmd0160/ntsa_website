@@ -333,6 +333,10 @@ input {
   padding: 3rem 0 1rem 0;
 }
 
+#trophy-festival {
+  margin-bottom: 3rem;
+}
+
 /* Footer */
 
 #footer {
@@ -404,8 +408,18 @@ font-size: .85rem;
 
 #board-members .card-container .card .image-container img {
   margin: auto;
-  box-shadow: 5px 8px 20px var(--dark-color);
+  box-shadow: 0 8px 20px var(--dark-color);
+  height: 350px;
+  width: auto;  
 }
+
+#board-members .card-container .card .info-container p {
+  height: 265px;
+  width: auto;  
+  overflow: scroll; 
+}
+
+
 
 #code-of-ethics .container {
   display: flex;
