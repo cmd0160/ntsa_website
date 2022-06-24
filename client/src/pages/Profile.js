@@ -1,5 +1,6 @@
 import React from "react";
 import pracPic from "../../src/images/christine-cd.jpeg";
+import ashPic from "../../src/images/ashliePic.jpeg";
 import { useQuery } from "@apollo/client";
 import { QUERY_CURRENT_USER } from "../utils/queries";
 
@@ -12,30 +13,37 @@ const Profile = () => {
   return (
     <div>
       <section id="profile-page">
-        <div className="container">
-          <div className="image-container p-1">
-            <div className="circular--landscape">
-              <img src={pracPic} alt="" />
-            </div>
-            <h3 className="p-1">
+        <div className="outer-container">
+          <div className="container">
+            <h4 className="p-h left">
               {firstName} {lastName}
-            </h3>
-            <h4>Member Status:</h4>
-            <p className="active">Active</p>
-          </div>
-          <div className="info-container p-1">
-            <h3 className="p-2 center">Member Information</h3>
-            <div className="p-container">
+            </h4>
+            <hr className="f-r card-hr"></hr>
+            <div className="center">
+              <img src={ashPic} className="card-img" alt="" />
+            </div>
+            <h5 className="center p-0">Member Status:</h5>
+            <p className=" active center">Active</p>
+            <hr className="f-l card-hr"></hr>
+            <h5 className="p-h center">Member Information:</h5>
+            <div className="m-info">
               <p>
                 First Name: <span>{firstName}</span>
-              </p>
-              <p>
+                <br></br>
                 Last Name: <span>{lastName}</span>
-              </p>
-              <p>
+                <br></br>
                 Email: <span>{email}</span>
+                <br></br>
+                Instrument(s): <span>Violin, Viola</span>
+                <br></br>
+                Location: <span>Arlington, TX</span>
+                <br></br>
               </p>
-              <p style={{ color: "blue" }}>Change Password</p>
+              <hr className="f-r card-hr"></hr>
+              <div className="edits">
+                <p style={{ color: "blue" }}>Edit Information</p>
+                <p style={{ color: "blue" }}>Change Password</p>
+              </div>
             </div>
           </div>
         </div>

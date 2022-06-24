@@ -50,12 +50,21 @@ i:hover {
   color: var(--primary-color);
 }
 
+.card-hr {
+  height: 1px;
+  width: 90%;
+  background-color: var(--dark-color);
+  margin: 0;
+}
+
 hr {
   height: 4px;
   width: 70%;
   background-color: var(--dark-color);
   margin: auto;
 }
+
+
 
 button {
   margin: 1rem auto 3rem auto;
@@ -156,6 +165,17 @@ h4 {
   color: var(--light-color);
 }
 
+.my-h {margin: .5rem 0;}
+.my-1 { margin: 1rem 0;}
+.my-2 { margin: 2rem 0;}
+.my-3 { margin: 3rem 0;}
+.m-0 { margin: 0;}
+.m-h {margin: .5rem;}
+.m-1 { margin: 1rem;}
+.m-2 { margin: 2rem;}
+.m-3 { margin: 3rem;}
+
+.py-h {padding: .5rem 0;}
 .py-1 { padding: 1rem 0;}
 .py-2 { padding: 2rem 0;}
 .py-3 { padding: 3rem 0;}
@@ -167,7 +187,11 @@ h4 {
 
 .center { text-align: center;}
 .left { text-align: left;}
-.justify { text-align: left; }
+.right { text-align: right;}
+.justify { text-align: left;}
+
+.f-l {float: left;}
+.f-r {float: right;}
 
 input {
   height: 1.8rem;
@@ -179,6 +203,16 @@ input {
   font-size: .8rem;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.card-img { 
+  margin: auto;
+  display: inline-block; 
+  position: relative; 
+  width: auto; 
+  max-height: 240px; 
+  overflow: hidden;  
+  background: var(--dark-color);
+} 
 
 /* Home Page Start */
 
@@ -598,7 +632,7 @@ textarea:focus {
 /* Profile page start */
 
 #profile-page {
-  height: 575px;
+  height: 80vh;
   width: 100vw;
   margin: auto;
   background: url("../src/images/violins.jpeg") no-repeat center center/cover;
@@ -608,38 +642,46 @@ textarea:focus {
   align-items: center;
 }
 
-#profile-page h1 {
-  padding-bottom: 0;
+#profile-page .outer-container {
+    height: 580px;
+    width: 400px;
+    background: var(--light-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#profile-page .container {
-  height: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: 3px;
-  background: transparent;
-  box-shadow:0 3px 30px var(--dark-color);
-
-}
-
-#profile-page .container .image-container {
-  height: 100%;
+#profile-page .outer-container .container {
+  height: 93%;
+  width: 92%;
   background: var(--light-color);
+  box-shadow: 0 5px 15px var(--dark-color);
+}
+
+#profile-page .outer-container .container hr {
+  margin-bottom: .5rem;
+}
+
+
+
+#profile-page .outer-container .container p {
+  margin-top: 0;
+}
+
+#profile-page .m-info p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+#profile-page .m-info .edits {
+  width: 70%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: .7rem;
 }
-
-#profile-page .container .info-container {
-  background: var(--light-color);
-}
-
-#profile-page .container .info-container .p-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 /* For images that are completly square */
 /* .circular--square { 
@@ -649,8 +691,7 @@ textarea:focus {
   border-bottom-left-radius: 50% 50%; 
 } */
 
-
-.circular--landscape { 
+/* .circular--landscape { 
   display: inline-block; 
   position: relative; 
   width: 200px; 
@@ -658,11 +699,10 @@ textarea:focus {
   overflow: hidden; 
   border-radius: 50%; 
   background: var(--dark-color);
-
 } 
   
   .circular--landscape img { 
     width: auto; 
     height: 100%; 
     margin-left: -50px; 
-  }
+  } */
