@@ -1,6 +1,5 @@
 import React from "react";
 import pracPic from "../../src/images/christine-cd.jpeg";
-import ashPic from "../../src/images/ashliePic.jpeg";
 import { useQuery } from "@apollo/client";
 import { QUERY_CURRENT_USER } from "../utils/queries";
 
@@ -20,7 +19,7 @@ const Profile = () => {
             </h4>
             <hr className="f-r card-hr"></hr>
             <div className="center">
-              <img src={ashPic} className="card-img" alt="" />
+              <img src={pracPic} className="card-img" alt="" />
             </div>
             <h5 className="center p-0">Member Status:</h5>
             <p className=" active center">Active</p>
