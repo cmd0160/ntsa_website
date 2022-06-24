@@ -14,7 +14,7 @@ const Profile = () => {
       <section id="profile-page">
         <div className="outer-container">
           <div className="container">
-            <h4 className="p-h left">
+            <h4 className="p-1 left">
               {firstName} {lastName}
             </h4>
             <hr className="f-r card-hr"></hr>

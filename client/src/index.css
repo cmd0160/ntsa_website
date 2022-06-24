@@ -646,7 +646,7 @@ textarea:focus {
 /* Profile page start */
 
 #profile-page {
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
   margin: auto;
   background: url("../src/images/violins.jpeg") no-repeat center center/cover;
@@ -657,7 +657,7 @@ textarea:focus {
 }
 
 #profile-page .outer-container {
-    height: 580px;
+    height: 600px;
     width: 400px;
     background: var(--light-color);
     border-radius: 5px;
@@ -677,24 +677,25 @@ textarea:focus {
   margin-bottom: .5rem;
 }
 
-
-
 #profile-page .outer-container .container p {
+  text-align: center;
   margin-top: 0;
 }
 
-#profile-page .m-info p {
-  text-align: center;
-  line-height: 1.5;
-}
-
 #profile-page .m-info .edits {
+  height: 100%;
   width: 70%;
+  padding-top: .3rem;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   font-size: .7rem;
+}
+
+#profile-page .m-info p {
+  text-align: left;
+  line-height: 1.5;
 }
 
 /* For images that are completly square */
