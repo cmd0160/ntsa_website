@@ -754,6 +754,10 @@ textarea:focus {
   justify-content: space-between;
 }
 
+#membership .membership-info-container .contact h3 {
+  margin: auto;
+}
+
 #membership .membership-info-container i {
 font-size: 1.7rem;
 padding: .4rem;

@@ -1,7 +1,15 @@
 import React from "react";
 import ntsaPresident from "../../src/images/christine-cd.jpeg";
+import { useQuery } from "@apollo/client";
+import { QUERY_ALL_USERS } from "../utils/queries";
 
 const Membership = () => {
+  const { loading, error, data } = useQuery(QUERY_ALL_USERS);
+  if (loading) return "Loading...";
+  if (error) return `Error! ${error.message}`;
+
+
+
   return (
     <div>
       <section id="membership_hero">
@@ -12,42 +20,47 @@ const Membership = () => {
 
       <h2 className="membership-title p-3 center">Member Directory</h2>
 
-
       <section id="membership">
-        <div className="card">
-          <div className="membership-image-container center">
-            <div className="membership-image-holder">
-              <img src={ntsaPresident} alt="" />
-            </div>
-          </div>
 
-          <div className="membership-info-container">
-            <div className="contact">
-              <div>
-                <h3>Christine Collins-Davis</h3>
+        {data.users.map((users) => {
+          const { firstName, lastName } = users;
+          
+          return (
+            <div key={firstName}>
+              <div className="card">
+                <div className="membership-image-container center">
+                  <div className="membership-image-holder">
+                    <img src={ntsaPresident} alt="" />
+                  </div>
+                </div>
+
+                <div className="membership-info-container">
+                  <div className="contact center">
+                      <h3>{firstName} {lastName}</h3>
+                  </div>
+
+                  <hr className="center card-hr m-h"></hr>
+                  <h4 className="p-h center">Member Information:</h4>
+                  <div className="m-info">
+                    <p className="center">
+                      Instrument(s): <span>Violin, Viola</span>
+                      <br></br>
+                      Location: <span>Arlington, TX</span>
+                      <br></br>
+                    </p>
+                    <div className="center">
+                      <i className="fa fa-envelope"></i>
+                      <i className="fa-solid fa-phone"></i>
+                    </div>
+                  </div>
+                  <hr className="center card-hr m-h"></hr>
+                </div>
               </div>
-            </div>
 
-            <hr className="center card-hr m-h"></hr>
-            <h4 className="p-h center">Member Information:</h4>
-            <div className="m-info">
-              <p className="center">
-                Instrument(s): <span>Violin, Viola</span>
-                <br></br>
-                Location: <span>Arlington, TX</span>
-                <br></br>
-              </p>
-              <div className="center">
-              <i className="fa fa-envelope"></i>
-              <i className="fa-solid fa-phone"></i>
+              <hr className="center card-hr m-3"></hr>
             </div>
-            </div>
-            <hr className="center card-hr m-h"></hr>
-          </div>
-        </div>
-
-        <hr className="center card-hr m-3"></hr>
-
+          );
+        })}
       </section>
     </div>
   );
