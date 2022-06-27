@@ -1,13 +1,768 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-color: #54C247;
+  --secondary-color: #f99500;
+  --light-color: #fff;
+  --dark-color: #333;
+  --max-width: 1100px; 
+  font-family: 'Times New Roman', Times, serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styling */
+
+body {
+  background: var(--light-color);
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: .5rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+i {
+  color: var(--dark-color);
+  padding: .3rem;
+}
+i:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.card-hr {
+  height: 1px;
+  width: 90%;
+  background-color: var(--dark-color);
+  margin: 0;
+}
+
+hr {
+  height: 4px;
+  width: 70%;
+  background-color: var(--dark-color);
+  margin: auto;
+}
+
+
+
+button {
+  margin: 1rem auto 3rem auto;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+/* Utilities */
+
+.active {
+  color: #54C247;
+  font-weight: 900;
+}
+
+.inactive {
+  color: #ff0000;
+  font-weight: 900;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  /* padding: 0 2rem; */
+  overflow: hidden;
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-color);
+}
+
+.container-description p {
+  width: 50%;
+  text-align: center;
+}
+
+
+.btn {
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  background: var(--light-color);
+  color: var(--dark-color);
+  padding: .5rem 1rem;
+}
+
+.btn-light { background: var(--light-color);}
+.btn-primary { 
+  background: var(--primary-color);
+  color: var(--light-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-secondary { background: var(--secondary-color);}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+.bg-primary {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+.bg-secondary {
+  background: var(--secondary-color);
+  color: var(--light-color);
+}
+
+.my-h {margin: .5rem 0;}
+.my-1 { margin: 1rem 0;}
+.my-2 { margin: 2rem 0;}
+.my-3 { margin: 3rem 0;}
+.m-0 { margin: 0;}
+.m-h {margin: .5rem;}
+.m-1 { margin: 1rem;}
+.m-2 { margin: 2rem;}
+.m-3 { margin: 3rem;}
+
+.py-h {padding: .5rem 0;}
+.py-1 { padding: 1rem 0;}
+.py-2 { padding: 2rem 0;}
+.py-3 { padding: 3rem 0;}
+.p-0 { padding: 0;}
+.p-h {padding: .5rem;}
+.p-1 { padding: 1rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 3rem;}
+
+.center { text-align: center;}
+.left { text-align: left;}
+.right { text-align: right;}
+.justify { text-align: left;}
+
+.f-l {float: left;}
+.f-r {float: right;}
+
+input {
+  height: 1.8rem;
+  margin: .5rem 1rem;
+  padding: .5rem;
+  border: none;
+  border-radius: 3px;
+  background: #bcb7b7;
+  font-size: .8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-img { 
+  margin: auto;
+  display: inline-block; 
+  position: relative; 
+  width: auto; 
+  max-height: 220px; 
+  overflow: hidden;  
+  background: var(--dark-color);
+} 
+
+/* For images that are completly square */
+/* .circular--square { 
+  border-top-left-radius: 50% 50%; 
+  border-top-right-radius: 50% 50%; 
+  border-bottom-right-radius: 50% 50%; 
+  border-bottom-left-radius: 50% 50%; 
+} */
+
+/* .circular--landscape { 
+  display: inline-block; 
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+  background: var(--dark-color);
+} 
+  
+  .circular--landscape img { 
+    width: auto; 
+    height: 100%; 
+    margin-left: -50px; 
+  } */
+
+/* Home Page Start */
+
+/* Navigation */
+
+#main-nav {
+  background: var(--light-color);
+  position: sticky;
+  top: 0;
+  /* z-index: 2; */
+}
+
+#main-nav .logo {
+  width: 80px;
+  padding: .5rem;
+}
+
+
+#main-nav .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#main-nav .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+/* Dropdown Directory in Navigation */
+
+#main-nav .nav div ul {
+  position: absolute;
+  margin: .5rem 0 .5rem .2rem;
+  display: none;
+}
+
+#main-nav .nav div ul li {
+  height: 100%;
+  width: 100%;
+  padding: .4rem;
+  background: var(--light-color);
+}
+
+#main-nav .nav div ul li:hover {
+  background-color: #ece1e1;
+}
+
+#main-nav .nav div:hover > ul {
+  display: block;
+}
+
+/* Hero Section */
+
+#hero {
+  background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+  /* opacity: 0.8; */
+}
+
+#hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: var(--light-color);
+}
+
+
+#hero .container p {
+  margin: .4rem auto;
+  width: 400px;
+  color: var(--light-color);
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* Main Content Section */
+
+#main-content .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#main-content .container h2 {
+  padding-bottom: 0;
+}
+
+#main-content .container p {
+  width: 500px;
+  padding-bottom: 3rem;
+}
+
+#main-content .container a {
+  color: blue;
+}
+#main-content .container a:hover {
+  color: var(--primary-color);
+}
+
+/* Announcement Section */
+
+#announcement .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#announcement .container h2 {
+  padding: 3rem 0 1rem 0;
+}
+
+#trophy-festival {
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+
+#footer {
+  background: var(--dark-color);
+}
+
+#footer .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  width: 60vw;
+  
+}
+
+#footer .container h4 {
+  margin-bottom: 1rem;
+}
+
+#footer .container a {
+color: var(--light-color);
+margin: auto;
+font-size: .85rem;
+}
+
+#footer .copyright p {
+  text-align: center;
+  color: var(--light-color);
+}
+#footer hr {
+  margin: auto;
+  width: 70%;
+  background-color: var(--light-color);
+}
+
+/* Home Page End */
+
+/* About Page Start */
+
+#about_hero {
+  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+}
+
+#about_hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+}
+
+#board-members p {
+  margin: 2rem 0;
+}
+
+#board-members .card-container {
+  max-width: var(--max-width);
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+#board-members .card-container .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#board-members .card-container .card .image-container img {
+  margin: auto;
+  box-shadow: 0 8px 20px var(--dark-color);
+  height: 350px;
+  width: auto;  
+}
+
+#board-members .card-container .card .info-container p {
+  height: 265px;
+  width: auto;  
+  overflow: scroll; 
+}
+
+
+
+#code-of-ethics .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#code-of-ethics .container p {
+  width: 55%;
+  margin-bottom: 3rem;
+}
+#code-of-ethics .container h4 {
+  padding: 0 0 1rem 0;
+}
+
+
+
+/* About Page End */
+
+
+/* Login Form Section */
+
+#login-form {
+  background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form .container {
+  padding-bottom: .5rem;
+  height: 400px;
+  max-width: 300px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 5px 8px 20px var(--dark-color);
+}
+
+#login-form .container i {
+  margin: 0;
+  float: right;
+}
+
+#login-form .container button {
+  margin: 1rem;
+}
+
+#login-form .container form {
+  display: grid;
+  grid-template-rows: 1fr 1fr  ;
+}
+
+  /* Login Form Section End*/
+
+  /* Offerings Section */
+
+  #offerings_hero {
+    background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color)
+  }
+
+/* Teacher development announcement Section */
+
+  #teacher-development-announcement .container {
+    height: 100%;
+    width: 55%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-color)
+  }
+
+/* Scholarship Announcement Section */
+
+  #scholarships-announcement .container {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--dark-color)
+  }
+
+  #scholarships-announcement .container p {
+    margin-left: 0;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  #scholarships-announcement .container ul {
+    margin-left: 2rem;
+  }
+
+  #scholarships-announcement .container li {
+    list-style: circle;
+    padding: .1rem;
+    font-size: .9rem;
+  }
+
+  /* Trophy Festival Announcement Section */
+
+  #trophy-festival-announcement .container {
+    height: 100%;
+    width: 55%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--dark-color)
+  }
+
+  #trophy-festival-announcement .container p {
+    margin-left: 0;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  #trophy-festival-announcement .container h2 {
+    margin: auto;
+  }
+
+  #trophy-festival-announcement .container button {
+    display: block;
+    margin: .2rem 0;
+  }
+
+  /* Contact Form */
+
+
+.contact-con {
+    height: 70vh;
+    background: url('../src/images/violins.jpeg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+
+form .text{
+    width: 75%;
+    margin: .2rem;
+    padding: .5rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-size: .8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text::-webkit-input-placeholder {
+    color: var(--dark-color);
+}
+
+input:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.message {
+    height: 100px;
+    border: none;
+    border-radius: 3px;
+}
+
+.message:focus::placeholder {
+    color: transparent;
+}
+
+/* Membership Section */
+
+#membership_hero {
+  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+}
+
+#membership_hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color)
+}
+
+
+/* Donate Section */
+
+#donate_hero {
+  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 60vh;
+}
+
+#donate_hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color)
+}
+
+/* Profile page start */
+
+#profile-page {
+  height: 70vh;
+  width: 100vw;
+  margin: auto;
+  background: url("../src/images/violins.jpeg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-page .outer-container {
+    height: 555px;
+    min-width: 380px;
+    background: var(--light-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#profile-page .outer-container .container {
+  height: 94%;
+  width: 92%;
+  background: var(--light-color);
+  box-shadow: 0 5px 15px var(--dark-color);
+}
+
+#profile-page .outer-container .container hr {
+  margin-bottom: .5rem;
+}
+
+#profile-page .outer-container .container p {
+  text-align: center;
+  margin-top: 0;
+}
+
+#profile-page .m-info .edits {
+  height: 100%;
+  width: 70%;
+  padding-top: .3rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: .7rem;
+}
+
+#profile-page .m-info p {
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* Membership Section */
+
+#membership {
+  width: var(--max-width);
+  margin: auto;
+}
+
+#membership .card {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#membership .membership-info-container {
+  margin: auto;
+}
+
+#membership img {
+  max-height: 200px;
+  width: auto;
+  box-shadow: 0 2px 8px var(--dark-color);
+}
+
+
+#membership .membership-info-container .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#membership .membership-info-container .contact h3 {
+  margin: auto;
+}
+
+#membership .membership-info-container i {
+font-size: 1.7rem;
+padding: .4rem;
+}
+
+#membership .membership-info-container p {
+  line-height: 1.3;
 }
