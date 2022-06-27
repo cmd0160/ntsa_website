@@ -214,6 +214,30 @@ input {
   background: var(--dark-color);
 } 
 
+/* For images that are completly square */
+/* .circular--square { 
+  border-top-left-radius: 50% 50%; 
+  border-top-right-radius: 50% 50%; 
+  border-bottom-right-radius: 50% 50%; 
+  border-bottom-left-radius: 50% 50%; 
+} */
+
+/* .circular--landscape { 
+  display: inline-block; 
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+  background: var(--dark-color);
+} 
+  
+  .circular--landscape img { 
+    width: auto; 
+    height: 100%; 
+    margin-left: -50px; 
+  } */
+
 /* Home Page Start */
 
 /* Navigation */
@@ -646,7 +670,7 @@ textarea:focus {
 /* Profile page start */
 
 #profile-page {
-  height: 86vh;
+  height: 70vh;
   width: 100vw;
   margin: auto;
   background: url("../src/images/violins.jpeg") no-repeat center center/cover;
@@ -657,7 +681,7 @@ textarea:focus {
 }
 
 #profile-page .outer-container {
-    height: 92%;
+    height: 555px;
     min-width: 380px;
     background: var(--light-color);
     border-radius: 5px;
@@ -698,26 +722,47 @@ textarea:focus {
   line-height: 1.3;
 }
 
-/* For images that are completly square */
-/* .circular--square { 
-  border-top-left-radius: 50% 50%; 
-  border-top-right-radius: 50% 50%; 
-  border-bottom-right-radius: 50% 50%; 
-  border-bottom-left-radius: 50% 50%; 
-} */
+/* Membership Section */
 
-/* .circular--landscape { 
-  display: inline-block; 
-  position: relative; 
-  width: 200px; 
-  height: 200px; 
-  overflow: hidden; 
-  border-radius: 50%; 
-  background: var(--dark-color);
-} 
-  
-  .circular--landscape img { 
-    width: auto; 
-    height: 100%; 
-    margin-left: -50px; 
-  } */
+#membership {
+  width: var(--max-width);
+  margin: auto;
+}
+
+#membership .card {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#membership .membership-info-container {
+  margin: auto;
+}
+
+#membership img {
+  max-height: 200px;
+  width: auto;
+  box-shadow: 0 2px 8px var(--dark-color);
+}
+
+
+#membership .membership-info-container .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#membership .membership-info-container .contact h3 {
+  margin: auto;
+}
+
+#membership .membership-info-container i {
+font-size: 1.7rem;
+padding: .4rem;
+}
+
+#membership .membership-info-container p {
+  line-height: 1.3;
+}
