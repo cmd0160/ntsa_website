@@ -35,7 +35,7 @@ const UserSchema = new Schema (
             type: String, 
             required: true, 
             trim: true
-        }, 
+        },
         membershipDate: {
             type: String, 
         }

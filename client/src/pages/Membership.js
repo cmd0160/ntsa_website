@@ -23,7 +23,7 @@ const Membership = () => {
       <section id="membership">
 
         {data.users.map((users) => {
-          const { firstName, lastName } = users;
+          const { firstName, lastName, email, instruments, location } = users;
           
           return (
             <div key={firstName}>
@@ -43,9 +43,9 @@ const Membership = () => {
                   <h4 className="p-h center">Member Information:</h4>
                   <div className="m-info">
                     <p className="center">
-                      Instrument(s): <span>Violin, Viola</span>
+                      Instrument(s): <span>{instruments}</span>
                       <br></br>
-                      Location: <span>Arlington, TX</span>
+                      Location: <span>{location}</span>
                       <br></br>
                     </p>
                     <div className="center">

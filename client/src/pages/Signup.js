@@ -102,7 +102,7 @@ const Signup = () => {
           <input
             className="signup-input"
             type="text"
-            placeholder="Instrument(s)"
+            placeholder="Instrument(s) 'Ex. Violin, Piano, etc.'"
             name="instrument"
             id="instrument"
             onChange={handleChange}
@@ -110,7 +110,7 @@ const Signup = () => {
           <input
             className="signup-input"
             type="text"
-            placeholder="Location"
+            placeholder="City, State"
             name="location"
             id="location"
             onChange={handleChange}

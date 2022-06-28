@@ -7,7 +7,7 @@ const Profile = () => {
   const { loading, error, data } = useQuery(QUERY_CURRENT_USER);
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
-  const { firstName, lastName, email } = data.me;
+  const { firstName, lastName, email, instruments, location } = data.me;
 
   return (
     <div>
@@ -33,9 +33,9 @@ const Profile = () => {
                 <br></br>
                 Email: <span>{email}</span>
                 <br></br>
-                Instrument(s): <span>Violin, Viola</span>
+                Instrument(s): <span>{instruments}</span>
                 <br></br>
-                Location: <span>Arlington, TX</span>
+                Location: <span>{location}</span>
                 <br></br>
               </p>
               <hr className="f-r card-hr"></hr>
