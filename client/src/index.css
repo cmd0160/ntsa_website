@@ -246,7 +246,7 @@ input {
   background: var(--light-color);
   position: sticky;
   top: 0;
-  /* z-index: 2; */
+  z-index: 2;
 }
 
 #main-nav .logo {

@@ -1,4 +1,6 @@
 import React from "react";
+
+
 import ntsaPresident from "../../src/images/christine-cd.jpeg";
 import ntsaTreasurer from "../../src/images/ashliePic.jpeg";
 import vicePresident from "../../src/images/vicePresident.jpg";
@@ -20,7 +22,7 @@ const About = () => {
       <section id="main-content">
         <div className="container">
           <h2 className="p-3">Our Mission</h2>
-          <p>
+          <p id="main-content-p">
             The North Texas Suzuki Association exists to coordinate, support and
             publicize Suzuki events in North Texas. We promote Suzuki teaching
             and training among teachers, parents, students and the general

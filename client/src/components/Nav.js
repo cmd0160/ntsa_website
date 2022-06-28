@@ -1,11 +1,19 @@
 import React from "react";
 import ntsaLogo from "../images/ntsa.png";
 import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const Nav = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
+  };
+
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
   return (
@@ -26,16 +34,34 @@ const Nav = () => {
             </li>
             <ul>
               <li>
-                <a href="#">Mission Statement</a>
+                <NavHashLink
+                  smooth
+                  to="/about/#main-content"
+                  scroll={scrollWithOffset}
+                >
+                  Mission Statement
+                </NavHashLink>
               </li>
               <li>
-                <a href="#">Board Members</a>
+                <NavHashLink
+                  smooth
+                  to="/about/#board-members"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Board Members
+                </NavHashLink>
               </li>
               <li>
-                <a href="#">Code Of Ethics</a>
+                <NavHashLink
+                  smooth
+                  to="/about/#code-of-ethics"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Code of Ethics
+                </NavHashLink>
               </li>
               <li>
-                <a href="#">Bylaws</a>
+                <Link to="/about">Bylaws</Link>
               </li>
             </ul>
           </div>
@@ -48,16 +74,40 @@ const Nav = () => {
             </li>
             <ul>
               <li>
-                <a href="#">Biannual Meetings</a>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Biannual Meetings
+                </NavHashLink>
               </li>
               <li>
-                <a href="#">Teacher Development</a>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#teacher-development-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Teacher Development
+                </NavHashLink>{" "}
               </li>
               <li>
-                <a href="#">Scholarships</a>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#scholarships-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Scholarships
+                </NavHashLink>{" "}
               </li>
               <li>
-                <a href="#">Trophy Festival</a>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#trophy-festival-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  Trophy Festival
+                </NavHashLink>{" "}
               </li>
             </ul>
           </div>
@@ -70,10 +120,10 @@ const Nav = () => {
             </li>
             <ul>
               <li>
-                <a href="#">Amazon Smile</a>
+                <Link to="/donate">Amazon Smile</Link>
               </li>
               <li>
-                <a href="#">Donate Here</a>
+                <Link to="/donate">Donate Here</Link>
               </li>
             </ul>
           </div>
@@ -84,11 +134,6 @@ const Nav = () => {
                 CONTACT
               </a>
             </li>
-            <ul>
-              <li>
-                <a href="#">Email</a>
-              </li>
-            </ul>
           </div>
 
           {Auth.loggedIn() ? (
@@ -101,7 +146,13 @@ const Nav = () => {
                 </li>
                 <ul>
                   <li>
-                    <a href="#">Member Directory</a>
+                    <NavHashLink
+                      smooth
+                      to="/membership/#member-directory"
+                      scroll={(el) => scrollWithOffset(el)}
+                    >
+                      Member Directory
+                    </NavHashLink>{" "}
                   </li>
                 </ul>
               </div>
@@ -143,12 +194,12 @@ const Nav = () => {
           )}
 
           <li>
-            <a href="http://facebook.com" target="_blank">
+            <a href="http://facebook.com" target="_blank" rel="noreferrer">
               <i className="fab fa-facebook fa-2x"></i>
             </a>
           </li>
           <li>
-            <a href="http://instagram.com" target="_blank">
+            <a href="http://instagram.com" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram fa-2x"></i>
             </a>
           </li>

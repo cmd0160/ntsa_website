@@ -18,7 +18,7 @@ const Membership = () => {
         </div>
       </section>
 
-      <h2 className="membership-title p-3 center">Member Directory</h2>
+      <h2 id='member-directory' className="membership-title p-3 center">Member Directory</h2>
 
       <section id="membership">
 
