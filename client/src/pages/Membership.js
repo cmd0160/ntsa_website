@@ -8,8 +8,6 @@ const Membership = () => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
-
-
   return (
     <div>
       <section id="membership_hero">
@@ -49,14 +47,13 @@ const Membership = () => {
                       <br></br>
                     </p>
                     <div className="center">
-                      <i className="fa fa-envelope"></i>
+                      <a href={"mailto:" + email}><i className="fa fa-envelope"></i></a>
                       <i className="fa-solid fa-phone"></i>
                     </div>
                   </div>
                   <hr className="center card-hr m-h"></hr>
                 </div>
               </div>
-
               <hr className="center card-hr m-3"></hr>
             </div>
           );
