@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
-
 import Auth from "../utils/auth";
 
 const Signup = () => {
@@ -45,55 +44,75 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <div className="container">
-        <div className="exit-row">
-          <i className="fa-solid fa-xmark"></i>
-        </div>
+    <section id="signup-section">
 
-        <div className="center">
+      <section id="about_hero">
+        <div className="container">
+          <h1>Signup</h1>
+        </div>
+      </section>
+
+      <div className="signup-container">
+
+        <div className="center m-3">
           <h3>North Texas Suzuki Association</h3>
         </div>
 
         <form onSubmit={handleFormSubmit}>
           <input
-            className="form-input"
+            className="signup-input"
             type="text"
-            placeholder="First Name"
+            placeholder="First Name*"
             name="firstName"
             id="firstName"
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="signup-input"
             type="text"
-            placeholder="Last Name"
+            placeholder="Last Name*"
             name="lastName"
             id="lastName"
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="signup-input"
             type="email"
-            placeholder="Email"
+            placeholder="Email*"
             name="email"
             id="email"
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="signup-input"
             type="password"
-            placeholder="Password"
+            placeholder="Password*"
             name="password"
             id="login-password"
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="signup-input"
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Confirm Password*"
             name="password"
             id="login-password"
+            onChange={handleChange}
+          />
+          <input
+            className="signup-input"
+            type="text"
+            placeholder="Instrument(s)"
+            name="instrument"
+            id="instrument"
+            onChange={handleChange}
+          />
+          <input
+            className="signup-input"
+            type="text"
+            placeholder="Location"
+            name="location"
+            id="location"
             onChange={handleChange}
           />
           {/* <div className="row justify-content-center">
@@ -111,7 +130,7 @@ const Signup = () => {
         </form>
         {error && <div>Signup failed</div>}
       </div>
-    </div>
+    </section>
   );
 };
 

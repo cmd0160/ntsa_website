@@ -516,6 +516,41 @@ font-size: .85rem;
 
   /* Login Form Section End*/
 
+  /* Signup section */
+
+  #signup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signup-section .signup-container {
+    height: 500px;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signup-section .signup-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signup-section .signup-container .signup-input{
+    width: 400px;
+    margin: .2rem;
+    padding: .5rem;
+    background-color: rgb(236, 224, 224);
+    color: var(--dark-color);
+    font-size: .8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
   /* Offerings Section */
 
   #offerings_hero {
