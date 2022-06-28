@@ -6,8 +6,8 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         email: String
-        role: String
-        membershipDate: String
+        instruments: String
+        location: String
     }
     type Auth {
         token: ID!
@@ -25,6 +25,8 @@ const typeDefs = gql`
             lastName: String!
             email: String!
             password: String!
+            instruments: String!
+            location: String!
         ): Auth
         updateUser(
             _id: ID!
@@ -32,7 +34,8 @@ const typeDefs = gql`
             lastName: String
             email: String
             password: String
-            role: String
+            instruments: String
+            location: String
         ): User
         deleteUser(_id: ID!): User  
     }      

@@ -26,11 +26,15 @@ const UserSchema = new Schema (
             trim: true, 
             minlength: 8
         }, 
-        role: {
+        instruments: {
             type: String, 
             required: true, 
-            enum: ['user', 'member', 'admin'], 
-            default: 'user'
+            trim: true
+        }, 
+        location: {
+            type: String, 
+            required: true, 
+            trim: true
         }, 
         membershipDate: {
             type: String, 
