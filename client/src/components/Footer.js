@@ -23,7 +23,7 @@ const Footer = () => {
                   to="/about/#main-content"
                   scroll={scrollWithOffset}
                 >
-                  Mission Statement
+                  <span className="footerNav">Mission Statement</span>
                 </NavHashLink>
               </li>
               <li>
@@ -32,7 +32,7 @@ const Footer = () => {
                   to="/about/#board-members"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Board Members
+                  <span className="footerNav">Board Members</span>
                 </NavHashLink>
               </li>
               <li>
@@ -41,7 +41,7 @@ const Footer = () => {
                   to="/about/#code-of-ethics"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Code of Ethics
+                  <span className="footerNav">Code of Ethics</span>
                 </NavHashLink>
               </li>
             </ul>
@@ -57,7 +57,7 @@ const Footer = () => {
                   to="/offerings/#announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Biannual Meetings
+                  <span className="footerNav">Biannual Meetings</span>
                 </NavHashLink>
               </li>
               <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                   to="/offerings/#teacher-development-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Teacher Development
+                  <span className="footerNav">Teacher Development</span>
                 </NavHashLink>{" "}
               </li>
               <li>
@@ -75,7 +75,7 @@ const Footer = () => {
                   to="/offerings/#scholarships-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Scholarships
+                  <span className="footerNav">Scholarships</span>
                 </NavHashLink>{" "}
               </li>
               <li>
@@ -84,7 +84,7 @@ const Footer = () => {
                   to="/offerings/#trophy-festival-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Trophy Festival
+                  <span className="footerNav">Trophy Festival</span>
                 </NavHashLink>{" "}
               </li>
             </ul>
@@ -99,7 +99,7 @@ const Footer = () => {
                 to="/membership/#member-directory"
                 scroll={(el) => scrollWithOffset(el)}
               >
-                Member Directory
+                  <span className="footerNav">Member Directory</span>
               </NavHashLink>
             </ul>
           </div>
