@@ -670,7 +670,7 @@ textarea:focus {
 /* Profile page start */
 
 #profile-page {
-  height: 70vh;
+  height: 85vh;
   width: 100vw;
   margin: auto;
   background: url("../src/images/violins.jpeg") no-repeat center center/cover;
