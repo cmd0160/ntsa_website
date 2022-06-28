@@ -292,6 +292,14 @@ input {
   display: block;
 }
 
+#main-nav .nav .nestedNav {
+  color: var(--dark-color);
+}
+
+#main-nav .nav .nestedNav:hover {
+  color: var(--primary-color);
+}
+
 /* Hero Section */
 
 #hero {

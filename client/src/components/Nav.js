@@ -39,7 +39,7 @@ const Nav = () => {
                   to="/about/#main-content"
                   scroll={scrollWithOffset}
                 >
-                  Mission Statement
+                  <span className="nestedNav">Mission Statement</span>
                 </NavHashLink>
               </li>
               <li>
@@ -48,7 +48,7 @@ const Nav = () => {
                   to="/about/#board-members"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Board Members
+                  <span className="nestedNav">Board Members</span>
                 </NavHashLink>
               </li>
               <li>
@@ -57,11 +57,11 @@ const Nav = () => {
                   to="/about/#code-of-ethics"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Code of Ethics
+                  <span className="nestedNav">Code of Ethics</span>
                 </NavHashLink>
               </li>
               <li>
-                <Link to="/about">Bylaws</Link>
+              <span className="nestedNav">Bylaws</span>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Nav = () => {
                   to="/offerings/#announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Biannual Meetings
+                  <span className="nestedNav">Biannual Meetings</span>
                 </NavHashLink>
               </li>
               <li>
@@ -88,7 +88,7 @@ const Nav = () => {
                   to="/offerings/#teacher-development-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Teacher Development
+                  <span className="nestedNav">Teacher Development</span>
                 </NavHashLink>{" "}
               </li>
               <li>
@@ -97,7 +97,7 @@ const Nav = () => {
                   to="/offerings/#scholarships-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Scholarships
+                  <span className="nestedNav">Scholarships</span>
                 </NavHashLink>{" "}
               </li>
               <li>
@@ -106,7 +106,7 @@ const Nav = () => {
                   to="/offerings/#trophy-festival-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
-                  Trophy Festival
+                  <span className="nestedNav">Trophy Festival</span>
                 </NavHashLink>{" "}
               </li>
             </ul>
@@ -151,7 +151,7 @@ const Nav = () => {
                       to="/membership/#member-directory"
                       scroll={(el) => scrollWithOffset(el)}
                     >
-                      Member Directory
+                  <span className="nestedNav">Member Directory</span>
                     </NavHashLink>{" "}
                   </li>
                 </ul>
