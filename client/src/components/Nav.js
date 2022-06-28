@@ -177,7 +177,7 @@ const Nav = () => {
             <>
               <div>
                 <li>
-                  <a href="/login_signup" className="p-h">
+                  <a href="/login" className="p-h">
                     LOGIN/JOIN
                   </a>
                 </li>
