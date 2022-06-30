@@ -793,10 +793,17 @@ textarea:focus {
   margin-bottom: 1rem;
 }
 
-#edit-form p {
-  font-size: .8rem;
+#edit-form, #edit-section p {
+  font-size: .7rem;
 }
 
+#editPass-section p {
+  font-size: .7rem;
+}
+
+#edit-section p:hover {
+  cursor: pointer;
+}
 
 /* Membership Section */
 

@@ -13,7 +13,6 @@ const Profile = () => {
     } else if (editForm) {
       setEditForm(false);
     }
-
   };
 
   const { loading, error, data } = useQuery(QUERY_CURRENT_USER);
@@ -36,6 +35,7 @@ const Profile = () => {
             <h5 className="center p-0">Member Status:</h5>
             <p className=" active center">Active</p>
             <hr className="f-l card-hr"></hr>
+
             {!editForm ? (
                 <>
             <h5 className="p-h center">Member Information:</h5>
@@ -57,7 +57,6 @@ const Profile = () => {
                     <p style={{ color: "blue" }} onClick={handleEdit}>
                       Edit Information
                     </p>
-                    <p style={{ color: "blue" }}>Change Password</p>
                   </div>
                   </div>
                 </>
