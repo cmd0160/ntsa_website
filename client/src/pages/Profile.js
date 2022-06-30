@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import pracPic from "../../src/images/christine-cd.jpeg";
 import { useQuery } from "@apollo/client";
 import { QUERY_CURRENT_USER } from "../utils/queries";
+import Edit from "../components/Edit";
 
 const Profile = () => {
+const [editForm, setEditForm] = useState(false);
+
+const handleEdit = () => {
+  setEditForm(true);
+}
+
   const { loading, error, data } = useQuery(QUERY_CURRENT_USER);
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
+  console.log(data)
   const { firstName, lastName, email, instruments, location } = data.me;
 
   return (
@@ -26,6 +34,7 @@ const Profile = () => {
             <hr className="f-l card-hr"></hr>
             <h5 className="p-h center">Member Information:</h5>
             <div className="m-info">
+              {!editForm ? 
               <p>
                 First Name: <span>{firstName}</span>
                 <br></br>
@@ -38,9 +47,10 @@ const Profile = () => {
                 Location: <span>{location}</span>
                 <br></br>
               </p>
+                  : <Edit />}
               <hr className="f-r card-hr"></hr>
               <div className="edits">
-                <p style={{ color: "blue" }}>Edit Information</p>
+                <p style={{ color: "blue" }} onClick={handleEdit}>Edit Information</p>
                 <p style={{ color: "blue" }}>Change Password</p>
               </div>
             </div>
