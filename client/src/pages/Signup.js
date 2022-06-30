@@ -10,6 +10,8 @@ const Signup = () => {
     lastName: "",
     email: "",
     password: "",
+    instruments: "",
+    location: ""
   });
 
   const [addUser, { error }] = useMutation(ADD_USER);
@@ -103,8 +105,8 @@ const Signup = () => {
             className="signup-input"
             type="text"
             placeholder="Instrument(s) 'Ex. Violin, Piano, etc.'"
-            name="instrument"
-            id="instrument"
+            name="instruments"
+            id="instruments"
             onChange={handleChange}
           />
           <input
