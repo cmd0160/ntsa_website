@@ -5,16 +5,20 @@ import { QUERY_CURRENT_USER } from "../utils/queries";
 import Edit from "../components/Edit";
 
 const Profile = () => {
-const [editForm, setEditForm] = useState(false);
+  const [editForm, setEditForm] = useState(false);
 
-const handleEdit = () => {
-  setEditForm(true);
-}
+  const handleEdit = () => {
+    if(!editForm) {
+      setEditForm(true);
+    } else if (editForm) {
+      setEditForm(false);
+    }
+
+  };
 
   const { loading, error, data } = useQuery(QUERY_CURRENT_USER);
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
-  console.log(data)
   const { firstName, lastName, email, instruments, location } = data.me;
 
   return (
@@ -32,28 +36,35 @@ const handleEdit = () => {
             <h5 className="center p-0">Member Status:</h5>
             <p className=" active center">Active</p>
             <hr className="f-l card-hr"></hr>
+            {!editForm ? (
+                <>
             <h5 className="p-h center">Member Information:</h5>
             <div className="m-info">
-              {!editForm ? 
-              <p>
-                First Name: <span>{firstName}</span>
-                <br></br>
-                Last Name: <span>{lastName}</span>
-                <br></br>
-                Email: <span>{email}</span>
-                <br></br>
-                Instrument(s): <span>{instruments}</span>
-                <br></br>
-                Location: <span>{location}</span>
-                <br></br>
-              </p>
-                  : <Edit />}
-              <hr className="f-r card-hr"></hr>
-              <div className="edits">
-                <p style={{ color: "blue" }} onClick={handleEdit}>Edit Information</p>
-                <p style={{ color: "blue" }}>Change Password</p>
-              </div>
-            </div>
+                  <p>
+                    First Name: <span>{firstName}</span>
+                    <br></br>
+                    Last Name: <span>{lastName}</span>
+                    <br></br>
+                    Email: <span>{email}</span>
+                    <br></br>
+                    Instrument(s): <span>{instruments}</span>
+                    <br></br>
+                    Location: <span>{location}</span>
+                    <br></br>
+                  </p>
+                  <hr className="f-r card-hr"></hr>
+                  <div className="edits">
+                    <p style={{ color: "blue" }} onClick={handleEdit}>
+                      Edit Information
+                    </p>
+                    <p style={{ color: "blue" }}>Change Password</p>
+                  </div>
+                  </div>
+                </>
+              ) : (
+                <Edit togglePage={handleEdit} userData={data} />
+              )}
+
           </div>
         </div>
       </section>
