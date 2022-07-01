@@ -45,6 +45,7 @@ const Edit = (props) => {
         },
       });
       console.log(data);
+      alert('Member Info Updated!')
     } catch {
       console.log(error);
     }
