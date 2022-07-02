@@ -4,7 +4,7 @@ import edImage from "./../images/music_ed.jpeg";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home-page">
           <section id="hero">
         <div className="container">
             <h1>Announcements</h1>
