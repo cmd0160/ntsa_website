@@ -4,7 +4,6 @@ import { setContext } from "@apollo/client/link/context";
 
 
 import './index.css';
-import './mobile.css';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
