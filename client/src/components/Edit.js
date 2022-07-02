@@ -27,7 +27,8 @@ const Edit = (props) => {
   const [updateUser, { error }] = useMutation(UPDATE_USER);
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target.value;
+    console.log(event.target.value)
 
     setFormState({
       ...formState,
@@ -36,18 +37,27 @@ const Edit = (props) => {
   };
 
   const newInfo = async (event) => {
+
+    const dataObject = {
+      firstName: event.target[0].value,
+      lastName: event.target[1].value,
+      email: event.target[2].value,
+      instruments: event.target[3].value,
+      location: event.target[4].value
+    }
+    console.log(dataObject);
     event.preventDefault();
     try {
       const { data } = await updateUser({
         variables: {
           _id: _id,
-          ...formState,
+          ...dataObject,
         },
       });
       console.log(data);
       alert('Member Info Updated!')
     } catch {
-      console.log(error);
+      console.log(event);
     }
   };
 
@@ -65,25 +75,28 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  placeholder={"First Name: " + firstName}
+                  // placeholder={"First Name: " + firstName}
                   name="firstName"
                   id="firstName"
+                  defaultValue={firstName}
                   onBlur={handleChange}
                 />
                 <input
                   className="signup-input"
                   type="text"
-                  placeholder={"Last Name: " + lastName}
+                  // placeholder={"Last Name: " + lastName}
                   name="lastName"
                   id="lastName"
+                  defaultValue={lastName}
                   onBlur={handleChange}
                 />
                 <input
                   className="signup-input"
                   type="email"
-                  placeholder={"Email: " + email}
+                  // placeholder={"Email: " + email}
                   name="email"
                   id="email"
+                  defaultValue={email}
                   onBlur={handleChange}
                 />
                 <input
@@ -92,14 +105,16 @@ const Edit = (props) => {
                   placeholder={"Instruments: " + instruments}
                   name="instruments"
                   id="instruments"
+                  defaultValue={instruments}
                   onBlur={handleChange}
                 />
                 <input
                   className="signup-input"
                   type="text"
-                  placeholder={"Location: " + location}
+                  // placeholder={"Location: " + location}
                   name="location"
                   id="location"
+                  defaultValue={location}
                   onBlur={handleChange}
                 />
                 {/* <div className="row justify-content-center">
