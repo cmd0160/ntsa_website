@@ -365,9 +365,11 @@ input {
   padding: 3rem 0 1rem 0;
 }
 
-#trophy-festival {
-  margin-bottom: 3rem;
+#home-page .container-card {
+  margin: auto;
 }
+
+
 
 /* Footer */
 
@@ -679,6 +681,19 @@ textarea:focus {
 .message:focus::placeholder {
     color: transparent;
 }
+
+/* Donation Section */
+
+.donation-info {
+  width: 500px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+#donate-section hr {
+  margin-bottom: 3rem;
+}
+
 
 /* Membership Section */
 
