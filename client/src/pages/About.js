@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import ntsaPresident from "../../src/images/christine-cd.jpeg";
 import ntsaTreasurer from "../../src/images/ashliePic.jpeg";
 import vicePresident from "../../src/images/vicePresident.jpg";

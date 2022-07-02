@@ -58,6 +58,7 @@ const Signup = () => {
 
         <div className="center m-3">
           <h3>North Texas Suzuki Association</h3>
+          <p>Welcome to our NTSA signup page! Please fill out the information below to register for our organization.</p>
         </div>
 
         <form onSubmit={handleFormSubmit}>
