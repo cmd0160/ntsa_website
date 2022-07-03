@@ -1,6 +1,9 @@
 import React from 'react'
 
 const EditPass = (props) => {
+  const { _id } = props.user;
+
+  
   return (
     <div id="editPass-section">
     <h5 className="p-h center">Update Password:</h5>

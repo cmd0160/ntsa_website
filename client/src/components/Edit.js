@@ -34,6 +34,7 @@ const Edit = (props) => {
       ...formState,
       [name]: value,
     });
+    console.log(error);
   };
 
   const newInfo = async (event) => {
@@ -138,7 +139,7 @@ const Edit = (props) => {
           </div>
         </>
       ) : (
-        <EditPass togglePass={togglePassHandler} />
+        <EditPass togglePass={togglePassHandler} user={props.userData.me} />
       )}
     </div>
   );
