@@ -22,7 +22,7 @@ const EditPass = (props) => {
             type="password"
             placeholder="Confirm New Password*"
             name="password"
-            id="login-password"
+            id="confirm-password"
           />
           <div className="sign-up-button center ">
             <button className=" btn btn-primary" type="submit">
