@@ -86,11 +86,12 @@ const Home = () => {
                 <h2>Trophy Festival</h2>
                 <p>An opportunity for North Texas area Suzuki students to receive feedback on a solo of their choice.
                 </p>
-                <button className="btn btn-primary">Trophy Festival</button>
+                <button className="btn btn-primary">The Trophy Festival</button>
             </div>
         </div>
     </section>
     <hr className='trophy-hr'></hr>
+
 
     </div>
   )
