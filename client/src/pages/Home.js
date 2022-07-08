@@ -1,8 +1,16 @@
 import React from 'react'
 import edImage from "./../images/music_ed.jpeg";
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 
 const Home = () => {
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+      };
+
   return (
     <div id="home-page">
           <section id="hero">
@@ -13,7 +21,7 @@ const Home = () => {
                     ratione, qui et corporis provident sint placeat. Voluptatum amet, quis aspernatur expedita, ullam
                     quibusdam possimus nesciunt eum doloremque obcaecati temporibus, laborum veniam ea!
                 </p>
-                <button className="btn btn-primary">Join Now!</button>
+                <Link to='/login'><button className="btn btn-primary">Join Now!</button></Link>
         </div>
     </section>
 
@@ -34,22 +42,11 @@ const Home = () => {
                 The NTSA is a chapter affiliate of the <span><a href="https://suzukiassociation.org/">Suzuki Association
                         of The Americas</a></span>.
             </p>
-            <hr></hr>
+            <hr className='trophy-hr'></hr>
         </div>
     </section>
 
-    <section id="announcement">
-        <div className="container">
-            <h2>Next biannual NTSA general meeting</h2>
-            <p>September 18th, 2022
-            <br></br>
-                3pm
-                <br></br>
-                Location: TBD
-            </p>
-            <button className="btn btn-primary">Events</button>
-        </div>
-    </section>
+
 
     <section id="teacher-development">
         <div className="container container-card">
@@ -59,8 +56,13 @@ const Home = () => {
             <div className="container-description">
                 <h2>Teacher Development</h2>
                 <p>Stay up to date with our teacher development event taking place on MLK weekend.</p>
-                <button className="btn btn-primary">Teacher Development</button>
-            </div>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#teacher-development-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <button className="btn btn-primary">Teacher Development</button>
+                </NavHashLink>{" "}            </div>
         </div>
     </section>
 
@@ -69,8 +71,13 @@ const Home = () => {
             <div className="container-description">
                 <h2>Scholarships</h2>
                 <p>Scholarship notifications will be sent out on March 1st, 2022</p>
-                <button className="btn btn-primary">Scholarships</button>
-            </div>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#scholarships-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <button className="btn btn-primary">Scholarships</button>
+                </NavHashLink>{" "}            </div>
             <div className="image-container">
                 <img src={edImage} alt="" />
             </div>
@@ -86,8 +93,13 @@ const Home = () => {
                 <h2>Trophy Festival</h2>
                 <p>An opportunity for North Texas area Suzuki students to receive feedback on a solo of their choice.
                 </p>
-                <button className="btn btn-primary">Trophy Festival</button>
-            </div>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#trophy-festival-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <button className="btn btn-primary">Trophy Festival</button>
+                </NavHashLink>{" "}            </div>
         </div>
     </section>
     <hr className='trophy-hr'></hr>
