@@ -90,6 +90,8 @@ const Home = () => {
             </div>
         </div>
     </section>
+    <hr className='trophy-hr'></hr>
+
     </div>
   )
 }
