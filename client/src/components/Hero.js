@@ -14,7 +14,7 @@ const Hero = () => {
         return num + 1;
       });
     };
-    setInterval(timer, 20000);
+    setInterval(timer, 10000);
     // return () => { clearInterval(timer); }
   }, []);
 
@@ -22,10 +22,7 @@ const Hero = () => {
     <section
       id="hero"
       style={{
-        backgroundImage: `url(${imageArr[imageIndex]})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(${imageArr[imageIndex]})`
       }}
     >
       <div className="container">

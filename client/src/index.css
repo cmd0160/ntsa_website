@@ -306,7 +306,9 @@ input {
   /* background: url(../src/images/music_ed.jpeg) no-repeat center center/cover; */
   width: 100%;
   height: 60vh;
-  /* opacity: 0.8; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #hero .container {
@@ -326,6 +328,7 @@ input {
   font-weight: bold;
   text-align: justify;
 }
+
 
 /* Main Content Section */
 
