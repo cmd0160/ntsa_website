@@ -1,10 +1,9 @@
-import React from "react";
 import ntsaLogo from "../images/ntsa.png";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
-const Nav = () => {
+const Nav = ({ mobileNavHandler, displayMobileNav }) => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -15,6 +14,8 @@ const Nav = () => {
     const yOffset = -80;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
+
+
 
   return (
     <nav id="main-nav">
@@ -61,7 +62,7 @@ const Nav = () => {
                 </NavHashLink>
               </li>
               <li>
-              <span className="nestedNav">Bylaws</span>
+                <span className="nestedNav">Bylaws</span>
               </li>
             </ul>
           </div>
@@ -151,7 +152,7 @@ const Nav = () => {
                       to="/membership/#member-directory"
                       scroll={(el) => scrollWithOffset(el)}
                     >
-                  <span className="nestedNav">Member Directory</span>
+                      <span className="nestedNav">Member Directory</span>
                     </NavHashLink>{" "}
                   </li>
                 </ul>
@@ -202,6 +203,13 @@ const Nav = () => {
             <a href="http://instagram.com" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram fa-2x"></i>
             </a>
+          </li>
+          <li className="hamburger" onClick={mobileNavHandler}>
+            {!displayMobileNav ? (
+              <i className="fa-solid fa-bars fa-3x"></i>
+            ) : (
+              <i className="fa-solid fa-x fa-3x"></i>
+            )}
           </li>
         </ul>
       </div>

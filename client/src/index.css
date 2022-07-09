@@ -256,6 +256,7 @@ input {
 
 
 #main-nav .container {
+  padding: 0 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -300,13 +301,64 @@ input {
   color: var(--primary-color);
 }
 
+/* Mobile Nav */
+#mobileNav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+#mobileNav li {
+  padding: 1rem;
+}
+
+
+/* MobileNav Dropdown */
+
+#mobileNav div ul {
+  position: relative;
+  margin: .5rem 0 .5rem .2rem;
+  display: none;
+}
+
+#mobileNav div ul li {
+  height: 100%;
+  width: 100%;
+  padding: .4rem;
+  background: var(--light-color);
+}
+
+#mobileNav div ul li:hover {
+  background-color: #ece1e1;
+}
+
+#mobileNav div:hover > ul {
+  display: block;
+}
+
+#mobileNav .nestedNav {
+  color: var(--dark-color);
+}
+
+#mobileNav .nestedNav:hover {
+  color: var(--primary-color);
+}
+
+
 /* Hero Section */
 
 #hero {
-  background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+  /* background: url(../src/images/music_ed.jpeg) no-repeat center center/cover; */
   width: 100%;
   height: 60vh;
-  /* opacity: 0.8; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #hero .container {
@@ -326,6 +378,7 @@ input {
   font-weight: bold;
   text-align: justify;
 }
+
 
 /* Main Content Section */
 
