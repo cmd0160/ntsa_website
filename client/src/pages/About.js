@@ -51,8 +51,8 @@ const About = () => {
               <div className="image-holder">
                 <img src={ntsaPresident} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
-              <i className="fab fa-linkedin fa-2x"></i>
+              <a href="mailto:christinenicole.collins@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
+              {/* <i className="fab fa-linkedin fa-2x"></i> */}
             </div>
             <div className="info-container py-1">
               <h3>President</h3>
