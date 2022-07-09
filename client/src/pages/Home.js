@@ -44,9 +44,7 @@ const Home = () => {
 
       <section id="teacher-development">
         <div className="container container-card">
-          <div className="image-container">
             <img src={edImage} alt="" />
-          </div>
           <div className="container-description">
             <h2>Teacher Development</h2>
             <p>
@@ -104,7 +102,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <hr className="trophy-hr"></hr>
+      <hr className="bottom-hr"></hr>
     </div>
   );
 };
