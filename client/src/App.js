@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
@@ -7,6 +8,7 @@ import './index.css';
 import './mobile.css';
 
 import Nav from './components/Nav';
+import MobileNav from "./components/MobileNav";
 import Footer from './components/Footer';
 
 import Home from "./pages/Home";
@@ -40,11 +42,19 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 function App() {
+  const [displayMobileNav, setDisplayMobileNav] = useState(false);
+
+  const mobileNavHandler = () => {
+    setDisplayMobileNav((curr) => !curr);
+  };
+
+
   return (
     <ApolloProvider client={client}>
     <Router>
     <div>
-      <Nav />
+      <Nav mobileNavHandler={mobileNavHandler} displayMobileNav={displayMobileNav}/>
+      {displayMobileNav && <MobileNav />}
       <div>
         <Routes>
           <Route exact path="/" element={<Home />} />
