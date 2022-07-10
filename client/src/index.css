@@ -39,6 +39,7 @@ p {
 img {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 i {
@@ -106,6 +107,8 @@ h4 {
 }
 
 .container-card {
+  height: 350px;
+  width: fit-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -306,10 +309,10 @@ input {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: .85rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -353,7 +356,6 @@ input {
 /* Hero Section */
 
 #hero {
-  /* background: url(../src/images/music_ed.jpeg) no-repeat center center/cover; */
   width: 100%;
   height: 60vh;
   background-position: center;
@@ -381,6 +383,8 @@ input {
 
 
 /* Main Content Section */
+
+
 
 #main-content .container {
   display: flex;
@@ -422,8 +426,12 @@ input {
   margin: auto;
 }
 
-.trophy-hr {
-  margin: 3rem auto;
+#teacher-development {
+  padding-top: 4rem;
+}
+
+.bottom-hr {
+  margin: 4rem auto;
 }
 
 
@@ -471,7 +479,7 @@ font-size: .85rem;
 /* About Page Start */
 
 #about_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/pianoImg.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -539,7 +547,7 @@ font-size: .85rem;
 /* Login Form Section */
 
 #login-form {
-  background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+  background: url(../src/images/contact.jpg) no-repeat center center/cover;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -612,7 +620,7 @@ font-size: .85rem;
   /* Offerings Section */
 
   #offerings_hero {
-    background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+    background: url(../src/images/cello1.jpg) no-repeat center center/cover;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -750,11 +758,18 @@ textarea:focus {
   margin-bottom: 3rem;
 }
 
+#donate-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Membership Section */
 
 #membership_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/teacherDevelopment.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -772,7 +787,7 @@ textarea:focus {
 /* Donate Section */
 
 #donate_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/celloBench.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -792,7 +807,7 @@ textarea:focus {
   height: 95vh;
   width: 100vw;
   margin: auto;
-  background: url("../src/images/violins.jpeg") no-repeat center center/cover;
+  background: url("../src/images/violin.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

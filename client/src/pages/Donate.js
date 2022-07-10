@@ -1,5 +1,4 @@
 import React from "react";
-import edImage from "./../images/music_ed.jpeg";
 
 const Donate = () => {
   return (
@@ -22,19 +21,15 @@ const Donate = () => {
 
       <hr></hr>
 
-      <section id="amazon-smile">
-        <div className="container container-card">
-          <div className="image-container">
-            <img src={edImage} alt="" />
-          </div>
+      <section id="teacher-development">
+        <div className="container">
           <div className="container-description">
             <h2>Amazon Smile</h2>
             <p>
-              Stay up to date with our teacher development event taking place on
-              MLK weekend.
+              A simple way for you to support the NTSA every time you shop, at no cost to you.
             </p>
             <button className="btn btn-primary">
-              <a style={{ color: "white" }} href="http://www.Amazon.com">
+              <a style={{ color: "white" }} href="https://smile.amazon.com/charity?orig=%2F">
                 Amazon
               </a>
             </button>
@@ -43,18 +38,15 @@ const Donate = () => {
       </section>
 
       <section id="scholarships">
-        <div className="container container-card">
+        <div className="container">
           <div className="container-description">
             <h2>Donation</h2>
-            <p>Click the button below to make a donation via PayPal</p>
+            <p>Make a charitable donation to the NTSA via PayPal.</p>
             <button className="btn btn-primary">
               <a style={{ color: "white" }} href="http://www.paypal.com">
                 PayPal
               </a>
             </button>
-          </div>
-          <div className="image-container">
-            <img src={edImage} alt="" />
           </div>
         </div>
       </section>

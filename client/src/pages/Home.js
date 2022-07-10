@@ -1,6 +1,8 @@
-import edImage from "./../images/music_ed.jpeg";
 import Hero from "../components/Hero";
 import { NavHashLink } from "react-router-hash-link";
+import teacherDevelopment from '../images/teacherDevelopment.jpg';
+import scholarshipWinners from '../images/scholarshipWinners.jpg';
+import trophyFest from '../images/trophyFestival.jpg';
 
 const Home = () => {
   const scrollWithOffset = (el) => {
@@ -44,9 +46,7 @@ const Home = () => {
 
       <section id="teacher-development">
         <div className="container container-card">
-          <div className="image-container">
-            <img src={edImage} alt="" />
-          </div>
+          <img src={teacherDevelopment} alt="" className="t-dev"/>
           <div className="container-description">
             <h2>Teacher Development</h2>
             <p>
@@ -77,17 +77,13 @@ const Home = () => {
               <button className="btn btn-primary">Scholarships</button>
             </NavHashLink>{" "}
           </div>
-          <div className="image-container">
-            <img src={edImage} alt="" />
-          </div>
+            <img src={scholarshipWinners} alt="" />
         </div>
       </section>
 
       <section id="trophy-festival">
         <div className="container container-card">
-          <div className="image-container">
-            <img src={edImage} alt="" />
-          </div>
+            <img src={trophyFest} alt="" />
           <div className="container-description">
             <h2>Trophy Festival</h2>
             <p>
@@ -104,7 +100,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <hr className="trophy-hr"></hr>
+      <hr className="bottom-hr"></hr>
     </div>
   );
 };
