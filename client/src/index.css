@@ -307,6 +307,7 @@ input {
 /* Mobile Nav */
 #mobileNav {
   height: 100vh;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

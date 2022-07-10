@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
@@ -46,8 +46,13 @@ function App() {
 
   const mobileNavHandler = () => {
     setDisplayMobileNav((curr) => !curr);
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   };
 
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
   return (
     <ApolloProvider client={client}>
