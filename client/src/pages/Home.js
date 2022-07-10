@@ -45,8 +45,8 @@ const Home = () => {
       </section>
 
       <section id="teacher-development">
-        <div className="container-card">
-          <img src={teacherDevelopment} alt="" />
+        <div className="container container-card">
+          <img src={teacherDevelopment} alt="" className="t-dev"/>
           <div className="container-description">
             <h2>Teacher Development</h2>
             <p>
@@ -65,7 +65,7 @@ const Home = () => {
       </section>
 
       <section id="scholarships">
-        <div className="container-card">
+        <div className="container container-card">
           <div className="container-description">
             <h2>Scholarships</h2>
             <p>Scholarship notifications will be sent out on March 1st, 2022</p>
@@ -82,7 +82,7 @@ const Home = () => {
       </section>
 
       <section id="trophy-festival">
-        <div className="container-card">
+        <div className="container container-card">
             <img src={trophyFest} alt="" />
           <div className="container-description">
             <h2>Trophy Festival</h2>

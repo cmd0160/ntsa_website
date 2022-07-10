@@ -1,12 +1,10 @@
 @media (max-width: 420px) {
   /* Utility */
-
   .container-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
   }
+
 
   /* Nav */
   #main-nav {
@@ -35,37 +33,33 @@
   #teacher-development .container-description {
     margin: .5rem;
     padding-top: 3rem;
-    background-color: rgb(206, 244, 158);
+    background-color: rgb(208, 217, 196);
     border-radius: 5%;
   }
   #scholarships .container-description {
     margin: .5rem;
     padding-top: 3rem;
-    background-color: rgb(206, 244, 158);
+    background-color: rgb(208, 217, 196);
     border-radius: 5%;
   }
   #trophy-festival .container-description {
     margin: .5rem;
     padding-top: 3rem;
-    background-color: rgb(206, 244, 158);
+    background-color: rgb(208, 217, 196);
     border-radius: 5%;
   }
 
-
   #teacher-development img {
-    height: 350px;
-    width: fit-content;
-    margin-bottom: 4rem;
+    display: none;
   }
 
   #scholarships img {
     display: none;
-
   }
+
   #trophy-festival img {
     display: none;
   }
-
 
 
   /* Footer */
@@ -107,8 +101,6 @@
     height: 200px;
     width: auto;
     padding: .6rem;  
-    border: .1rem solid var(--dark-color);
-    border-radius: 2px;
     overflow: scroll; 
   }
   #board-members .card-container .card .image-container i {
@@ -136,6 +128,19 @@
     margin: .5rem 2rem;
   }
 
+  /* Membership */
+
+  #membership .card {
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #membership hr {
+    margin: 2rem auto;
+  }
+
 }
 
 @media (min-width: 820px) {
@@ -158,6 +163,29 @@
 
     #home-page .container-card {
         padding: 0 1rem;
+      }
+
+      #teacher-development .container-card {
+        max-height: 250px;
+      }
+      #scholarships .container-card {
+        max-height: 250px;
+      }
+      #trophy-festival .container-card {
+        max-height: 250px;
+      }
+
+      #teacher-development img {
+        width: auto;
+
+      }
+    
+      #scholarships img {
+        width: auto;  
+      }
+    
+      #trophy-festival img {
+        width: auto; 
       }
 
       /* Footer Modile */

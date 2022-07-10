@@ -39,6 +39,7 @@ p {
 img {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 i {
@@ -426,20 +427,8 @@ input {
 }
 
 #teacher-development {
-  margin: auto;
-  width: var(--max-width);
   padding-top: 4rem;
 }
-#scholarships {
-  margin: auto;
-  width: var(--max-width);
-}
-
-#trophy-festival {
-  margin: auto;
-  width: var(--max-width);
-}
-
 
 .bottom-hr {
   margin: 4rem auto;
@@ -780,7 +769,7 @@ textarea:focus {
 /* Membership Section */
 
 #membership_hero {
-  background: url(../src/images/membership.jpg) no-repeat center center/cover;
+  background: url(../src/images/teacherDevelopment.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
