@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #54C247;
+  --secondary-color: #f99500;
+  --light-color: #fff;
+  --dark-color: #333;
+  --max-width: 1100px; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
 @media (max-width: 420px) {
   /* Utility */
   .container-card {
@@ -7,6 +18,7 @@
 
   .hamburger-icon {
     padding: 1.4rem 0;
+    color: var(--primary-color);
   }
 
   /* Nav */
