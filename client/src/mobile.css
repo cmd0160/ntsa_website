@@ -5,6 +5,9 @@
     grid-template-columns: 1fr;
   }
 
+  .hamburger-icon {
+    padding: 1rem;
+  }
 
   /* Nav */
   #main-nav {

@@ -206,7 +206,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
           </li>
           <li className="hamburger" onClick={mobileNavHandler}>
             {!displayMobileNav ? (
-              <i className="fa-solid fa-bars fa-3x"></i>
+              <i className="fa-solid fa-bars fa-3x hamburger-icon"></i>
             ) : (
               <i className="fa-solid fa-x fa-3x"></i>
             )}
