@@ -7,8 +7,8 @@ export const QUERY_CURRENT_USER = gql`
       firstName
       lastName
       email
-      role
-      membershipDate
+      instruments
+      location
     }
   }
 `;
@@ -20,8 +20,8 @@ export const QUERY_ALL_USERS = gql`
       email
       firstName
       lastName
-      role
-      membershipDate
+      instruments
+      location
     }
   }
 `;
@@ -33,8 +33,8 @@ export const QUERY_USER = gql`
       firstName
       lastName
       email
-      role
-      membershipDate
+      instruments
+      location
     }
   }
 `;

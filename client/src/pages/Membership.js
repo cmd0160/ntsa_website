@@ -8,8 +8,6 @@ const Membership = () => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
-
-
   return (
     <div>
       <section id="membership_hero">
@@ -18,12 +16,12 @@ const Membership = () => {
         </div>
       </section>
 
-      <h2 className="membership-title p-3 center">Member Directory</h2>
+      <h2 id='member-directory' className="membership-title p-3 center">Member Directory</h2>
 
       <section id="membership">
 
         {data.users.map((users) => {
-          const { firstName, lastName } = users;
+          const { firstName, lastName, email, instruments, location } = users;
           
           return (
             <div key={firstName}>
@@ -43,20 +41,19 @@ const Membership = () => {
                   <h4 className="p-h center">Member Information:</h4>
                   <div className="m-info">
                     <p className="center">
-                      Instrument(s): <span>Violin, Viola</span>
+                      Instrument(s): <span>{instruments}</span>
                       <br></br>
-                      Location: <span>Arlington, TX</span>
+                      Location: <span>{location}</span>
                       <br></br>
                     </p>
                     <div className="center">
-                      <i className="fa fa-envelope"></i>
+                      <a href={"mailto:" + email}><i className="fa fa-envelope"></i></a>
                       <i className="fa-solid fa-phone"></i>
                     </div>
                   </div>
                   <hr className="center card-hr m-h"></hr>
                 </div>
               </div>
-
               <hr className="center card-hr m-3"></hr>
             </div>
           );

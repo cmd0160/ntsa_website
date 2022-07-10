@@ -1,55 +1,134 @@
-import React from 'react'
+import React from "react";
+import { NavHashLink } from "react-router-hash-link";
 
 const Footer = () => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
+
   return (
     <div>
-    <footer id="footer">
+      <footer id="footer">
         <div className="container bg-dark p-2">
-            <div className="about-list">
-                <h4><a href="#">ABOUT</a></h4>
-                <ul>
-                    <li><a href="#">Mission Statement</a></li>
-                    <li><a href="#">Board Members</a></li>
-                    <li><a href="#">Code Of Ethics</a></li>
-                    <li><a href="#">Bylaws</a></li>
-                </ul>
-            </div>
-            <div className="offerings-list">
-                <h4><a href="#">OFFERINGS</a></h4>
-                <ul>
-                    <li><a href="#">Biannual Meetings</a></li>
-                    <li><a href="#">Teacher Development</a></li>
-                    <li><a href="#">Scholarships</a></li>
-                    <li><a href="#">Trophy Festival</a></li>
-                </ul>
-            </div>
-            <div className="membership-list">
-                <h4><a href="#">MEMBERSHIP</a></h4>
-                <ul>
-                    <li><a href="#">Member Directory</a></li>
-                </ul>
-            </div>
-            <div className="donate-list">
-                <h4><a href="#">DONATE</a></h4>
-                <ul>
-                    <li><a href="#">Amazon Smile</a></li>
-                    <li><a href="#">Donate Here</a></li>
-                </ul>
-            </div>
-            <div className="contact-list">
-                <h4><a href="#">CONTACT US</a></h4>
-                <ul>
-                    <li><a href="#">Email</a></li>
-                </ul>
-            </div>
+          <div className="about-list">
+            <h4>
+              <a href="/about">ABOUT</a>
+            </h4>
+            <ul>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/about/#main-content"
+                  scroll={scrollWithOffset}
+                >
+                  <span className="footerNav">Mission Statement</span>
+                </NavHashLink>
+              </li>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/about/#board-members"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Board Members</span>
+                </NavHashLink>
+              </li>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/about/#code-of-ethics"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Code of Ethics</span>
+                </NavHashLink>
+              </li>
+            </ul>
+          </div>
+          <div className="offerings-list">
+            <h4>
+              <a href="/offerings">OFFERINGS</a>
+            </h4>
+            <ul>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Biannual Meetings</span>
+                </NavHashLink>
+              </li>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#teacher-development-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Teacher Development</span>
+                </NavHashLink>{" "}
+              </li>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#scholarships-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Scholarships</span>
+                </NavHashLink>{" "}
+              </li>
+              <li>
+                <NavHashLink
+                  smooth
+                  to="/offerings/#trophy-festival-announcement"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
+                  <span className="footerNav">Trophy Festival</span>
+                </NavHashLink>{" "}
+              </li>
+            </ul>
+          </div>
+          <div className="membership-list">
+            <h4>
+              <a href="/membership">MEMBERSHIP</a>
+            </h4>
+            <ul>
+              <NavHashLink
+                smooth
+                to="/membership/#member-directory"
+                scroll={(el) => scrollWithOffset(el)}
+              >
+                  <span className="footerNav">Member Directory</span>
+              </NavHashLink>
+            </ul>
+          </div>
+          <div className="donate-list">
+            <h4>
+              <a href="/donate">DONATE</a>
+            </h4>
+            <ul>
+              <li>
+                <a href="/donate">Amazon Smile</a>
+              </li>
+              <li>
+                <a href="/donate">Donate Here</a>
+              </li>
+            </ul>
+          </div>
+          <div className="contact-list">
+            <h4>
+              <a href="/contact">CONTACT US</a>
+            </h4>
+          </div>
         </div>
         <hr></hr>
         <div className="copyright p-1">
-            <p>Copyright &copy; 2022, All Rights Reserved</p>
+          <p>Copyright &copy; 2022, All Rights Reserved</p>
         </div>
-    </footer>
-</div>
+      </footer>
+    </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

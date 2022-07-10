@@ -1,4 +1,4 @@
-import React from "react";
+
 import ntsaPresident from "../../src/images/christine-cd.jpeg";
 import ntsaTreasurer from "../../src/images/ashliePic.jpeg";
 import vicePresident from "../../src/images/vicePresident.jpg";
@@ -13,14 +13,14 @@ const About = () => {
     <div>
       <section id="about_hero">
         <div className="container">
-          <h1>About Our Organization</h1>
+          <h1 className="center">About Our Organization</h1>
         </div>
       </section>
 
       <section id="main-content">
         <div className="container">
           <h2 className="p-3">Our Mission</h2>
-          <p>
+          <p id="main-content-p">
             The North Texas Suzuki Association exists to coordinate, support and
             publicize Suzuki events in North Texas. We promote Suzuki teaching
             and training among teachers, parents, students and the general
@@ -49,8 +49,8 @@ const About = () => {
             <div className="image-container py-1 center">
               <div className="image-holder">
                 <img src={ntsaPresident} alt="" />
-              </div>
-              <i className="fa fa-envelope fa-2x"></i>
+                </div>
+                <a href="mailto:christinenicole.collins@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
@@ -173,7 +173,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={vicePresident} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:msmusic724.sg@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
@@ -183,12 +183,12 @@ const About = () => {
               <div className="image-holder">
                 <img src={ntsaTreasurer} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:ashlieskidmore@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
               <h3>Treasurer</h3>
-              <h4>Ashley Skidmore</h4>
+              <h4>Ashlie Skidmore</h4>
               <p>
                 Ashlie Skidmore is a third-generation Suzuki teacher and Suzuki
                 parent. She began her violin studies at the age of three at the
@@ -259,7 +259,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={secretary} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:fiddler247@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
@@ -277,7 +277,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={trophyFest} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:rxsamson@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
@@ -401,7 +401,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={scholarships} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:bretserrin@hotmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
@@ -411,7 +411,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={t_dev1} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:lindsay.serdar@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
@@ -474,7 +474,7 @@ const About = () => {
               <div className="image-holder">
                 <img src={t_dev2} alt="" />
               </div>
-              <i className="fa fa-envelope fa-2x"></i>
+              <a href="mailto:stacysmi@msn.com"><i className="fa fa-envelope fa-2x"></i></a>
               <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>

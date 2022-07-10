@@ -7,7 +7,6 @@ export const LOGIN_USER = gql`
       user {
         _id
         email
-        role
       }
     }
   }
@@ -19,12 +18,16 @@ export const ADD_USER = gql`
     $lastName: String!
     $email: String!
     $password: String!
+    $instruments: String!
+    $location: String!
   ) {
     addUser(
       firstName: $firstName
       lastName: $lastName
       email: $email
       password: $password
+      instruments: $instruments
+      location: $location
     ) {
       token
       user {
@@ -41,23 +44,23 @@ export const UPDATE_USER = gql`
     $firstName: String
     $lastName: String
     $email: String
-    $password: String
-    $role: String
+    $instruments: String!
+    $location: String!
   ) {
     updateUser(
       _id: $_id
       firstName: $firstName
       lastName: $lastName
       email: $email
-      password: $password
-      role: $role
+      instruments: $instruments
+      location: $location
     ) {
       _id
       firstName
       lastName
       email
-      role
-      membershipDate
+      instruments
+      location
     }
   }
 `;
