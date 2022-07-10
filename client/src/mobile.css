@@ -35,18 +35,21 @@
   }
 
   #teacher-development .container-description {
+    height: 100%;
     margin: .5rem;
     padding-top: 3rem;
     background-color: rgb(208, 217, 196);
     border-radius: 5%;
   }
   #scholarships .container-description {
+    height: 100%;
     margin: .5rem;
     padding-top: 3rem;
     background-color: rgb(208, 217, 196);
     border-radius: 5%;
   }
   #trophy-festival .container-description {
+    height: 100%;
     margin: .5rem;
     padding-top: 3rem;
     background-color: rgb(208, 217, 196);
