@@ -106,6 +106,8 @@ h4 {
 }
 
 .container-card {
+  height: 350px;
+  width: fit-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -381,6 +383,8 @@ input {
 
 /* Main Content Section */
 
+
+
 #main-content .container {
   display: flex;
   flex-direction: column;
@@ -422,8 +426,20 @@ input {
 }
 
 #teacher-development {
+  margin: auto;
+  width: var(--max-width);
   padding-top: 4rem;
 }
+#scholarships {
+  margin: auto;
+  width: var(--max-width);
+}
+
+#trophy-festival {
+  margin: auto;
+  width: var(--max-width);
+}
+
 
 .bottom-hr {
   margin: 4rem auto;
@@ -474,7 +490,7 @@ font-size: .85rem;
 /* About Page Start */
 
 #about_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/pianoImg.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -542,7 +558,7 @@ font-size: .85rem;
 /* Login Form Section */
 
 #login-form {
-  background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+  background: url(../src/images/contact.jpg) no-repeat center center/cover;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -615,7 +631,7 @@ font-size: .85rem;
   /* Offerings Section */
 
   #offerings_hero {
-    background: url(../src/images/music_ed.jpeg) no-repeat center center/cover;
+    background: url(../src/images/cello1.jpg) no-repeat center center/cover;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -764,7 +780,7 @@ textarea:focus {
 /* Membership Section */
 
 #membership_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/membership.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -782,7 +798,7 @@ textarea:focus {
 /* Donate Section */
 
 #donate_hero {
-  background: url(../src/images/violins.jpeg) no-repeat center center/cover;
+  background: url(../src/images/celloBench.jpg) no-repeat center center/cover;
   width: 100%;
   height: 60vh;
 }
@@ -802,7 +818,7 @@ textarea:focus {
   height: 95vh;
   width: 100vw;
   margin: auto;
-  background: url("../src/images/violins.jpeg") no-repeat center center/cover;
+  background: url("../src/images/violin.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
