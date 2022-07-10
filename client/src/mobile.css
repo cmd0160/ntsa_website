@@ -12,8 +12,10 @@
 @media (max-width: 420px) {
   /* Utility */
   .container-card {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .hamburger-icon {
@@ -69,6 +71,14 @@
     padding-top: 3rem;
     background-color: rgb(208, 217, 196);
     border-radius: 5%;
+  }
+
+  #scholarships {
+    margin-top: 1rem;
+  }
+
+  #trophy-festival {
+    margin-top: 1rem;
   }
 
   #teacher-development img {
