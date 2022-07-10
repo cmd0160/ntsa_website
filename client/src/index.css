@@ -306,10 +306,10 @@ input {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: left;
-  font-size: .85rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -751,6 +751,13 @@ textarea:focus {
 
 #donate-section hr {
   margin-bottom: 3rem;
+}
+
+#donate-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 

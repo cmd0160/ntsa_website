@@ -26,14 +26,9 @@ const Hero = () => {
       }}
     >
       <div className="container">
-        <h1>Announcements</h1>
+        <h1>Announcement</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, et
-          perspiciatis eveniet atque corporis ab dolorum facere id pariatur
-          iste? Est perspiciatis commodi, facilis maxime quidem aspernatur
-          ratione, qui et corporis provident sint placeat. Voluptatum amet, quis
-          aspernatur expedita, ullam quibusdam possimus nesciunt eum doloremque
-          obcaecati temporibus, laborum veniam ea!
+          Please join us for our next meeting on September 18th, 2022.
         </p>
         <Link to="/login">
           <button className="btn btn-primary">Join Now!</button>

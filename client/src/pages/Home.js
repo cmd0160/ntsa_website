@@ -44,7 +44,7 @@ const Home = () => {
 
       <section id="teacher-development">
         <div className="container container-card">
-            <img src={edImage} alt="" />
+          <img src={edImage} alt="" />
           <div className="container-description">
             <h2>Teacher Development</h2>
             <p>
@@ -75,17 +75,13 @@ const Home = () => {
               <button className="btn btn-primary">Scholarships</button>
             </NavHashLink>{" "}
           </div>
-          <div className="image-container">
             <img src={edImage} alt="" />
-          </div>
         </div>
       </section>
 
       <section id="trophy-festival">
         <div className="container container-card">
-          <div className="image-container">
             <img src={edImage} alt="" />
-          </div>
           <div className="container-description">
             <h2>Trophy Festival</h2>
             <p>
