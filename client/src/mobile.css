@@ -94,7 +94,7 @@
     margin: auto;
     box-shadow: 0 8px 20px var(--dark-color);
     max-height: 240px;
-    width: fit-content;  
+    width: auto;  
   }
 
   #board-members .card-container .card .info-container p {
