@@ -1,7 +1,7 @@
 import ntsaLogo from "../images/ntsa.png";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = ({ mobileNavHandler, displayMobileNav }) => {
   const logout = (event) => {
@@ -35,31 +35,31 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             </li>
             <ul>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/about/#main-content"
                   scroll={scrollWithOffset}
                 >
                   <span className="nestedNav">Mission Statement</span>
-                </NavHashLink>
+                </HashLink>
               </li>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/about/#board-members"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Board Members</span>
-                </NavHashLink>
+                </HashLink>
               </li>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/about/#code-of-ethics"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Code of Ethics</span>
-                </NavHashLink>
+                </HashLink>
               </li>
               <li>
                 <span className="nestedNav">Bylaws</span>
@@ -75,40 +75,40 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             </li>
             <ul>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/offerings/#announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Biannual Meetings</span>
-                </NavHashLink>
+                </HashLink>
               </li>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/offerings/#teacher-development-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Teacher Development</span>
-                </NavHashLink>{" "}
+                </HashLink>{" "}
               </li>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/offerings/#scholarships-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Scholarships</span>
-                </NavHashLink>{" "}
+                </HashLink>{" "}
               </li>
               <li>
-                <NavHashLink
+                <HashLink
                   smooth
                   to="/offerings/#trophy-festival-announcement"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   <span className="nestedNav">Trophy Festival</span>
-                </NavHashLink>{" "}
+                </HashLink>{" "}
               </li>
             </ul>
           </div>
@@ -147,13 +147,13 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
                 </li>
                 <ul>
                   <li>
-                    <NavHashLink
+                    <HashLink
                       smooth
                       to="/membership/#member-directory"
                       scroll={(el) => scrollWithOffset(el)}
                     >
                       <span className="nestedNav">Member Directory</span>
-                    </NavHashLink>{" "}
+                    </HashLink>{" "}
                   </li>
                 </ul>
               </div>
