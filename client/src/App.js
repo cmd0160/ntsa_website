@@ -22,8 +22,8 @@ import Donate from "./pages/Donate";
 import Contact from "./pages/Contact"
 
 const httpLink = createHttpLink({
-  // uri: "/graphql", uncomment for live server and delete row below
-  uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
+  // uri: "http://localhost:3001/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
