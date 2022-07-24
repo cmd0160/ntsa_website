@@ -23,8 +23,7 @@ import Contact from "./pages/Contact"
 
 const httpLink = createHttpLink({
   uri: "/graphql",
-  // Uncomment for Local
-  // uri: "http://localhost:3001/graphql",
+
 });
 
 const authLink = setContext((_, { headers }) => {
