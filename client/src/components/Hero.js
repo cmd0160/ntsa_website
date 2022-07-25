@@ -26,7 +26,7 @@ const Hero = () => {
       }}
     >
       <div className="container">
-        <h1>Announcement</h1>
+        <h1>Meeting Info</h1>
         <p>
           Please join us for our next meeting on September 18th, 2022.
         </p>
