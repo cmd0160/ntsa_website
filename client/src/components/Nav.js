@@ -20,9 +20,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
       <div className="container">
         <div className="logo-info">
           <div className="theLogo">
-            <a href="/">
+            <Link to="/">
               <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
-            </a>
+            </Link>
           </div>
           <p className="logo-title">North Texas Suzuki Association</p>
         </div>
@@ -30,9 +30,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
         <ul className="nav">
           <div>
             <li>
-              <a href="/about" className="p-h">
+              <Link to="/about" className="p-h">
                 ABOUT
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -70,9 +70,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/offerings" className="p-h">
+              <Link to="/offerings" className="p-h">
                 OFFERINGS
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -116,9 +116,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/donate" className="p-h">
+              <Link to="/donate" className="p-h">
                 DONATE
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -132,9 +132,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/contact" className="p-h">
+              <Link to="/contact" className="p-h">
                 CONTACT
-              </a>
+              </Link>
             </li>
           </div>
 
@@ -142,9 +142,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <a href="/membership" className="p-h">
+                  <Link to="/membership" className="p-h">
                     MEMBERSHIP
-                  </a>
+                  </Link>
                 </li>
                 <ul>
                   <li>
@@ -161,17 +161,17 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
               <div>
                 <li>
-                  <a href="/profile" className="p-h">
+                  <Link to="/profile" className="p-h">
                     PROFILE
-                  </a>
+                  </Link>
                 </li>
               </div>
 
               <div>
                 <li>
-                  <a href="/" className="p-h" onClick={logout}>
+                  <Link to="/" className="p-h" onClick={logout}>
                     LOGOUT
-                  </a>
+                  </Link>
                 </li>
               </div>
             </>
@@ -179,9 +179,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <a href="/login" className="p-h">
+                  <Link to="/login" className="p-h">
                     LOGIN/JOIN
-                  </a>
+                  </Link>
                 </li>
                 {/* <ul>
                   <li>
