@@ -1,4 +1,6 @@
 import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
+
 
 
 const MobileNav = () => {
@@ -12,33 +14,33 @@ const MobileNav = () => {
     <ul id="mobileNav">
       <div>
         <li>
-          <a href="/about" className="p-h">
+          <Link to="/about" className="p-h">
             ABOUT
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
         <li>
-          <a href="/offerings" className="p-h">
+          <Link to="/offerings" className="p-h">
             OFFERINGS
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
         <li>
-          <a href="/donate" className="p-h">
+          <Link to="/donate" className="p-h">
             DONATE
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
         <li>
-          <a href="/contact" className="p-h">
+          <Link to="/contact" className="p-h">
             CONTACT
-          </a>
+          </Link>
         </li>
       </div>
 
@@ -46,25 +48,25 @@ const MobileNav = () => {
         <>
           <div>
             <li>
-              <a href="/membership" className="p-h">
+              <Link to="/membership" className="p-h">
                 MEMBERSHIP
-              </a>
+              </Link>
             </li>
           </div>
 
           <div>
             <li>
-              <a href="/profile" className="p-h">
+              <Link to="/profile" className="p-h">
                 PROFILE
-              </a>
+              </Link>
             </li>
           </div>
 
           <div>
             <li>
-              <a href="/" className="p-h" onClick={logout}>
+              <Link to="/" className="p-h" onClick={logout}>
                 LOGOUT
-              </a>
+              </Link>
             </li>
           </div>
         </>
@@ -72,9 +74,9 @@ const MobileNav = () => {
         <>
           <div>
             <li>
-              <a href="/login" className="p-h">
+              <Link to="/login" className="p-h">
                 LOGIN/JOIN
-              </a>
+              </Link>
             </li>
           </div>
         </>
