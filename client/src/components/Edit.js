@@ -76,7 +76,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"First Name: " + firstName}
                   name="firstName"
                   id="firstName"
                   defaultValue={firstName}
@@ -85,7 +84,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"Last Name: " + lastName}
                   name="lastName"
                   id="lastName"
                   defaultValue={lastName}
@@ -94,7 +92,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="email"
-                  // placeholder={"Email: " + email}
                   name="email"
                   id="email"
                   defaultValue={email}
@@ -112,7 +109,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"Location: " + location}
                   name="location"
                   id="location"
                   defaultValue={location}
