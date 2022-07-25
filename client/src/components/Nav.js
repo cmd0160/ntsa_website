@@ -15,17 +15,16 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
-  
-
-
-
   return (
     <nav id="main-nav">
       <div className="container">
-        <div className="theLogo">
-          <a href="/">
-            <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
-          </a>
+        <div className="logo-info">
+          <div className="theLogo">
+            <a href="/">
+              <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
+            </a>
+          </div>
+          <p className="logo-title">North Texas Suzuki Association</p>
         </div>
 
         <ul className="nav">
@@ -206,7 +205,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
               <i className="fab fa-instagram fa-2x"></i>
             </a>
           </li>
-          <li className="hamburger" onClick={mobileNavHandler} >
+          <li className="hamburger" onClick={mobileNavHandler}>
             {!displayMobileNav ? (
               <i className="fa-solid fa-bars fa-3x hamburger-icon"></i>
             ) : (

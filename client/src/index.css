@@ -288,6 +288,18 @@ input {
   background: var(--light-color);
 }
 
+#main-nav .logo-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-nav .logo-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: flex-start;
+}
+
 #main-nav .nav div ul li:hover {
   background-color: #ece1e1;
 }
