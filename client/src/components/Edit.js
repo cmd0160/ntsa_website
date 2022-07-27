@@ -28,7 +28,6 @@ const Edit = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target.value;
-    console.log(event.target.value)
 
     setFormState({
       ...formState,
@@ -46,7 +45,6 @@ const Edit = (props) => {
       instruments: event.target[3].value,
       location: event.target[4].value
     }
-    console.log(dataObject);
     event.preventDefault();
     try {
       const { data } = await updateUser({
@@ -58,7 +56,7 @@ const Edit = (props) => {
       console.log(data);
       alert('Member Info Updated!')
     } catch {
-      console.log(event);
+      console.log(event.error);
     }
   };
 

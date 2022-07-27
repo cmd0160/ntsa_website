@@ -21,10 +21,10 @@ const Membership = () => {
       <section id="membership">
 
         {data.users.map((users) => {
-          const { firstName, lastName, email, instruments, location } = users;
+          const { _id, firstName, lastName, email, instruments, location } = users;
           
           return (
-            <div key={firstName}>
+            <div key={_id}>
               <div className="card">
                 <div className="membership-image-container center">
                   <div className="membership-image-holder">

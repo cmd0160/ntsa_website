@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import ntsaLogo from "../images/ntsa.png";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
@@ -15,11 +16,20 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
+  // useEffect(() => {
+  //   // 👇️ scroll to top on page load
+  //   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  // }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, left: 0});
+  }
+
   return (
     <nav id="main-nav">
       <div className="container">
         <div className="logo-info">
-          <div className="theLogo">
+          <div className="theLogo" onClick={scrollToTop}>
             <Link to="/">
               <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
             </Link>
@@ -29,7 +39,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
         <ul className="nav">
           <div>
-            <li>
+            <li onClick={scrollToTop}>
               <Link to="/about" className="p-h">
                 ABOUT
               </Link>
@@ -70,7 +80,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <Link to="/offerings" className="p-h">
+              <Link to="/offerings" className="p-h" onClick={scrollToTop}>
                 OFFERINGS
               </Link>
             </li>
@@ -116,7 +126,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <Link to="/donate" className="p-h">
+              <Link to="/donate" className="p-h" onClick={scrollToTop}>
                 DONATE
               </Link>
             </li>
@@ -132,7 +142,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <Link to="/contact" className="p-h">
+              <Link to="/contact" className="p-h" onClick={scrollToTop}>
                 CONTACT
               </Link>
             </li>
@@ -142,7 +152,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <Link to="/membership" className="p-h">
+                  <Link to="/membership" className="p-h" onClick={scrollToTop}>
                     MEMBERSHIP
                   </Link>
                 </li>
@@ -161,7 +171,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
               <div>
                 <li>
-                  <Link to="/profile" className="p-h">
+                  <Link to="/profile" className="p-h" onClick={scrollToTop}>
                     PROFILE
                   </Link>
                 </li>
@@ -179,7 +189,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <Link to="/login" className="p-h">
+                  <Link to="/login" className="p-h" onClick={scrollToTop}>
                     LOGIN/JOIN
                   </Link>
                 </li>

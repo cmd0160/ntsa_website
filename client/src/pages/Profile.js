@@ -19,7 +19,7 @@ const Profile = () => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
   const { firstName, lastName, email, instruments, location } = data.me;
-  console.log(data.me)
+  // console.log(data.me)
 
   return (
     <div>

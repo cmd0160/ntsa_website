@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 
-const MobileNav = () => {
+const MobileNav = ({mobileNavHandler}) => {
 
   const logout = (event) => {
     event.preventDefault();
@@ -13,7 +13,7 @@ const MobileNav = () => {
   return (
     <ul id="mobileNav">
       <div>
-        <li>
+        <li onClick={mobileNavHandler}>
           <Link to="/about" className="p-h">
             ABOUT
           </Link>
@@ -21,7 +21,7 @@ const MobileNav = () => {
       </div>
 
       <div>
-        <li>
+      <li onClick={mobileNavHandler}>
           <Link to="/offerings" className="p-h">
             OFFERINGS
           </Link>
@@ -29,7 +29,7 @@ const MobileNav = () => {
       </div>
 
       <div>
-        <li>
+      <li onClick={mobileNavHandler}>
           <Link to="/donate" className="p-h">
             DONATE
           </Link>
@@ -37,7 +37,7 @@ const MobileNav = () => {
       </div>
 
       <div>
-        <li>
+      <li onClick={mobileNavHandler}>
           <Link to="/contact" className="p-h">
             CONTACT
           </Link>
@@ -47,7 +47,7 @@ const MobileNav = () => {
       {Auth.loggedIn() ? (
         <>
           <div>
-            <li>
+          <li onClick={mobileNavHandler}>
               <Link to="/membership" className="p-h">
                 MEMBERSHIP
               </Link>
@@ -55,7 +55,7 @@ const MobileNav = () => {
           </div>
 
           <div>
-            <li>
+          <li onClick={mobileNavHandler}>
               <Link to="/profile" className="p-h">
                 PROFILE
               </Link>
@@ -63,7 +63,7 @@ const MobileNav = () => {
           </div>
 
           <div>
-            <li>
+          <li onClick={mobileNavHandler}>
               <Link to="/" className="p-h" onClick={logout}>
                 LOGOUT
               </Link>
@@ -73,7 +73,7 @@ const MobileNav = () => {
       ) : (
         <>
           <div>
-            <li>
+          <li onClick={mobileNavHandler}>
               <Link to="/login" className="p-h">
                 LOGIN/JOIN
               </Link>
