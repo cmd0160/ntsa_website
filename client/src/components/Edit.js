@@ -28,7 +28,6 @@ const Edit = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target.value;
-    console.log(event.target.value)
 
     setFormState({
       ...formState,
@@ -46,7 +45,6 @@ const Edit = (props) => {
       instruments: event.target[3].value,
       location: event.target[4].value
     }
-    console.log(dataObject);
     event.preventDefault();
     try {
       const { data } = await updateUser({
@@ -58,7 +56,7 @@ const Edit = (props) => {
       console.log(data);
       alert('Member Info Updated!')
     } catch {
-      console.log(event);
+      console.log(event.error);
     }
   };
 
@@ -76,7 +74,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"First Name: " + firstName}
                   name="firstName"
                   id="firstName"
                   defaultValue={firstName}
@@ -85,7 +82,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"Last Name: " + lastName}
                   name="lastName"
                   id="lastName"
                   defaultValue={lastName}
@@ -94,7 +90,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="email"
-                  // placeholder={"Email: " + email}
                   name="email"
                   id="email"
                   defaultValue={email}
@@ -112,7 +107,6 @@ const Edit = (props) => {
                 <input
                   className="signup-input"
                   type="text"
-                  // placeholder={"Location: " + location}
                   name="location"
                   id="location"
                   defaultValue={location}

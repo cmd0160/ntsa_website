@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import ntsaLogo from "../images/ntsa.png";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
@@ -15,25 +16,33 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
-  
+  // useEffect(() => {
+  //   // 👇️ scroll to top on page load
+  //   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  // }, []);
 
-
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, left: 0});
+  }
 
   return (
     <nav id="main-nav">
       <div className="container">
-        <div className="theLogo">
-          <a href="/">
-            <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
-          </a>
+        <div className="logo-info">
+          <div className="theLogo" onClick={scrollToTop}>
+            <Link to="/">
+              <img src={ntsaLogo} alt="NTSA Logo" className="logo" />
+            </Link>
+          </div>
+          <p className="logo-title">North Texas Suzuki Association</p>
         </div>
 
         <ul className="nav">
           <div>
-            <li>
-              <a href="/about" className="p-h">
+            <li onClick={scrollToTop}>
+              <Link to="/about" className="p-h">
                 ABOUT
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -71,9 +80,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/offerings" className="p-h">
+              <Link to="/offerings" className="p-h" onClick={scrollToTop}>
                 OFFERINGS
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -117,9 +126,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/donate" className="p-h">
+              <Link to="/donate" className="p-h" onClick={scrollToTop}>
                 DONATE
-              </a>
+              </Link>
             </li>
             <ul>
               <li>
@@ -133,9 +142,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
           <div>
             <li>
-              <a href="/contact" className="p-h">
+              <Link to="/contact" className="p-h" onClick={scrollToTop}>
                 CONTACT
-              </a>
+              </Link>
             </li>
           </div>
 
@@ -143,9 +152,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <a href="/membership" className="p-h">
+                  <Link to="/membership" className="p-h" onClick={scrollToTop}>
                     MEMBERSHIP
-                  </a>
+                  </Link>
                 </li>
                 <ul>
                   <li>
@@ -162,17 +171,17 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
 
               <div>
                 <li>
-                  <a href="/profile" className="p-h">
+                  <Link to="/profile" className="p-h" onClick={scrollToTop}>
                     PROFILE
-                  </a>
+                  </Link>
                 </li>
               </div>
 
               <div>
                 <li>
-                  <a href="/" className="p-h" onClick={logout}>
+                  <Link to="/" className="p-h" onClick={logout}>
                     LOGOUT
-                  </a>
+                  </Link>
                 </li>
               </div>
             </>
@@ -180,9 +189,9 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
             <>
               <div>
                 <li>
-                  <a href="/login" className="p-h">
+                  <Link to="/login" className="p-h" onClick={scrollToTop}>
                     LOGIN/JOIN
-                  </a>
+                  </Link>
                 </li>
                 {/* <ul>
                   <li>
@@ -206,7 +215,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
               <i className="fab fa-instagram fa-2x"></i>
             </a>
           </li>
-          <li className="hamburger" onClick={mobileNavHandler} >
+          <li className="hamburger" onClick={mobileNavHandler}>
             {!displayMobileNav ? (
               <i className="fa-solid fa-bars fa-3x hamburger-icon"></i>
             ) : (

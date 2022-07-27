@@ -59,7 +59,7 @@ function App() {
     <Router>
     <div>
       <Nav mobileNavHandler={mobileNavHandler} displayMobileNav={displayMobileNav}/>
-      {displayMobileNav && <MobileNav />}
+      {displayMobileNav && <MobileNav mobileNavHandler={mobileNavHandler}/>}
       <div>
         <Routes>
           <Route exact path="/" element={<Home />} />

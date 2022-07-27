@@ -288,6 +288,19 @@ input {
   background: var(--light-color);
 }
 
+#main-nav .logo-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-nav .logo-title {
+  font-size: .85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: flex-start;
+}
+
 #main-nav .nav div ul li:hover {
   background-color: #ece1e1;
 }
@@ -507,7 +520,7 @@ font-size: .85rem;
 #board-members .card-container .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
 }
 
 #board-members .card-container .card .image-container img {
@@ -533,7 +546,7 @@ font-size: .85rem;
 }
 
 #code-of-ethics .container p {
-  width: 55%;
+  width: 85%;
   margin-bottom: 3rem;
 }
 #code-of-ethics .container h4 {

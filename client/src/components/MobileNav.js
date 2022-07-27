@@ -1,7 +1,9 @@
 import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
 
 
-const MobileNav = () => {
+
+const MobileNav = ({mobileNavHandler}) => {
 
   const logout = (event) => {
     event.preventDefault();
@@ -11,70 +13,70 @@ const MobileNav = () => {
   return (
     <ul id="mobileNav">
       <div>
-        <li>
-          <a href="/about" className="p-h">
+        <li onClick={mobileNavHandler}>
+          <Link to="/about" className="p-h">
             ABOUT
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
-        <li>
-          <a href="/offerings" className="p-h">
+      <li onClick={mobileNavHandler}>
+          <Link to="/offerings" className="p-h">
             OFFERINGS
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
-        <li>
-          <a href="/donate" className="p-h">
+      <li onClick={mobileNavHandler}>
+          <Link to="/donate" className="p-h">
             DONATE
-          </a>
+          </Link>
         </li>
       </div>
 
       <div>
-        <li>
-          <a href="/contact" className="p-h">
+      <li onClick={mobileNavHandler}>
+          <Link to="/contact" className="p-h">
             CONTACT
-          </a>
+          </Link>
         </li>
       </div>
 
       {Auth.loggedIn() ? (
         <>
           <div>
-            <li>
-              <a href="/membership" className="p-h">
+          <li onClick={mobileNavHandler}>
+              <Link to="/membership" className="p-h">
                 MEMBERSHIP
-              </a>
+              </Link>
             </li>
           </div>
 
           <div>
-            <li>
-              <a href="/profile" className="p-h">
+          <li onClick={mobileNavHandler}>
+              <Link to="/profile" className="p-h">
                 PROFILE
-              </a>
+              </Link>
             </li>
           </div>
 
           <div>
-            <li>
-              <a href="/" className="p-h" onClick={logout}>
+          <li onClick={mobileNavHandler}>
+              <Link to="/" className="p-h" onClick={logout}>
                 LOGOUT
-              </a>
+              </Link>
             </li>
           </div>
         </>
       ) : (
         <>
           <div>
-            <li>
-              <a href="/login" className="p-h">
+          <li onClick={mobileNavHandler}>
+              <Link to="/login" className="p-h">
                 LOGIN/JOIN
-              </a>
+              </Link>
             </li>
           </div>
         </>

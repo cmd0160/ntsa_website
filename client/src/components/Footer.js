@@ -1,5 +1,6 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollWithOffset = (el) => {
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className="container bg-dark p-2">
           <div className="about-list">
             <h4>
-              <a href="/about">ABOUT</a>
+              <Link to="/about">ABOUT</Link>
             </h4>
             <ul>
               <li>
@@ -48,7 +49,7 @@ const Footer = () => {
           </div>
           <div className="offerings-list">
             <h4>
-              <a href="/offerings">OFFERINGS</a>
+              <Link to="/offerings">OFFERINGS</Link>
             </h4>
             <ul>
               <li>
@@ -91,7 +92,7 @@ const Footer = () => {
           </div>
           <div className="membership-list">
             <h4>
-              <a href="/membership">MEMBERSHIP</a>
+              <Link to="/membership">MEMBERSHIP</Link>
             </h4>
             <ul>
               <NavHashLink
@@ -105,7 +106,7 @@ const Footer = () => {
           </div>
           <div className="donate-list">
             <h4>
-              <a href="/donate">DONATE</a>
+              <Link to="/donate">DONATE</Link>
             </h4>
             <ul>
               <li>
@@ -118,7 +119,7 @@ const Footer = () => {
           </div>
           <div className="contact-list">
             <h4>
-              <a href="/contact">CONTACT US</a>
+              <Link to="/contact">CONTACT US</Link>
             </h4>
           </div>
         </div>
