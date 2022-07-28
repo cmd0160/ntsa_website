@@ -613,7 +613,7 @@ font-size: .85rem;
   }
 
   #signup-section .signup-container {
-    height: 500px;
+    height: 100vh;
     max-width: var(--max-width);
     display: flex;
     flex-direction: column;
