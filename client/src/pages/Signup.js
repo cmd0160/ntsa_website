@@ -3,15 +3,19 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import Paypal from "../components/Paypal";
 
 const Signup = () => {
+  // Set up to render paypal page
+  // const paypal = useRef();
+  // const [checkout, setCheckout] = useState(false);
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     instruments: "",
-    location: ""
+    location: "",
   });
 
   const [addUser, { error }] = useMutation(ADD_USER);
@@ -45,20 +49,22 @@ const Signup = () => {
     // }
   };
 
+
+
   return (
     <section id="signup-section">
-
       <section id="about_hero">
         <div className="container">
           <h1>Signup</h1>
         </div>
       </section>
-
       <div className="signup-container">
-
         <div className="center m-3">
           <h3>North Texas Suzuki Association</h3>
-          <p>Welcome to our NTSA signup page! Please fill out the information below to register for our organization.</p>
+          <p>
+            Welcome to our NTSA signup page! Please fill out the information
+            below to register for our organization.
+          </p>
         </div>
 
         <form onSubmit={handleFormSubmit}>
@@ -131,8 +137,11 @@ const Signup = () => {
             </button>
           </div>
         </form>
-        {error && <div>Signup failed</div>}
+        <Paypal />
       </div>
+
+      {error && <div>Signup failed</div>}
+
     </section>
   );
 };
