@@ -5,10 +5,13 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import Paypal from "../components/Paypal";
 
-const Signup = () => {
-  // Set up to render paypal page
-  // const paypal = useRef();
-  // const [checkout, setCheckout] = useState(false);
+const Signup = (props) => {
+  const [enableBtn, setEnableBtn] = useState(false);
+
+  const buttonHandler = () => {
+    setEnableBtn(true);
+  };
+
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -28,7 +31,6 @@ const Signup = () => {
       ...formState,
       [name]: value,
     });
-    console.log(value);
   };
 
   // submit form
@@ -49,8 +51,6 @@ const Signup = () => {
     // }
   };
 
-
-
   return (
     <section id="signup-section">
       <section id="about_hero">
@@ -60,10 +60,44 @@ const Signup = () => {
       </section>
       <div className="signup-container">
         <div className="center m-3">
-          <h3>North Texas Suzuki Association</h3>
+          <h2>Memberships</h2>
           <p>
-            Welcome to our NTSA signup page! Please fill out the information
-            below to register for our organization.
+            Welcome to our NTSA signup page! Please review the following information
+            and register for our organization below.
+          </p>
+        </div>
+        <div className="center memberships">
+          <h4 className="my-2">Professional Membership</h4>
+          <h4>$25/year</h4>
+          <p className="justify">
+            Professional Members are teachers involved in Suzuki-style
+            instruction for remuneration who hold a music degree from an
+            accredited college/university and/or equivalent training/experience.
+            Membership in SAA is required of Professional Members. Professional
+            Members whose dues are current may vote, hold office, be listed in
+            the NTSA Directory, enter students in NTSA activities, participate
+            in Association events, and receive all mailings. Each teacher is
+            expected to participate in the planning and execution of at least
+            one, NTSA-sponsored activity per year. Individuals seeking
+            Professional Membership should have completed Suzuki Unit I-A in
+            their major- instrument with plans to continue their Suzuki
+            development at regular intervals.
+          </p>
+          <h4 className="my-2">Coorporate/Institutional Membership</h4>
+          <h4>$100/year</h4>
+          <p className="justify">
+            Corporate/Institutional Members include businesses and/or
+            educational institutions which support the Bylaws and Code of
+            Ethics. They are listed in the Directory and given opportunities to
+            assist the Association as their expertise allows.
+          </p>
+          <h4 className="my-2">Affiliate/Family</h4>
+          <h4>$25/year</h4>
+          <p className="justify">
+            Individuals who support Suzuki inspired instruction.
+            Affiliate/Family Members whose dues are current will receive all
+            communications, may attend all NTSA student/parent activities, and
+            will be listed in the NTSA directory.
           </p>
         </div>
 
@@ -105,7 +139,7 @@ const Signup = () => {
             type="password"
             placeholder="Confirm Password*"
             name="password"
-            id="login-password"
+            id="confirm-password"
             onChange={handleChange}
           />
           <input
@@ -132,16 +166,18 @@ const Signup = () => {
             </div>
           </div> */}
           <div className="sign-up-button center">
-            <button className=" btn btn-primary" type="submit">
+          <Paypal buttonHandler={buttonHandler} />
+            <button
+              className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
+              type="submit"
+            >
               SUBMIT
             </button>
           </div>
         </form>
-        <Paypal />
       </div>
 
       {error && <div>Signup failed</div>}
-
     </section>
   );
 };
