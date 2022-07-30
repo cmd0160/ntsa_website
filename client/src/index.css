@@ -629,12 +629,7 @@ font-size: .85rem;
     align-items: center;
   }
 
-  #signup-section .memberships p {
-    margin-bottom: 4rem;
-  }
-
   #signup-section .signup-container form {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -642,7 +637,7 @@ font-size: .85rem;
   }
 
   #signup-section .paypal-form {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   #signup-section .signup-container .signup-input{
@@ -654,6 +649,23 @@ font-size: .85rem;
     color: var(--dark-color);
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#membership-cards {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#membership-cards .info-card {
+  max-width: 300px;
+  margin: 1rem;
+
+}
+
+#membership-cards .info-card .info-card-text {
+  overflow: scroll;
 }
 
   /* Offerings Section */

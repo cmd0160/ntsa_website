@@ -1,11 +1,13 @@
-import React from "react";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import Paypal from "../components/Paypal";
+import MembershipCards from "../components/MembershipCards";
 
 const Signup = (props) => {
+  const [paypalCost, setpaypalCost] = useState("");
+
   const [enableBtn, setEnableBtn] = useState(false);
 
   const buttonHandler = () => {
@@ -51,6 +53,13 @@ const Signup = (props) => {
     // }
   };
 
+  // This is passed down to membership cards
+  const paypalInfoClickHandler = (event) => {
+    const paypalTotal = event.target.value;
+    alert("Membership selected.");
+    setpaypalCost(paypalTotal);
+  };
+
   return (
     <section id="signup-section">
       <section id="about_hero">
@@ -60,47 +69,22 @@ const Signup = (props) => {
       </section>
       <div className="signup-container">
         <div className="center m-3">
-          <h2>Memberships</h2>
           <p>
-            Welcome to our NTSA signup page! Please review the following information
-            and register for our organization below.
-          </p>
-        </div>
-        <div className="center memberships">
-          <h4 className="my-2">Professional Membership</h4>
-          <h4>$25/year</h4>
-          <p className="justify">
-            Professional Members are teachers involved in Suzuki-style
-            instruction for remuneration who hold a music degree from an
-            accredited college/university and/or equivalent training/experience.
-            Membership in SAA is required of Professional Members. Professional
-            Members whose dues are current may vote, hold office, be listed in
-            the NTSA Directory, enter students in NTSA activities, participate
-            in Association events, and receive all mailings. Each teacher is
-            expected to participate in the planning and execution of at least
-            one, NTSA-sponsored activity per year. Individuals seeking
-            Professional Membership should have completed Suzuki Unit I-A in
-            their major- instrument with plans to continue their Suzuki
-            development at regular intervals.
-          </p>
-          <h4 className="my-2">Coorporate/Institutional Membership</h4>
-          <h4>$100/year</h4>
-          <p className="justify">
-            Corporate/Institutional Members include businesses and/or
-            educational institutions which support the Bylaws and Code of
-            Ethics. They are listed in the Directory and given opportunities to
-            assist the Association as their expertise allows.
-          </p>
-          <h4 className="my-2">Affiliate/Family</h4>
-          <h4>$25/year</h4>
-          <p className="justify">
-            Individuals who support Suzuki inspired instruction.
-            Affiliate/Family Members whose dues are current will receive all
-            communications, may attend all NTSA student/parent activities, and
-            will be listed in the NTSA directory.
+            Welcome to our NTSA signup page! Please review the following
+            information and register for our organization.
           </p>
         </div>
 
+        <div className="center m-2">
+          <h4>Step. 1</h4>
+          <p>Select level of membership.</p>
+        </div>
+        <MembershipCards paypalInfoClickHandler={paypalInfoClickHandler} />
+
+        <div className="center m-2">
+          <h4>Step. 2</h4>
+          <p>Fill out the following information.</p>
+        </div>
         <form onSubmit={handleFormSubmit}>
           <input
             className="signup-input"
@@ -138,14 +122,14 @@ const Signup = (props) => {
             className="signup-input"
             type="password"
             placeholder="Confirm Password*"
-            name="password"
+            name="password*"
             id="confirm-password"
             onChange={handleChange}
           />
           <input
             className="signup-input"
             type="text"
-            placeholder="Instrument(s) 'Ex. Violin, Piano, etc.'"
+            placeholder="Instrument(s) 'Ex. Violin, Piano, etc.*'"
             name="instruments"
             id="instruments"
             onChange={handleChange}
@@ -153,7 +137,7 @@ const Signup = (props) => {
           <input
             className="signup-input"
             type="text"
-            placeholder="City, State"
+            placeholder="City, State*"
             name="location"
             id="location"
             onChange={handleChange}
@@ -165,8 +149,16 @@ const Signup = (props) => {
               </button>
             </div>
           </div> */}
+          <div className="center m-2">
+            <h4>Step. 3</h4>
+            <p>Follow the PayPal link to submit membership payment.</p>
+          </div>
           <div className="sign-up-button center">
-          <Paypal buttonHandler={buttonHandler} />
+            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} />
+            <div className="center m-2">
+              <h4>Step. 4</h4>
+              <p>Click submit.</p>
+            </div>
             <button
               className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
               type="submit"
