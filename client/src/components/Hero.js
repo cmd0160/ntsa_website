@@ -30,7 +30,7 @@ const Hero = () => {
         <p>
           Please join us for our next meeting on September 18th, 2022.
         </p>
-        <Link to="/login">
+        <Link to="/signup">
           <button className="btn btn-primary">Join Now!</button>
         </Link>
       </div>
