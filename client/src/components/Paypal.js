@@ -1,27 +1,15 @@
-
-
 import {
   PayPalScriptProvider,
   PayPalButtons,
 } from "@paypal/react-paypal-js";
 
-// This values are the props in the UI
-
-
-
-const Paypal = ({buttonHandler, paypalCost}) => {
-
+const Paypal = ({buttonHandler, paypalCost, paypalBtns}) => {
 const amount = paypalCost;
 const currency = "USD";
 const style = { layout: "vertical", color: 'gold' };
 
-
-
-
   return (
     <div className="paypal-form"  style={{ minWidth: "325px", minHeight: "200px" }}>
-
-
       <PayPalScriptProvider
         options={{
           "client-id":
@@ -32,7 +20,7 @@ const style = { layout: "vertical", color: 'gold' };
       >
               <PayPalButtons
         style={style}
-        disabled={false}
+        disabled={paypalBtns}
         forceReRender={[amount, currency, style]}
         fundingSource={undefined}
         createOrder={(data, actions) => {

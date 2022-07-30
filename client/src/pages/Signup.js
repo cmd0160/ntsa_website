@@ -7,7 +7,7 @@ import MembershipCards from "../components/MembershipCards";
 
 const Signup = (props) => {
   const [paypalCost, setpaypalCost] = useState("");
-
+  const [paypalBtns, setpaypalBtns] = useState(true);
   const [enableBtn, setEnableBtn] = useState(false);
 
   const buttonHandler = () => {
@@ -58,6 +58,7 @@ const Signup = (props) => {
     const paypalTotal = event.target.value;
     alert("Membership selected.");
     setpaypalCost(paypalTotal);
+    setpaypalBtns(false);
   };
 
   return (
@@ -154,7 +155,7 @@ const Signup = (props) => {
             <p>Follow the PayPal link to submit membership payment.</p>
           </div>
           <div className="sign-up-button center">
-            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} />
+            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} paypalBtns={paypalBtns}/>
             <div className="center m-2">
               <h4>Step. 4</h4>
               <p>Click submit.</p>
