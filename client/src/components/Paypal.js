@@ -1,17 +1,27 @@
+
+
 import {
   PayPalScriptProvider,
   PayPalButtons,
 } from "@paypal/react-paypal-js";
 
 // This values are the props in the UI
-const amount = "100";
+
+
+
+const Paypal = ({buttonHandler, paypalCost}) => {
+
+const amount = paypalCost;
 const currency = "USD";
 const style = { layout: "vertical", color: 'gold' };
 
 
-export default function App() {
+
+
   return (
-    <div style={{ minWidth: "350px", minHeight: "200px" }}>
+    <div className="paypal-form"  style={{ minWidth: "325px", minHeight: "200px" }}>
+
+
       <PayPalScriptProvider
         options={{
           "client-id":
@@ -38,12 +48,16 @@ export default function App() {
               ],
             })
             .then((orderId) => {
-              return orderId;
+                return orderId;
             });
         }}
         onApprove={function (data, actions) {
           return actions.order.capture().then(function () {
             console.log("Approved");
+            // Add conditional statement here to enable submit button
+                if("Approved") {
+                    buttonHandler();
+                }
           });
         }}
       />
@@ -51,3 +65,5 @@ export default function App() {
     </div>
   );
 }
+
+export default Paypal

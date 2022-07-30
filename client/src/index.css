@@ -145,6 +145,15 @@ h4 {
 }
 .btn-secondary { background: var(--secondary-color);}
 
+.btn-disabled { 
+  background: var(--dark-color);
+  color: var(--light-color);
+  font-weight: 700;
+  cursor: not-allowed;
+  pointer-events: none;
+
+}
+
 .btn:hover {
   opacity: 0.8;
 }
@@ -613,7 +622,6 @@ font-size: .85rem;
   }
 
   #signup-section .signup-container {
-    height: 100vh;
     max-width: var(--max-width);
     display: flex;
     flex-direction: column;
@@ -628,14 +636,36 @@ font-size: .85rem;
     align-items: center;
   }
 
+  #signup-section .paypal-form {
+    margin-top: 1rem;
+  }
+
   #signup-section .signup-container .signup-input{
     width: 400px;
-    margin: .2rem;
-    padding: .5rem;
-    background-color: rgb(236, 224, 224);
+    margin: .5rem;
+    padding: 1.2rem;
+    background-color: var(--light-color);
+    border: 1px solid black;
     color: var(--dark-color);
-    font-size: .8rem;
+    font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#membership-cards {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#membership-cards .info-card {
+  max-width: 300px;
+  margin: 1rem;
+
+}
+
+#membership-cards .info-card .info-card-text {
+  overflow: scroll;
 }
 
   /* Offerings Section */

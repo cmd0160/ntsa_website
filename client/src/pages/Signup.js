@@ -1,14 +1,19 @@
-import React from "react";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import Paypal from "../components/Paypal";
+import MembershipCards from "../components/MembershipCards";
 
-const Signup = () => {
-  // Set up to render paypal page
-  // const paypal = useRef();
-  // const [checkout, setCheckout] = useState(false);
+const Signup = (props) => {
+  const [paypalCost, setpaypalCost] = useState("");
+
+  const [enableBtn, setEnableBtn] = useState(false);
+
+  const buttonHandler = () => {
+    setEnableBtn(true);
+  };
+
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -28,7 +33,6 @@ const Signup = () => {
       ...formState,
       [name]: value,
     });
-    console.log(value);
   };
 
   // submit form
@@ -49,7 +53,12 @@ const Signup = () => {
     // }
   };
 
-
+  // This is passed down to membership cards
+  const paypalInfoClickHandler = (event) => {
+    const paypalTotal = event.target.value;
+    alert("Membership selected.");
+    setpaypalCost(paypalTotal);
+  };
 
   return (
     <section id="signup-section">
@@ -60,13 +69,22 @@ const Signup = () => {
       </section>
       <div className="signup-container">
         <div className="center m-3">
-          <h3>North Texas Suzuki Association</h3>
           <p>
-            Welcome to our NTSA signup page! Please fill out the information
-            below to register for our organization.
+            Welcome to our NTSA signup page! Please review the following
+            information and register for our organization.
           </p>
         </div>
 
+        <div className="center m-2">
+          <h4>Step. 1</h4>
+          <p>Select level of membership.</p>
+        </div>
+        <MembershipCards paypalInfoClickHandler={paypalInfoClickHandler} />
+
+        <div className="center m-2">
+          <h4>Step. 2</h4>
+          <p>Fill out the following information.</p>
+        </div>
         <form onSubmit={handleFormSubmit}>
           <input
             className="signup-input"
@@ -104,14 +122,14 @@ const Signup = () => {
             className="signup-input"
             type="password"
             placeholder="Confirm Password*"
-            name="password"
-            id="login-password"
+            name="password*"
+            id="confirm-password"
             onChange={handleChange}
           />
           <input
             className="signup-input"
             type="text"
-            placeholder="Instrument(s) 'Ex. Violin, Piano, etc.'"
+            placeholder="Instrument(s) 'Ex. Violin, Piano, etc.*'"
             name="instruments"
             id="instruments"
             onChange={handleChange}
@@ -119,7 +137,7 @@ const Signup = () => {
           <input
             className="signup-input"
             type="text"
-            placeholder="City, State"
+            placeholder="City, State*"
             name="location"
             id="location"
             onChange={handleChange}
@@ -131,17 +149,27 @@ const Signup = () => {
               </button>
             </div>
           </div> */}
+          <div className="center m-2">
+            <h4>Step. 3</h4>
+            <p>Follow the PayPal link to submit membership payment.</p>
+          </div>
           <div className="sign-up-button center">
-            <button className=" btn btn-primary" type="submit">
+            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} />
+            <div className="center m-2">
+              <h4>Step. 4</h4>
+              <p>Click submit.</p>
+            </div>
+            <button
+              className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
+              type="submit"
+            >
               SUBMIT
             </button>
           </div>
         </form>
-        <Paypal />
       </div>
 
       {error && <div>Signup failed</div>}
-
     </section>
   );
 };
