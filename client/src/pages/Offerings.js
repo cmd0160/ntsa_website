@@ -15,13 +15,12 @@ const Offerings = () => {
     <section id="announcement">
         <div className="container">
             <h2>Next biannual NTSA general meeting</h2>
-            <p>September 18th, 2022
+            <p className='meeting-info'>September 18th, 2022
                 <br></br>
                 3pm
                 <br></br>
                 Location: TBD
             </p>
-            <button className="btn btn-primary">Events</button>
         </div>
         <hr></hr>
     </section>
@@ -115,7 +114,7 @@ const Offerings = () => {
             </div>
 
             <div>
-                <button className="btn btn-primary">Apply Here</button>
+                <button className="btn btn-primary"><a href="https://forms.gle/mPNroRRoDQT26ADf7" style={{color: "white"}}>Apply Here</a></button>
             </div>
 
         </div>

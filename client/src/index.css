@@ -680,6 +680,10 @@ font-size: .85rem;
     color: var(--light-color)
   }
 
+  .meeting-info {
+    margin-bottom: 48px;
+  }
+
 /* Teacher development announcement Section */
 
   #teacher-development-announcement .container {

@@ -1,4 +1,4 @@
-import Hero1 from '../images/Hero1.png';
+import Hero1 from '../images/Hero1.jpg';
 import Hero2 from '../images/Hero2.jpg';
 import Hero3 from '../images/Hero3.jpg';
 import Hero4 from '../images/Hero4.jpg';
