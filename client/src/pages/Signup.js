@@ -78,7 +78,7 @@ const Signup = (props) => {
 
         <div className="center m-2">
           <h4>Step. 1</h4>
-          <p>Select level of membership.</p>
+          <p>Select level of membership. <br></br> - Scroll down in mobile. -</p>
         </div>
         <MembershipCards paypalInfoClickHandler={paypalInfoClickHandler} />
 

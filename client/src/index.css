@@ -617,6 +617,7 @@ font-size: .85rem;
   /* Signup section */
 
   #signup-section {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -663,7 +664,6 @@ font-size: .85rem;
 #membership-cards .info-card {
   max-width: 300px;
   margin: 1rem;
-
 }
 
 #membership-cards .info-card .info-card-text {
