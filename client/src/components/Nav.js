@@ -206,15 +206,15 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
           )}
 
           <li>
-            <a href="http://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/groups/179558988767446" target="_blank" rel="noreferrer">
               <i className="fab fa-facebook fa-2x"></i>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="http://instagram.com" target="_blank" rel="noreferrer">
               <i className="fab fa-instagram fa-2x"></i>
             </a>
-          </li>
+          </li> */}
           <li className="hamburger" onClick={mobileNavHandler}>
             {!displayMobileNav ? (
               <i className="fa-solid fa-bars fa-3x hamburger-icon"></i>
