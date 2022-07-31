@@ -411,7 +411,6 @@ input {
 /* Main Content Section */
 
 
-
 #main-content .container {
   display: flex;
   flex-direction: column;
@@ -821,6 +820,17 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#donate-section .donate-container {
+  margin: 2rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+#donate-section .donate-links {
+  display: flex;
+  flex-direction: row;
 }
 
 
