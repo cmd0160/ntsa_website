@@ -13,7 +13,7 @@ const style = { layout: "vertical", color: 'gold' };
       <PayPalScriptProvider
         options={{
           "client-id":
-            "Af_NzuAKBu84b_rbfUc-jxKwsGNW6KmRMvY84Zl_i7j6yT_krDzuMq-EKOY5hbl9TLIS_r0rPg9pXbpP",
+            "ATs_5ESD8GH6DykIjGMdx_077TCVd6si0bT8UAH4SYdRqkNYRpTudXBF5wyz9YzISD-C6f8nqywU1y-4",
           components: "buttons",
           currency: "USD",
         }}
