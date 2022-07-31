@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pracPic from "../../src/images/christine-cd.jpeg";
+import pracPic from "../../src/images/ntsa.png";
 import { useQuery } from "@apollo/client";
 import { QUERY_CURRENT_USER } from "../utils/queries";
 import Edit from "../components/Edit";
