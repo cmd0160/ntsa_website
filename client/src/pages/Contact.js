@@ -1,11 +1,27 @@
-import React from "react";
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_7ykpuqm", "template_dn09d7v", e.target, "mCG88DAOqQCwIdyiA")
+      .then((result) => {
+          console.log(result.text);
+          alert("Message Sent!")
+        },(error) => {
+          console.log(error.text);
+        }
+      );
+      e.target.reset();
+  }
+
   return (
     <div className="contact-con">
         <h1 className="contact-title p-2">Contact Us</h1>
         <p>Questions?<br></br> Fill out the following form to contact us. <br></br></p>
-        <form className="">
+        <form className="" onSubmit={sendEmail}>
           <input
             type="text"
             className="text name"
