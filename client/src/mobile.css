@@ -307,17 +307,13 @@
 
 
       #membership-cards {
-        max-height: 325px;
+        max-height: fit;
         display: flex;
         flex-direction: column;
-        overflow: scroll;
       }
 
       #membership-cards .info-card {
-        background-color: rgb(241, 241, 241);
-        border: 1px solid var(--primary-color);
-        border-radius: 5px;
-        margin: 1rem;
+        border-bottom: 1px solid var(--primary-color);
       }
 
     }
