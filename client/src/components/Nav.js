@@ -73,7 +73,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
                 </HashLink>
               </li>
               <li>
-                <span className="nestedNav">Bylaws</span>
+                <span className="nestedNav"><a href="https://docs.google.com/document/d/1N20CfHDNs295EB6BhrnXfPm5ct4E4zlUcQvacOk-k1I/edit?usp=sharing">By Laws</a></span>
               </li>
             </ul>
           </div>
