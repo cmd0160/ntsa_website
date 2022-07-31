@@ -1,5 +1,5 @@
 import React from "react";
-import ntsaPresident from "../../src/images/christine-cd.jpeg";
+import pracPic from "../../src/images/ntsa.png";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_USERS } from "../utils/queries";
 
@@ -28,7 +28,7 @@ const Membership = () => {
               <div className="card">
                 <div className="membership-image-container center">
                   <div className="membership-image-holder">
-                    <img src={ntsaPresident} alt="" />
+                    <img src={pracPic} alt="" />
                   </div>
                 </div>
 
@@ -48,7 +48,7 @@ const Membership = () => {
                     </p>
                     <div className="center">
                       <a href={"mailto:" + email}><i className="fa fa-envelope"></i></a>
-                      <i className="fa-solid fa-phone"></i>
+                      {/* <i className="fa-solid fa-phone"></i> */}
                     </div>
                   </div>
                   <hr className="center card-hr m-h"></hr>
