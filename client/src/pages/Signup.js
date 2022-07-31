@@ -70,15 +70,15 @@ const Signup = (props) => {
       </section>
       <div className="signup-container">
         <div className="center m-3">
-          <p>
+          <h4>
             Welcome to our NTSA signup page! Please review the following
             information and register for our organization.
-          </p>
+          </h4>
         </div>
 
         <div className="center m-2">
           <h4>Step. 1</h4>
-          <p>Select level of membership. <br></br> - Scroll down in mobile. -</p>
+          <p>Select level of membership.</p>
         </div>
         <MembershipCards paypalInfoClickHandler={paypalInfoClickHandler} />
 
