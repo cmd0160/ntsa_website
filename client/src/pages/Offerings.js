@@ -31,6 +31,7 @@ const Offerings = () => {
             <p> Teacher development takes place annually on the weekend of the Martin Luther King Jr. holiday.
                 Information for this year's course will be posted in late fall!
             </p>
+            <button className="btn btn-primary"><a href="https://forms.gle/H3S4DrudQDWM7Pf9A" style={{color: "white"}}>Apply Here</a></button>
         </div>
         <hr></hr>
     </section>
@@ -154,9 +155,9 @@ const Offerings = () => {
                 <br></br>
             </p>
             <div>
-                <button className="btn btn-primary">Mid-Cities Trophy Festival Registration</button>
-                <button className="btn btn-primary">North-Dallas Location Trophy Festival Registration</button>
-                <button className="btn btn-primary">Online Trophy Festival Registration</button>
+                <button className="btn btn-primary"><a href="https://forms.gle/4AwvqxEqZWKKVHVbA" style={{color: "white"}}>Mid-Cities Location Trophy Festival Registration</a></button>
+                <button className="btn btn-primary"><a href="https://forms.gle/dDSHZyRKs9DbPpS79" style={{color: "white"}}>North-Dallas Location Trophy Festival Registration</a></button>
+                <button className="btn btn-primary"><a href="https://forms.gle/jdxNQ9rto1CofsMf6" style={{color: "white"}}>Online Trophy Festival Registration</a></button>
             </div>
         </div>
     </section>

@@ -404,6 +404,9 @@ input {
   text-align: justify;
 }
 
+#hero .container h1 {
+  color: var(--primary-color);
+}
 
 /* Main Content Section */
 
