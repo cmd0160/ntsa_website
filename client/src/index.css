@@ -393,6 +393,7 @@ input {
   text-align: center;
   justify-content: center;
   color: var(--light-color);
+
 }
 
 
@@ -405,7 +406,8 @@ input {
 }
 
 #hero .container h1 {
-  color: var(--primary-color);
+  color: var(--light-color);
+
 }
 
 /* Main Content Section */

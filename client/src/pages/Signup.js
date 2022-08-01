@@ -71,19 +71,19 @@ const Signup = (props) => {
       <div className="signup-container">
         <div className="center m-3">
           <h4>
-            Welcome to our NTSA signup page! Please review the following
-            information and register for our organization.
+            Welcome to our NTSA signup page!<br></br> Please review the following
+            information below to register for our organization.
           </h4>
         </div>
 
         <div className="center m-2">
-          <h4>Step. 1</h4>
+          <h3>Step. 1</h3>
           <p>Select level of membership.</p>
         </div>
         <MembershipCards paypalInfoClickHandler={paypalInfoClickHandler} />
 
         <div className="center m-2">
-          <h4>Step. 2</h4>
+          <h3>Step. 2</h3>
           <p>Fill out the following information.</p>
         </div>
         <form onSubmit={handleFormSubmit}>
@@ -151,13 +151,13 @@ const Signup = (props) => {
             </div>
           </div> */}
           <div className="center m-2">
-            <h4>Step. 3</h4>
+            <h3>Step. 3</h3>
             <p>Follow the PayPal link to submit membership payment.</p>
           </div>
           <div className="sign-up-button center">
             <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} paypalBtns={paypalBtns}/>
             <div className="center m-2">
-              <h4>Step. 4</h4>
+              <h3>Step. 4</h3>
               <p>Click submit.</p>
             </div>
             <button
