@@ -12,8 +12,7 @@ const Donate = () => {
       <div className="donation-info-con center">
         <h2 className="center p-3">Welcome To Our Donation Page</h2>
         <p className="donation-info">
-          Welcome to our Donate page! Please follow the link to submit donations
-          to our organization.
+          Please follow the links below to submit a donation to our organization.
         </p>
       </div>
 

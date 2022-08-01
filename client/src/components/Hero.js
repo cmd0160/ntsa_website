@@ -27,7 +27,7 @@ const Hero = () => {
     >
       <div className="container">
         <Link to="/signup">
-          <button className="btn btn-primary ">SIGNUP</button>
+          <button className="btn btn-primary ">SIGNUP!</button>
         </Link>
       </div>
     </section>
