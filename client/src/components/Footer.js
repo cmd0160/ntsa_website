@@ -89,20 +89,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="membership-list">
-            <h4>
-              <a href="/membership">MEMBERSHIP</a>
-            </h4>
-            <ul>
-              <NavHashLink
-                smooth
-                to="/membership/#member-directory"
-                scroll={(el) => scrollWithOffset(el)}
-              >
-                  <span className="footerNav">Member Directory</span>
-              </NavHashLink>
-            </ul>
-          </div>
           <div className="donate-list">
             <h4>
               <a href="/donate">DONATE</a>
