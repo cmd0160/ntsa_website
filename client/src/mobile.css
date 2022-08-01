@@ -165,6 +165,16 @@
     margin: .5rem 2rem;
   }
 
+  #donate-section .donate-container {
+    border-bottom: 3px solid var(--primary-color);
+
+  }
+
+  #donate-section .donate-links {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Membership */
 
   #membership .card {
