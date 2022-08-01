@@ -65,9 +65,10 @@ const Edit = (props) => {
       {!togglePass ? (
         <>
           <h5 className="p-h center">Update Member Information:</h5>
-          <p style={{ color: "blue" }} onClick={togglePassHandler}>
+          {/* Future Development */}
+          {/* <p style={{ color: "blue" }} onClick={togglePassHandler}>
             Change Password
-          </p>
+          </p> */}
           <div className="m-info">
             <div id="edit-form">
               <form onSubmit={newInfo}>

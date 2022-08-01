@@ -71,7 +71,7 @@ const Login = () => {
                 LOGIN
               </button>
             </div>
-            <a href='_blank'><p className="center f-password" >Forgot Password?</p></a>
+            {/* <a href='_blank'><p className="center f-password" >Forgot Password?</p></a> */}
             {error ? (
               <div>
                 <p>The login information you have entered is incorrect.</p>
