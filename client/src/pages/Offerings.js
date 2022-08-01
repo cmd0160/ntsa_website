@@ -17,7 +17,7 @@ const Offerings = () => {
             <h2>Next biannual NTSA general meeting</h2>
             <p className='meeting-info'>September 18th, 2022
                 <br></br>
-                3pm
+                5pm
                 <br></br>
                 Location: TBD
             </p>
