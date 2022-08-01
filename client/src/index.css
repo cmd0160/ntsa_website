@@ -262,8 +262,10 @@ input {
 }
 
 #main-nav .logo {
+  margin-top: 4px;
   width: 80px;
-  padding: .5rem;
+  height: 80px;
+  padding: .2rem;
 }
 
 
@@ -396,7 +398,7 @@ input {
 }
 
 #hero .container button {
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 32px;
 }
 
 
