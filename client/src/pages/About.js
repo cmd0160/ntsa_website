@@ -51,7 +51,6 @@ const About = () => {
                 <img src={ntsaPresident} alt="" />
                 </div>
                 <a href="mailto:christinenicole.collins@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
               <h3>President</h3>
@@ -174,7 +173,6 @@ const About = () => {
                 <img src={vicePresident} alt="" />
               </div>
               <a href="mailto:msmusic724.sg@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
 
@@ -184,7 +182,6 @@ const About = () => {
                 <img src={ntsaTreasurer} alt="" />
               </div>
               <a href="mailto:ashlieskidmore@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
               <h3>Treasurer</h3>
@@ -260,7 +257,6 @@ const About = () => {
                 <img src={secretary} alt="" />
               </div>
               <a href="mailto:fiddler247@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
         </div>
@@ -278,7 +274,6 @@ const About = () => {
                 <img src={trophyFest} alt="" />
               </div>
               <a href="mailto:rxsamson@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
               <h3>Trophy Festival</h3>
@@ -402,7 +397,6 @@ const About = () => {
                 <img src={scholarships} alt="" />
               </div>
               <a href="mailto:bretserrin@hotmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
 
@@ -412,7 +406,6 @@ const About = () => {
                 <img src={t_dev1} alt="" />
               </div>
               <a href="mailto:lindsay.serdar@gmail.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
             <div className="info-container py-1">
               <h3>Teacher Development Co-chair</h3>
@@ -475,7 +468,6 @@ const About = () => {
                 <img src={t_dev2} alt="" />
               </div>
               <a href="mailto:stacysmi@msn.com"><i className="fa fa-envelope fa-2x"></i></a>
-              <i className="fab fa-linkedin fa-2x"></i>
             </div>
           </div>
         </div>
