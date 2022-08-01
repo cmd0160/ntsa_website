@@ -41,7 +41,6 @@ const Login = () => {
     <section id="login-form">
       <div className="container">
         <div className="exit-row">
-          <i className="fa-solid fa-xmark"></i>
         </div>
 
         <div className="center">
