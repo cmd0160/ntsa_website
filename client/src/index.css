@@ -262,8 +262,10 @@ input {
 }
 
 #main-nav .logo {
+  margin-top: 4px;
   width: 80px;
-  padding: .5rem;
+  height: 80px;
+  padding: .2rem;
 }
 
 
@@ -390,23 +392,25 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   color: var(--light-color);
+}
 
+#hero .container button {
+  margin: 0 0 20px 32px;
 }
 
 
 #hero .container p {
-  margin: .4rem auto;
   width: 400px;
   color: var(--light-color);
   font-weight: bold;
-  text-align: justify;
 }
 
 #hero .container h1 {
   color: var(--light-color);
+
 
 }
 

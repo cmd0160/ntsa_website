@@ -26,12 +26,8 @@ const Hero = () => {
       }}
     >
       <div className="container">
-        <h1>Meeting Info</h1>
-        <p>
-          Please join us for our next meeting on September 18th, 2022.
-        </p>
         <Link to="/signup">
-          <button className="btn btn-primary">Join Now!</button>
+          <button className="btn btn-primary ">SIGNUP!</button>
         </Link>
       </div>
     </section>
