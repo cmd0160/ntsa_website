@@ -393,6 +393,7 @@ input {
   text-align: center;
   justify-content: center;
   color: var(--light-color);
+
 }
 
 
@@ -405,7 +406,8 @@ input {
 }
 
 #hero .container h1 {
-  color: var(--primary-color);
+  color: var(--light-color);
+
 }
 
 /* Main Content Section */
@@ -468,7 +470,7 @@ input {
 
 #footer .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   width: 60vw;
   

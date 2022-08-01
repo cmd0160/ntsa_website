@@ -130,14 +130,6 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
                 DONATE
               </Link>
             </li>
-            <ul>
-              <li>
-                <Link to="/donate">Amazon Smile</Link>
-              </li>
-              <li>
-                <Link to="/donate">Donate Here</Link>
-              </li>
-            </ul>
           </div>
 
           <div>
