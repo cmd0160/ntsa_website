@@ -14,47 +14,52 @@ const UserSchema = new Schema (
             trim: true
         },
         email: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true,
-            unique: true, 
+            unique: true,
             match: [/.+@.+\..+/, "Please enter a valid email address"]
-        }, 
+        },
         password: {
-            type: String, 
-            required: true, 
-            trim: true, 
+            type: String,
+            required: true,
+            trim: true,
             minlength: 8
-        }, 
+        },
         instruments: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true
-        }, 
+        },
         location: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true
         },
         membershipDate: {
-            type: String, 
+            type: String,
         }
     }
 );
 
-UserSchema.pre('save', async function(next) {
-    if (this.isNew || this.isModified('password')) {
-        const saltRounds = 15; 
-        this.password = await bcrypt.hash(this.password, saltRounds); 
+UserSchema.pre('findOneAndUpdate', async function(next) {
+    const docToUpdate = await this.model.findOne(this.getQuery());
+
+    if (docToUpdate.$isNew || this._update.hasOwnProperty('password')) {
+        const saltRounds = 15;
+
+        const hashedPassword = await bcrypt.hash(docToUpdate.password, saltRounds);
+
+        this._update.password = hashedPassword;
     }
 
-    next(); 
-}); 
+    next();
+});
 
 UserSchema.methods.isCorrectPassword = async function(password) {
-    return bcrypt.compare(password, this.password); 
-}; 
+    return bcrypt.compare(password, this.password);
+};
 
-const User = model('User', UserSchema); 
+const User = model('User', UserSchema);
 
-module.exports = User; 
+module.exports = User;
