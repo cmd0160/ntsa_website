@@ -6,6 +6,7 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         email: String
+        password: String
         instruments: String
         location: String
     }
@@ -36,6 +37,10 @@ const typeDefs = gql`
             password: String
             instruments: String
             location: String
+        ): User
+        updatePassword(
+            _id: ID!
+            password: String
         ): User
         deleteUser(_id: ID!): User  
     }      

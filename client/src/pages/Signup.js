@@ -161,8 +161,7 @@ const Signup = (props) => {
               <p>Click submit.</p>
             </div>
             <button
-            className="btn btn-primary"
-              // className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
+              className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
               type="submit"
             >
               SUBMIT

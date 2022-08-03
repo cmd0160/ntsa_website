@@ -42,19 +42,15 @@ const UserSchema = new Schema (
     }
 );
 
-UserSchema.pre('findOneAndUpdate', async function(next) {
-    const docToUpdate = await this.model.findOne(this.getQuery());
-
-    if (docToUpdate.$isNew || this._update.hasOwnProperty('password')) {
-        const saltRounds = 15;
-
-        const hashedPassword = await bcrypt.hash(docToUpdate.password, saltRounds);
-
-        this._update.password = hashedPassword;
+UserSchema.pre('save', async function(next) {
+    if (this.isNew || this.isModified('password')) {
+        const saltRounds = 15; 
+        this.password = await bcrypt.hash(this.password, saltRounds); 
     }
 
-    next();
-});
+    next(); 
+}); 
+
 
 UserSchema.methods.isCorrectPassword = async function(password) {
     return bcrypt.compare(password, this.password);

@@ -27,6 +27,7 @@ const Edit = (props) => {
   const [updateUser, { error }] = useMutation(UPDATE_USER);
 
   const handleChange = (event) => {
+    // console.log(event)
     const { name, value } = event.target.value;
 
     setFormState({

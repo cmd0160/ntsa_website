@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { UPDATE_USER } from "../utils/mutations";
+import { UPDATE_PASS } from "../utils/mutations";
 
 const EditPass = (props) => {
   const [formState, setFormState] = useState({
     password: "",
   });
 
-  const [updateUser, { error }] = useMutation(UPDATE_USER);
+  const [updatePassword, { error }] = useMutation(UPDATE_PASS);
 
   const handleChange = (event) => {
     const { name, value } = event.target.value;
@@ -20,21 +20,22 @@ const EditPass = (props) => {
 
   const newInfo = async (event) => {
     const { _id } = props.user;
-      console.log(_id)
+      // console.log(_id)
     event.preventDefault();
     const dataObject = {
+      id: _id,
       password: event.target[0].value,
     };
-    console.log(dataObject);
+    // console.log(dataObject);
     try {
-      const { data } = await updateUser({
+      const { data } = await updatePassword({
         variables: {
-          _id: _id,
           ...dataObject,
         },
       });
       console.log(data);
       alert("Password Updated!");
+      window.location.assign("/");
     } catch {
       console.log(error);
     }

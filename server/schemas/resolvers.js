@@ -2,6 +2,7 @@ const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const { AuthenticationError } = require("apollo-server-express");
+const bcrypt = require('bcrypt');
 
 const resolvers = {
     Query: {
@@ -58,6 +59,17 @@ const resolvers = {
         return await User.findByIdAndUpdate(args._id, args, {
           new: true,
         });
+      },
+
+      updatePassword: async (parent, args) => {
+        const saltRounds = 15; 
+        args.password = await bcrypt.hash(args.password, saltRounds); 
+        // console.log(args.password)
+
+        return await User.findByIdAndUpdate(args._id, args, {
+          new: true,
+        });
+          
       },
   
       // HAD TO BE UPDATED TYPEDEFS TOO
