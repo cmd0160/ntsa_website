@@ -27,6 +27,7 @@ const Edit = (props) => {
   const [updateUser, { error }] = useMutation(UPDATE_USER);
 
   const handleChange = (event) => {
+    // console.log(event)
     const { name, value } = event.target.value;
 
     setFormState({
@@ -66,9 +67,9 @@ const Edit = (props) => {
         <>
           <h5 className="p-h center">Update Member Information:</h5>
           {/* Future Development */}
-          {/* <p style={{ color: "blue" }} onClick={togglePassHandler}>
+          <p style={{ color: "blue" }} onClick={togglePassHandler}>
             Change Password
-          </p> */}
+          </p>
           <div className="m-info">
             <div id="edit-form">
               <form onSubmit={newInfo}>

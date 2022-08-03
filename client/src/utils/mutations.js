@@ -46,6 +46,7 @@ export const UPDATE_USER = gql`
     $email: String
     $instruments: String
     $location: String
+    $password: String
   ) {
     updateUser(
       _id: $_id
@@ -54,6 +55,7 @@ export const UPDATE_USER = gql`
       email: $email
       instruments: $instruments
       location: $location
+      password: $password
     ) {
       _id
       firstName
@@ -64,6 +66,22 @@ export const UPDATE_USER = gql`
     }
   }
 `;
+
+export const UPDATE_PASS = gql`
+  mutation updatePassword(
+    $id: ID!
+    $password: String
+    ) {
+      updatePassword(
+        _id: $id
+        password: $password
+        ) {
+      _id
+      password
+    }
+  }
+`;
+
 
 export const DELETE_USER = gql`
   mutation deleteUser($id: ID!) {

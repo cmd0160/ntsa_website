@@ -14,30 +14,30 @@ const UserSchema = new Schema (
             trim: true
         },
         email: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true,
-            unique: true, 
+            unique: true,
             match: [/.+@.+\..+/, "Please enter a valid email address"]
-        }, 
+        },
         password: {
-            type: String, 
-            required: true, 
-            trim: true, 
+            type: String,
+            required: true,
+            trim: true,
             minlength: 8
-        }, 
+        },
         instruments: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true
-        }, 
+        },
         location: {
-            type: String, 
-            required: true, 
+            type: String,
+            required: true,
             trim: true
         },
         membershipDate: {
-            type: String, 
+            type: String,
         }
     }
 );
@@ -51,10 +51,11 @@ UserSchema.pre('save', async function(next) {
     next(); 
 }); 
 
+
 UserSchema.methods.isCorrectPassword = async function(password) {
-    return bcrypt.compare(password, this.password); 
-}; 
+    return bcrypt.compare(password, this.password);
+};
 
-const User = model('User', UserSchema); 
+const User = model('User', UserSchema);
 
-module.exports = User; 
+module.exports = User;
