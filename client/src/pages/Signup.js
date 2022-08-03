@@ -8,11 +8,11 @@ import MembershipCards from "../components/MembershipCards";
 const Signup = (props) => {
   const [paypalCost, setpaypalCost] = useState("");
   const [paypalBtns, setpaypalBtns] = useState(true);
-  // const [enableBtn, setEnableBtn] = useState(false);
+  const [enableBtn, setEnableBtn] = useState(false);
 
-  // const buttonHandler = () => {
-  //   setEnableBtn(true);
-  // };
+  const buttonHandler = () => {
+    setEnableBtn(true);
+  };
 
   const [formState, setFormState] = useState({
     firstName: "",
@@ -156,14 +156,14 @@ const Signup = (props) => {
             <p>Follow the PayPal link to submit membership payment.</p>
           </div>
           <div className="sign-up-button center">
-            <Paypal paypalCost={paypalCost} paypalBtns={paypalBtns}/>
+            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} paypalBtns={paypalBtns}/>
             <div className="center m-2">
               <h3>Step. 4</h3>
               <p>Click submit.</p>
             </div>
             <button
-            className="btn btn-primary"
-              // className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
+            // className="btn btn-primary"
+              className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
               type="submit"
             >
               SUBMIT

@@ -43,9 +43,9 @@ const style = { layout: "vertical", color: 'gold' };
           return actions.order.capture().then(function () {
             console.log("Approved");
             // Add conditional statement here to enable submit button
-                // if("Approved") {
-                //     buttonHandler();
-                // }
+                if("Approved") {
+                    buttonHandler();
+                }
           });
         }}
       />
