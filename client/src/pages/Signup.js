@@ -44,6 +44,7 @@ const Signup = (props) => {
       const { data } = await addUser({
         variables: { ...formState },
       });
+      alert("Registration successful!")
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
