@@ -88,9 +88,6 @@ const MobileNav = ({mobileNavHandler}) => {
           <a href="http://facebook.com" target="_blank" rel="noreferrer">
             <i className="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="http://instagram.com" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram fa-2x"></i>
-          </a>
         </span>
       </div>
     </ul>
