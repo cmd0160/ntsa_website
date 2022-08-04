@@ -9,6 +9,17 @@ const Signup = (props) => {
   const [paypalCost, setpaypalCost] = useState("");
   const [paypalBtns, setpaypalBtns] = useState(true);
   const [enableBtn, setEnableBtn] = useState(false);
+  const [passwordMsg, setPasswordMsg] = useState(
+    "Password must be at least 8 characters long!"
+  );
+
+  const passwordHandler = (event) => {
+    let password = event.target.value;
+
+    if (password.length < 8) {
+      alert(passwordMsg);
+    }
+  };
 
   const buttonHandler = () => {
     setEnableBtn(true);
@@ -44,7 +55,7 @@ const Signup = (props) => {
       const { data } = await addUser({
         variables: { ...formState },
       });
-      alert("Registration successful!")
+      alert("Registration successful!");
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
@@ -72,8 +83,8 @@ const Signup = (props) => {
       <div className="signup-container">
         <div className="center m-3">
           <h4>
-            Welcome to our NTSA signup page!<br></br> Please review the following
-            information below to register for our organization.
+            Welcome to our NTSA signup page!<br></br> Please review the
+            following information below to register for our organization.
           </h4>
         </div>
 
@@ -118,6 +129,7 @@ const Signup = (props) => {
             placeholder="Password*"
             name="password"
             id="login-password"
+            onBlur={passwordHandler}
             onChange={handleChange}
           />
           <input
@@ -156,13 +168,16 @@ const Signup = (props) => {
             <p>Follow the PayPal link to submit membership payment.</p>
           </div>
           <div className="sign-up-button center">
-            <Paypal buttonHandler={buttonHandler} paypalCost={paypalCost} paypalBtns={paypalBtns}/>
+            <Paypal
+              buttonHandler={buttonHandler}
+              paypalCost={paypalCost}
+              paypalBtns={paypalBtns}
+            />
             <div className="center m-2">
               <h3>Step. 4</h3>
               <p>Click submit.</p>
             </div>
             <button
-            // className="btn btn-primary"
               className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
               type="submit"
             >
