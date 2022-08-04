@@ -126,7 +126,7 @@ const Signup = (props) => {
           <input
             className="signup-input"
             type="password"
-            placeholder="Password*"
+            placeholder="Password* (Must be 8 characters long.)"
             name="password"
             id="login-password"
             onBlur={passwordHandler}
