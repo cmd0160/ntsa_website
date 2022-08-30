@@ -50,7 +50,7 @@ const EditPass = (props) => {
             <input
               className="signup-input"
               type="password"
-              placeholder="New Password*"
+              placeholder="New Password* (Must be 8 characters long!)"
               name="password"
               id="password"
               onBlur={handleChange}

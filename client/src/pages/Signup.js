@@ -126,7 +126,7 @@ const Signup = (props) => {
           <input
             className="signup-input"
             type="password"
-            placeholder="Password*"
+            placeholder="Password* (Must be 8 characters long.)"
             name="password"
             id="login-password"
             onBlur={passwordHandler}
@@ -178,8 +178,7 @@ const Signup = (props) => {
               <p>Click submit.</p>
             </div>
             <button
-              // className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
-              className="btn btn-primary"
+              className={`btn ${enableBtn ? "btn-primary" : "btn-disabled"}`}
               type="submit"
             >
               SUBMIT
