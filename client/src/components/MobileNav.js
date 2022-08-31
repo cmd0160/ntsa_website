@@ -1,10 +1,7 @@
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
-
-
-const MobileNav = ({mobileNavHandler}) => {
-
+const MobileNav = ({ mobileNavHandler }) => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -21,7 +18,7 @@ const MobileNav = ({mobileNavHandler}) => {
       </div>
 
       <div>
-      <li onClick={mobileNavHandler}>
+        <li onClick={mobileNavHandler}>
           <Link to="/offerings" className="p-h">
             OFFERINGS
           </Link>
@@ -29,7 +26,7 @@ const MobileNav = ({mobileNavHandler}) => {
       </div>
 
       <div>
-      <li onClick={mobileNavHandler}>
+        <li onClick={mobileNavHandler}>
           <Link to="/donate" className="p-h">
             DONATE
           </Link>
@@ -37,7 +34,7 @@ const MobileNav = ({mobileNavHandler}) => {
       </div>
 
       <div>
-      <li onClick={mobileNavHandler}>
+        <li onClick={mobileNavHandler}>
           <Link to="/contact" className="p-h">
             CONTACT
           </Link>
@@ -47,7 +44,7 @@ const MobileNav = ({mobileNavHandler}) => {
       {Auth.loggedIn() ? (
         <>
           <div>
-          <li onClick={mobileNavHandler}>
+            <li onClick={mobileNavHandler}>
               <Link to="/membership" className="p-h">
                 MEMBERSHIP
               </Link>
@@ -55,7 +52,7 @@ const MobileNav = ({mobileNavHandler}) => {
           </div>
 
           <div>
-          <li onClick={mobileNavHandler}>
+            <li onClick={mobileNavHandler}>
               <Link to="/profile" className="p-h">
                 PROFILE
               </Link>
@@ -63,7 +60,7 @@ const MobileNav = ({mobileNavHandler}) => {
           </div>
 
           <div>
-          <li onClick={mobileNavHandler}>
+            <li onClick={mobileNavHandler}>
               <Link to="/" className="p-h" onClick={logout}>
                 LOGOUT
               </Link>
@@ -73,7 +70,7 @@ const MobileNav = ({mobileNavHandler}) => {
       ) : (
         <>
           <div>
-          <li onClick={mobileNavHandler}>
+            <li onClick={mobileNavHandler}>
               <Link to="/login" className="p-h">
                 LOGIN/JOIN
               </Link>
