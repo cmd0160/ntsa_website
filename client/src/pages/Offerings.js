@@ -17,9 +17,13 @@ const Offerings = () => {
             <h2>Next biannual NTSA general meeting</h2>
             <p className='meeting-info'>September 18th, 2022
                 <br></br>
-                5pm
+                Time: 5pm
                 <br></br>
-                Location: TBD
+                Location: Veridian Elementary School Cafeteria
+                <br></br>
+                4001 Cascade Sky Dr.
+                <br></br>
+                Arlington, TX 76050
             </p>
         </div>
         <hr></hr>
