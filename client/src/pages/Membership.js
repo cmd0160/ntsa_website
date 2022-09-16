@@ -8,6 +8,24 @@ const Membership = () => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
+
+// Created arr copy to transform
+const arrToSort = [...data.users];
+
+// Alphabetize new array
+const sortedArr = arrToSort.sort(function(a,b) {
+    if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) {
+      return -1;
+    } else if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) {
+      return 1;
+    } else {
+      return 0;
+    }
+})
+
+console.log(sortedArr)
+
+
   return (
     <div>
       <section id="membership_hero">
@@ -20,7 +38,7 @@ const Membership = () => {
 
       <section id="membership">
 
-        {data.users.map((users) => {
+        {sortedArr.map((users) => {
           const { _id, firstName, lastName, email, instruments, location } = users;
           
           return (
