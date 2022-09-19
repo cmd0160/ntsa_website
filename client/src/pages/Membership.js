@@ -8,23 +8,19 @@ const Membership = () => {
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
 
+  // Created arr copy to transform
+  const arrToSort = [...data.users];
 
-// Created arr copy to transform
-const arrToSort = [...data.users];
-
-// Alphabetize new array
-const sortedArr = arrToSort.sort(function(a,b) {
-    if(a.lastName.toLowerCase() < b.lastName.toLowerCase()) {
+  // Alphabetize new array
+  const sortedArr = arrToSort.sort(function (a, b) {
+    if (a.lastName.toLowerCase() < b.lastName.toLowerCase()) {
       return -1;
-    } else if(a.lastName.toLowerCase() > b.lastName.toLowerCase()) {
+    } else if (a.lastName.toLowerCase() > b.lastName.toLowerCase()) {
       return 1;
     } else {
       return 0;
     }
-})
-
-console.log(sortedArr)
-
+  });
 
   return (
     <div>
@@ -34,13 +30,15 @@ console.log(sortedArr)
         </div>
       </section>
 
-      <h2 id='member-directory' className="membership-title p-3 center">Member Directory</h2>
+      <h2 id="member-directory" className="membership-title p-3 center">
+        Member Directory
+      </h2>
 
       <section id="membership">
-
         {sortedArr.map((users) => {
-          const { _id, firstName, lastName, email, instruments, location } = users;
-          
+          const { _id, firstName, lastName, email, instruments, location } =
+            users;
+
           return (
             <div key={_id}>
               <div className="card">
@@ -52,7 +50,9 @@ console.log(sortedArr)
 
                 <div className="membership-info-container">
                   <div className="contact center">
-                      <h3>{firstName} {lastName}</h3>
+                    <h3>
+                      {firstName} {lastName}
+                    </h3>
                   </div>
 
                   <hr className="center card-hr m-h"></hr>
@@ -65,7 +65,9 @@ console.log(sortedArr)
                       <br></br>
                     </p>
                     <div className="center">
-                      <a href={"mailto:" + email}><i className="fa fa-envelope"></i></a>
+                      <a href={"mailto:" + email}>
+                        <i className="fa fa-envelope"></i>
+                      </a>
                       {/* <i className="fa-solid fa-phone"></i> */}
                     </div>
                   </div>
