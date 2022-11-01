@@ -35,7 +35,9 @@ const Offerings = () => {
             <p> Teacher development takes place annually on the weekend of the Martin Luther King Jr. holiday.
                 Information for this year's course will be posted in late fall!
             </p>
-            <button className="btn btn-primary"><a href="https://forms.gle/H3S4DrudQDWM7Pf9A" style={{color: "white"}}>Apply Here</a></button>
+            <button className="btn btn-primary" style={{marginBottom: "3px"}}><a href="https://forms.gle/H3S4DrudQDWM7Pf9A" style={{color: "white"}}>Teacher Development Workshop Registration</a></button>
+            <button className="btn btn-primary" style={{margin: 0}}><a href="https://forms.gle/78autwpR3cYVySL29" style={{color: "white"}}>Every Child Can! Registration</a></button>
+
         </div>
         <hr></hr>
     </section>
