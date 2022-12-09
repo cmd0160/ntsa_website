@@ -37,6 +37,7 @@ const Offerings = () => {
             </p>
             <button className="btn btn-primary" style={{marginBottom: "3px"}}><a href="https://forms.gle/H3S4DrudQDWM7Pf9A" style={{color: "white"}}>Teacher Development Workshop Registration</a></button>
             <button className="btn btn-primary" style={{margin: 0}}><a href="https://forms.gle/78autwpR3cYVySL29" style={{color: "white"}}>Every Child Can! Registration</a></button>
+            <button className="btn btn-primary" style={{marginTop: ".2rem"}}><a href="https://docs.google.com/forms/d/e/1FAIpQLSdcJprwy7mBdoAqzK9OYN7HNGQxuE1Y1bnOGYNMv7LvufkQjw/viewform" style={{color: "white"}}>Parent Talk Registration</a></button>
 
         </div>
         <hr></hr>
@@ -63,6 +64,7 @@ const Offerings = () => {
                     <li>Allegro Scholarship - $750</li>
                     <li>The Gwen Runyon Memorial Scholarship - $750</li>
                     <li>The Jennifer Burton Founder's Award - $750</li>
+                    <li>The Katie Adams Memorial Scholarship - $500</li>
                     <li>Additional North Texas Suzuki Association Scholarships - $500</li>
                 </ul>
             </div>
@@ -104,7 +106,7 @@ const Offerings = () => {
                 <ul>
                     <li>Two scholarships in the amount of $500.00 will be awarded to teachers who wish to attend summer
                         Suzuki training.</li>
-                    <li>Applicants must be a student of a current NTSA member.</li>
+                    <li>Applicants must be a current NTSA member.</li>
                     <li>Funds may be applied towards tuition costs for SAA approved book level training, SPA, book
                         overviews, or practicum. Funds may not be applied towards 10- hour enrichment courses, or
                         auditing courses.</li>
