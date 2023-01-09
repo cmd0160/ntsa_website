@@ -15,7 +15,7 @@ const Offerings = () => {
     <section id="announcement">
         <div className="container">
             <h2>Next biannual NTSA general meeting</h2>
-            <p className='meeting-info'>September 18th, 2022
+            <p className='meeting-info'>May 7th, 2023
                 <br></br>
                 Time: 5pm
                 <br></br>
@@ -140,21 +140,9 @@ const Offerings = () => {
                 our chapter’s community.
                 <br></br>
                 <br></br>
-                Included below are letters to share with your studio families. Please note that the letters are
-                distinguished by “Online” and “Physical Location.” The information is different, depending on the participant’s choice, so please be sure that your
-                students are aware and read the appropriate letter.
-                <br></br>
-                <br></br>
-                Please also be aware that, in the “Physical Location” letter, there are two different registration
-                forms– one for the Mid-Cities location and one for the North-Dallas location. Bringing this detail to your
-                students’ attention will make the registration process smoother for everyone involved. I thank you in
-                advance for your help in the process!
+                <h4 className="py-3 center">What is Trophy Festival?</h4>
 
-                <br></br>
-                <br></br>
-                Lastly, linked here is the new adjudication form, revisions led by Charles Krigbaum and the NTSA Board.
-                This form adheres to the performance descriptors of the SAA and we encourage you to use this to guide
-                your preparations for the Trophy Festival.
+                All guitar, piano, harp, violin, viola, cello, and bass students who currently study with an NTSA Member Suzuki teacher are invited to participate. The purpose of this event is to provide an opportunity for students to perform for a clinician/adjudicator and receive positive comments, clear and specific feedback, and a certificate or trophy - tangible evidence of their effort and accomplishments. This event serves as a terrific introduction for elementary students who will later perform in Solo/Ensemble Festivals and Region and Youth Orchestra Auditions; it is also perfect for more advanced or older students who want additional performing experience, particularly in video submission format, with valuable feedback in return. Proceeds from the Trophy Festival largely fund the NTSA’s Scholarship Fund. 
                 <br></br>
                 <br></br>
                 Please reach out to our Trophy Festival Chair if you have any questions or concerns. We look forward to seeing you and your studio
@@ -163,9 +151,8 @@ const Offerings = () => {
                 <br></br>
             </p>
             <div>
-                <button className="btn btn-primary"><a href="https://forms.gle/4AwvqxEqZWKKVHVbA" style={{color: "white"}}>Mid-Cities Location Trophy Festival Registration</a></button>
-                <button className="btn btn-primary"><a href="https://forms.gle/dDSHZyRKs9DbPpS79" style={{color: "white"}}>North-Dallas Location Trophy Festival Registration</a></button>
-                <button className="btn btn-primary"><a href="https://forms.gle/jdxNQ9rto1CofsMf6" style={{color: "white"}}>Online Trophy Festival Registration</a></button>
+                <button className="btn btn-primary"><a href="https://docs.google.com/document/d/1Dmi__2u0_qaWtaqbEJw2hVt50UXW1Vc_pfdBAssgQuM/edit" style={{color: "white"}}>Trophy Festival Information</a></button>
+                <button className="btn btn-primary"><a href="https://forms.gle/Jjn8VEHTH4Ut99iJ9" style={{color: "white"}}>Trophy Festival Registration</a></button>
             </div>
         </div>
     </section>
