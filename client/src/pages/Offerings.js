@@ -15,21 +15,21 @@ const Offerings = () => {
     <section id="announcement">
         <div className="container">
             <h2>Next biannual NTSA general meeting</h2>
-            <p className='meeting-info'>May 7th, 2023
+            <p className='meeting-info'>September 10th, 2023
                 <br></br>
                 Time: 5pm
                 <br></br>
-                Location: Veridian Elementary School Cafeteria
+                Location: Suzuki Music Institute of Dallas
                 <br></br>
-                4001 Cascade Sky Dr.
+                14240 Midway Rd. Unit 300
                 <br></br>
-                Arlington, TX 76050
+                Dallas, TX 75244
             </p>
         </div>
         <hr></hr>
     </section>
 
-    <section id="teacher-development-announcement">
+    {/* <section id="teacher-development-announcement">
         <div className="container">
             <h2 className="py-3 center">Teacher Development</h2>
             <p> Teacher development takes place annually on the weekend of the Martin Luther King Jr. holiday.
@@ -41,7 +41,7 @@ const Offerings = () => {
 
         </div>
         <hr></hr>
-    </section>
+    </section> */}
 
     <section id="scholarships-announcement">
         <div className="container">
