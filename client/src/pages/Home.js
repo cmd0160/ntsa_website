@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import { NavHashLink } from "react-router-hash-link";
-import teacherDevelopment from '../images/teacherDevelopment.jpg';
+// import teacherDevelopment from '../images/teacherDevelopment.jpg';
 import scholarshipWinners from '../images/scholarshipWinners.jpg';
 import trophyFest from '../images/trophyFestival.jpg';
 
@@ -40,11 +40,11 @@ const Home = () => {
             </span>
             .
           </p>
-          <hr className="trophy-hr"></hr>
+          {/* <hr className="trophy-hr"></hr> */}
         </div>
       </section>
 
-      <section id="teacher-development">
+      {/* <section id="teacher-development">
         <div className="container container-card">
           <img src={teacherDevelopment} alt="" className="t-dev"/>
           <div className="container-description">
@@ -62,7 +62,7 @@ const Home = () => {
             </NavHashLink>{" "}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="scholarships">
         <div className="container container-card">

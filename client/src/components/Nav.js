@@ -94,7 +94,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
                   <span className="nestedNav">Biannual Meetings</span>
                 </HashLink>
               </li>
-              <li>
+              {/* <li>
                 <HashLink
                   smooth
                   to="/offerings/#teacher-development-announcement"
@@ -102,7 +102,7 @@ const Nav = ({ mobileNavHandler, displayMobileNav }) => {
                 >
                   <span className="nestedNav">Teacher Development</span>
                 </HashLink>{" "}
-              </li>
+              </li> */}
               <li>
                 <HashLink
                   smooth
